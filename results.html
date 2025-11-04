@@ -166,6 +166,55 @@
   .servings-toolbar { gap: 8px; }
   .swap { max-width: 100%; }
 }
+/* ===== MOBILE INGREDIENT LAYOUT UPGRADE (CSS-only) ===== */
+@media (max-width: 480px) {
+  /* Turn each ingredient row into a tidy 2-column grid */
+  .ing-row {
+    display: grid;
+    grid-template-columns: 1fr minmax(92px, max-content); /* name | amount */
+    align-items: start;
+    column-gap: 12px;
+    row-gap: 6px;
+    padding: 10px 8px;            /* a touch more breathing room */
+  }
+
+  /* Left column (name + method) reads cleanly and wraps nicely */
+  .ing-left {
+    font-size: 16px;
+    line-height: 1.25;
+    min-width: 0;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+  .ing-left .method { display: inline; opacity: .75; }
+
+  /* Right column (amounts) stays aligned and never wraps awkwardly */
+  .ing-qty {
+    justify-self: end;
+    white-space: nowrap;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    font-size: 15px;
+    color: #6b6b6b;
+  }
+
+  /* Put the swap UI on its own line spanning both columns (full width) */
+  .ing-right { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; }
+  .swap-wrap { width: 100%; }
+  .swap { width: 100%; max-width: 100%; }
+  .swap-help { margin-left: 2px; font-size: 11px; color: #888; }
+
+  /* Small visual tune-ups for the card */
+  .recipe { padding: 16px; }
+  .recipe h4 { margin-bottom: 6px; }
+  .macro-pill { margin-top: 8px; }
+
+  /* Keep plan rows aligned too (title left, macros right) */
+  .meal { align-items: baseline; gap: .75rem; }
+  .meal .macro { white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; }
+}
+
 
   </style>
 </head>
