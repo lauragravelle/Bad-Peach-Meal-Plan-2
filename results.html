@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Bad Peach – Meal Plan Results</title>
   <meta name="description" content="Your custom Bad Peach meal plan results.">
-  <meta name="robots" content="noindex, nofollow" />
   <style>
-    :root {
+    :root{
       --cream:#fffefc;
       --blush-light:#FFEFEA;
-      --blush-dark:#ebcac2;
+      --blush-dark:#ebcac2; /* left accent */
       --black:#191919;
       --text:#333333;
       --muted:#6B6B6B;
@@ -21,299 +20,1001 @@
       --shadow:0 10px 24px rgba(0,0,0,0.08);
       --radius:16px;
     }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--cream);color:var(--text);font-family:Inter, system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.5}
+    h1,h2,h3,h4{font-family:"Times New Roman",Times,serif;margin:0 0 .4rem}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
 
-    body {
-      font-family: "Inter", sans-serif;
-      color: var(--text);
-      background: linear-gradient(to bottom, var(--cream) 0%, var(--blush-light) 100%);
-      margin: 0;
-      padding: 0;
+    .btn{border:1px solid var(--border);background:#fff;padding:8px 12px;border-radius:10px;cursor:pointer;transition:.15s}
+    .btn:hover{background:var(--blush-light)}
+    .btn.active{background:var(--black);border-color:var(--black);color:#fff}
+
+    .tabs{display:flex;gap:8px;margin:12px 0 18px;flex-wrap:wrap}
+    .panel{display:block}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    .card{background:var(--paper);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:18px}
+    .card-header{font-weight:600;margin-bottom:8px}
+    .day{border:1px dashed #e8e0da;border-radius:12px;padding:12px;margin:10px 0;background:#fff}
+    .meal{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:8px 0;border-bottom:1px dashed #eee}
+    .meal:last-child{border-bottom:0}
+    .macro{color:#6b6b6b}
+    .recipe{
+      background:#fff;border:1px solid var(--border);border-radius:16px;padding:16px;margin:12px 0;
+      border-left:4px solid var(--blush-dark);
     }
 
-    h1, h2, h3 {
-      font-family: "Times New Roman", serif;
-      color: var(--black);
-      margin-top: 0;
+    .header{
+      background: linear-gradient(180deg, #f3cbc3 0%, #f0d6d0 46%, #ffffff 100%);
+      border-bottom:1px solid var(--border);
+    }
+    .header .wrap{padding-top:36px;padding-bottom:24px}
+    .header-title{
+      font-family:"Times New Roman",Times,serif;
+      font-weight:700;
+      font-size:clamp(28px,4.6vw,42px);
+      line-height:1.1;
+      color:var(--black);
+      margin:0 0 6px 0;
+    }
+    .header-sub{color:var(--muted);max-width:820px;margin:0;font-size:clamp(14px,1.5vw,16px)}
+    .pathbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:center}
+    #path-macros{color:var(--muted);font-size:14px}
+    .footer-space{height:28px}
+
+    /* NEW: User settings summary at top */
+    .statsbar{
+      margin-top:14px;
+      display:flex;flex-wrap:wrap;gap:8px;align-items:center
+    }
+    .pill{
+      display:inline-flex;align-items:center;gap:6px;
+      background:#fff;border:1px solid var(--border);border-radius:999px;
+      padding:6px 10px;font-size:13px;color:#444;font-weight:600;
+    }
+    .pill.emph{background:var(--blush-light);border-color:var(--blush-dark);color:#191919}
+
+    /* Grocery list */
+    .grocery-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .grocery-card{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+    .grocery-card h3{font-family:"Times New Roman",Times,serif;font-size:18px;border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:10px}
+    #groceryAll li,#groceryToBuy li{list-style:none;background:var(--blush-light);border-radius:8px;padding:8px 10px;margin:6px 0;display:flex;align-items:center;gap:8px}
+    #groceryAll li:hover{background:var(--blush-dark)}
+    input[type=checkbox]{accent-color:var(--accent2);width:18px;height:18px;cursor:pointer}
+    input[type=checkbox]:checked{accent-color:var(--black)}
+    #groceryToBuy li::before{content:"✔";color:var(--accent2);font-weight:700;margin-right:4px}
+    #groceryControls{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+    #glCount{margin-left:auto;font-weight:600;color:var(--accent2)}
+
+    /* Ingredient rows & swaps */
+    .ing-row{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:6px 8px;border-bottom:1px dashed #eee;border-radius:8px;transition:background .15s, padding-left .15s}
+    .ing-row:last-child{border-bottom:0}
+    .ing-row:hover{background:var(--blush-light);padding-left:12px}
+    .ing-left{min-width:40%;max-width:60%;font-weight:600}
+    .ing-left .method{font-weight:400;color:var(--muted)}
+    .ing-right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .swap{
+      appearance:none;-webkit-appearance:none;border:1px solid var(--border);background:#fff;border-radius:8px;
+      padding:6px 10px;font-size:13px;cursor:pointer;min-width:160px;height:32px;line-height:20px;
+    }
+    .swap:focus{outline:none;box-shadow:0 0 0 3px rgba(199,143,122,.25)}
+    .swap-wrap{display:flex;flex-direction:column;gap:2px;align-items:flex-start}
+    .swap-help{font-size:11px;color:var(--muted);margin-left:2px}
+    .ing-qty{color:#6b6b6b;min-width:170px;text-align:right}
+
+    /* Macro pill(s) */
+    .macro-pill{display:inline-block;background:var(--blush-light);border:1px solid var(--border);padding:4px 8px;border-radius:999px;font-size:12px;color:var(--muted);margin-top:4px}
+    .macro-batch{display:inline-block;margin-left:8px}
+
+    /* Servings toolbar */
+    .servings-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:10px;margin:8px 0 14px}
+    .seg{display:flex;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+    .seg button{border:0;background:#fff;padding:6px 10px;font-size:13px}
+    .seg button.active{background:var(--black);color:#fff}
+    .servings-toolbar label{font-size:13px;color:var(--muted)}
+    .linklike{font-size:13px;text-decoration:underline;cursor:pointer;border:0;background:transparent;padding:4px 6px;color:var(--accent)}
+    .stepper{display:inline-flex;align-items:center;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+    .stepper button{border:0;background:#fff;padding:4px 8px;font-size:16px;line-height:1}
+    .stepper input{width:42px;border:0;text-align:center;padding:6px 6px;font-size:16px}
+
+    /* Affiliate */
+    .affiliate{display:grid;grid-template-columns:280px 1fr;gap:18px;align-items:center;border:1px solid var(--border);border-radius:16px;background:var(--cream);padding:24px;margin-top:32px;opacity:0;transform:translateY(8px);transition:.35s;box-shadow:var(--shadow)}
+    .affiliate.visible{opacity:1;transform:none}
+    .affiliate img{width:100%;border-radius:12px;border:1px solid var(--border)}
+    .affiliate h3{font-family:"Times New Roman",Times,serif;font-size:22px;margin:0 0 8px}
+    .affiliate p{color:var(--muted);margin:0 0 16px}
+    .affiliate .btn{background:var(--blush-dark);color:var(--black);border:1px solid var(--border);font-weight:700;letter-spacing:.3px}
+    .affiliate .btn:hover{filter:brightness(0.96)}
+
+    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:720px){
+      .ing-row{align-items:flex-start}
+      .ing-right{justify-content:flex-end}
+      .ing-qty{min-width:auto}
+      .grocery-grid{grid-template-columns:1fr}
+      .affiliate{grid-template-columns:1fr}
+      .header .wrap{padding-top:28px;padding-bottom:18px}
+      .ing-left{max-width:100%}
+      .meal{align-items:flex-start}
     }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1rem 5rem;
-    }
-
-    .stats-bar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: .75rem;
-      background: linear-gradient(90deg, var(--blush-light), var(--cream));
-      border-radius: 12px;
-      box-shadow: inset 0 0 8px rgba(235,202,194,0.4);
-      padding: .75rem 1.25rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .stat-pill {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: .35rem .9rem;
-      font-size: .9rem;
-      color: var(--black);
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    }
-
-    .tabs {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .tab {
-      padding: .6rem 1.2rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: #fff;
-      cursor: pointer;
-      font-size: .9rem;
-      transition: all .2s ease;
-    }
-
-    .tab.active {
-      background: var(--black);
-      color: #fff;
-      border-color: var(--black);
-    }
-
-    .tab:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    }
-
-    .day-card {
-      background: rgba(255,255,255,0.9);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: var(--shadow);
-    }
-
-    .day-card h3 {
-      margin-top: 0;
-      border-bottom: 1px dashed var(--blush-dark);
-      padding-bottom: .25rem;
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
-
-    .meal {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px dashed var(--border);
-      padding: .5rem 0;
-    }
-
-    .meal:last-child {
-      border-bottom: none;
-    }
-
-    .meal-title {
-      font-weight: 500;
-    }
-
-    .macros {
-      white-space: nowrap;
-      text-align: right;
-      font-size: .9rem;
-      color: var(--muted);
-    }
-
-    .ingredients {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0 0;
-    }
-
-    .ingredients li {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px dashed var(--border);
-      padding: .25rem 0;
-    }
-
-    .ingredients li:last-child {
-      border-bottom: none;
-    }
-
-    .ingredient-name {
-      flex: 1;
-    }
-
-    .ingredient-amount {
-      text-align: right;
-      white-space: nowrap;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .grocery-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .grocery-section {
-      background: rgba(255,255,255,0.85);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
-
-    .affiliate {
-      background: linear-gradient(135deg, var(--blush-dark), var(--blush-light));
-      border-radius: 24px;
-      padding: 2rem;
-      text-align: center;
-      color: var(--black);
-      box-shadow: var(--shadow);
-      margin-top: 3rem;
-    }
-
-    .affiliate button {
-      background: var(--accent2);
-      color: white;
-      font-weight: 600;
-      padding: .8rem 1.5rem;
-      border-radius: 12px;
-      border: none;
-      cursor: pointer;
-      margin-top: 1rem;
-      transition: background .2s ease;
-    }
-
-    .affiliate button:hover {
-      background: #a76c5f;
-    }
-
-    /* === Everything else remains the same === */
-
-    /* ===== MOBILE ALIGNMENT-ONLY PATCH ===== */
-    @media (max-width: 480px) {
-      .day-card .meal {
-        align-items: baseline;
-        gap: .75rem;
-      }
-      .day-card .meal .meal-title {
-        flex: 1;
-        min-width: 0;
-        overflow-wrap: anywhere;
-      }
-      .day-card .meal .macros {
-        flex: 0 0 auto;
-        white-space: nowrap;
-        text-align: right;
-        font-variant-numeric: tabular-nums;
-      }
-      .ingredients li {
-        align-items: baseline;
-        gap: .5rem;
-      }
-      .ingredients .ingredient-name {
-        flex: 1;
-        min-width: 0;
-      }
-      .ingredients .ingredient-amount {
-        flex: 0 0 auto;
-        white-space: nowrap;
-        text-align: right;
-        font-variant-numeric: tabular-nums;
-      }
-    }
+    /* Mobile/Safari comfort & safe-area padding */
+    input,select{font-size:16px}
+    body{padding-bottom:env(safe-area-inset-bottom)}
+    .tabs{margin-bottom:12px}
   </style>
 </head>
-
 <body>
-  <div class="container">
-    <h1>Your 7-Day Bad Peach Meal Plan</h1>
+  <header class="header">
+    <div class="wrap">
+      <h1 class="header-title">Bad Peach — Meal Plan Results</h1>
+      <p class="header-sub">Your 7-day plan with Fat Loss, Maintenance, and Muscle Gain paths (protein fixed; calories scale by path).</p>
 
-    <div class="stats-bar">
-      <div class="stat-pill">Calories: 1900 kcal</div>
-      <div class="stat-pill">Protein: 150 g</div>
-      <div class="stat-pill">Meals: 4 / day</div>
+      <div class="statsbar" id="userStats" aria-live="polite"></div>
+
+      <div class="pathbar">
+        <button class="btn" data-path="fat">Fat Loss (85%)</button>
+        <button class="btn" data-path="maint">Maintenance (100%)</button>
+        <button class="btn" data-path="muscle">Muscle Gain (115%)</button>
+        <span id="path-macros" aria-live="polite"></span>
+      </div>
     </div>
+  </header>
 
+  <main class="wrap">
     <div class="tabs">
-      <div class="tab active">7-Day Plan</div>
-      <div class="tab">Recipes</div>
-      <div class="tab">Grocery List</div>
+      <button class="btn active" data-tab="plan">7-Day Plan</button>
+      <button class="btn" data-tab="recipes">Recipes</button>
+      <button class="btn" data-tab="grocery">Grocery List</button>
     </div>
 
-    <!-- Example week view -->
-    <div class="day-card">
-      <h3>Day 1</h3>
-      <div class="meal"><div class="meal-title">Breakfast — Vanilla-Berry Protein Shake</div><div class="macros">420 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Lunch — Greek Chicken Bowl</div><div class="macros">425 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Snack — Protein Yogurt + Berries</div><div class="macros">420 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Dinner — Mediterranean Salmon Bowl</div><div class="macros">425 kcal • 33 g protein</div></div>
-    </div>
+    <section id="panel-plan" class="panel">
+      <div class="card"><h2>Weekly Plan</h2><div id="days"></div></div>
+    </section>
 
-    <div class="day-card">
-      <h3>Day 2</h3>
-      <div class="meal"><div class="meal-title">Breakfast — High Protein Oats</div><div class="macros">420 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Lunch — Farro Chicken Bowl</div><div class="macros">425 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Snack — Barebell Bar + Yogurt</div><div class="macros">420 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Dinner — Shrimp Quinoa Bowl</div><div class="macros">425 kcal • 33 g protein</div></div>
-    </div>
+    <section id="panel-recipes" class="panel" style="display:none">
+      <div class="card">
+        <h2>Recipes</h2>
+        <div class="servings-toolbar" id="servingsBar">
+          <label style="font-weight:600;color:var(--text)">Servings View:</label>
+          <div class="seg" role="tablist" aria-label="Servings View">
+            <button id="modePer" class="active" role="tab" aria-selected="true">Per-Person</button>
+            <button id="modeBatch" role="tab" aria-selected="false">Batch (cook for X)</button>
+          </div>
+          <label><input type="checkbox" id="applyBatchToGrocery" /> Apply batch servings to Grocery List</label>
+          <button class="linklike" id="setAllTwo">Set all recipe servings to 2</button>
+          <button class="linklike" id="resetAll">Reset all to 1</button>
+        </div>
+        <p class="macro" style="margin-top:-2px">Tip: in Batch mode, use the “Servings” stepper on each recipe. Calories &amp; protein shown per serving; batch total appears when &gt; 1. Swaps re-calc and scale automatically.</p>
+        <div id="recipeList"></div>
+      </div>
+    </section>
 
-    <div class="day-card">
-      <h3>Day 3</h3>
-      <div class="meal"><div class="meal-title">Breakfast — Cottage Cheese & Toast</div><div class="macros">421 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Lunch — Power Bowl</div><div class="macros">420 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Snack — Edamame + Avocado Toast</div><div class="macros">420 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Dinner — Mediterranean Chicken Bowl</div><div class="macros">421 kcal • 33 g protein</div></div>
-    </div>
+    <section id="panel-grocery" class="panel" style="display:none">
+      <div class="card">
+        <h2 class="card-header">Grocery List</h2>
+        <p style="color:var(--muted);font-size:14px;margin:-4px 0 12px;">
+          Check off the items you need to buy — your selections will save automatically.
+        </p>
+        <div id="groceryControls">
+          <button id="glClear" class="btn">Clear All</button>
+          <button id="glSelectAll" class="btn">Select All</button>
+          <span id="glCount"></span>
+        </div>
+        <div class="grocery-grid">
+          <div class="grocery-card"><h3>All Ingredients</h3><ul id="groceryAll"></ul></div>
+          <div class="grocery-card"><h3>To Buy</h3><ul id="groceryToBuy"></ul></div>
+        </div>
+      </div>
+    </section>
 
-    <div class="day-card">
-      <h3>Day 4</h3>
-      <div class="meal"><div class="meal-title">Breakfast — Protein Pancakes</div><div class="macros">420 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Lunch — Quinoa Chicken Bowl</div><div class="macros">423 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Snack — Protein Bar + Yogurt</div><div class="macros">416 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Dinner — Southwest Chicken Bowl</div><div class="macros">423 kcal • 33 g protein</div></div>
-    </div>
+    <section class="affiliate" id="affiliate">
+      <img src="affiliate-photo.png" alt="Becoming Your Fittest Forever – Affiliate">
+      <div>
+        <h3>BECOME A BAD PEACH AFFILIATE</h3>
+        <p>Share the <em>Becoming Your Fittest Forever</em> system (with lifetime access to the custom meal plan generator) and be rewarded generously as a thank you! When you help other women glow up, you should benefit too.</p>
+        <p><strong>Earn 50% commission</strong> for every purchase made through your unique link. Click below to get your link today!</p>
+        <a class="btn" href="https://badpeachfitness.store/affiliates" target="_blank" rel="noopener">BECOME AN AFFILIATE</a>
+      </div>
+    </section>
+    <div class="footer-space"></div>
+  </main>
 
-    <div class="day-card">
-      <h3>Day 5</h3>
-      <div class="meal"><div class="meal-title">Breakfast — Cottage Cheese Eggs & Avocado Toast</div><div class="macros">421 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Lunch — Power Bowl</div><div class="macros">420 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Snack — Edamame Toast & String Cheese</div><div class="macros">420 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Dinner — Mediterranean Power Bowl</div><div class="macros">420 kcal • 33 g protein</div></div>
-    </div>
+  <script>
+  (function(){
+    // BEGIN SAFE SCALING — feature flag
+    const USE_SAFE_SCALING = true;
+    // END SAFE SCALING
 
-    <div class="day-card">
-      <h3>Day 6</h3>
-      <div class="meal"><div class="meal-title">Breakfast — Blueberry Protein Pancakes</div><div class="macros">424 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Lunch — Chicken Bowl</div><div class="macros">421 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Snack — Protein Bar & Yogurt</div><div class="macros">416 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Dinner — Salmon Bowl</div><div class="macros">423 kcal • 33 g protein</div></div>
-    </div>
+    let currentPath = 'maint';
+    let scaled = { fat: null, maint: null, muscle: null };
+    let user = { tdee: 0, protein: 0, mealsPerDay: 4 };
 
-    <div class="day-card">
-      <h3>Day 7</h3>
-      <div class="meal"><div class="meal-title">Breakfast — High Protein Oats</div><div class="macros">420 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Lunch — Greek Chicken Bowl</div><div class="macros">425 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Snack — Yogurt + Berries</div><div class="macros">420 kcal • 33 g protein</div></div>
-      <div class="meal"><div class="meal-title">Dinner — Shrimp Farro Bowl</div><div class="macros">425 kcal • 33 g protein</div></div>
-    </div>
+    // Servings state
+    let servingsMode = 'per';
+    const servingsByRecipe = {};
+    let applyBatchToGrocery = false;
 
-    <div class="affiliate">
-      <h2>Become a Bad Peach Affiliate</h2>
-      <p>Share the Becoming Your Fittest Forever system (with lifetime access to the custom meal plan generator) and be rewarded generously as a thank you!<br><br>Earn 50% commission for every purchase made through your unique link.</p>
-      <button>Get Your Link</button>
-    </div>
+    const $  = (q,ctx=document)=>ctx.querySelector(q);
+    const $$ = (q,ctx=document)=>Array.from(ctx.querySelectorAll(q));
+    const escapeHtml=(s)=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]) );
+    const round=(n)=>Math.round(Number(n||0));
+    const readJSON=(k)=>{try{return JSON.parse(sessionStorage.getItem(k)||'null')}catch{return null}};
+    const _key=(s)=>String(s||'').toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9\s]/g,' ').replace(/\s{2,}/g,' ').trim();
+    const slug=(s)=>(_key(s).replace(/\s+/g,'-'));
 
-  </div>
+    function loadFromStorage(){
+      const Snew = readJSON('SCALED_RECIPES');
+      const Sleg = readJSON('bp_scaled');
+      const Unew = readJSON('USER_TARGETS');
+      const Uleg = readJSON('bp_user_params');
+      const Anew = sessionStorage.getItem('ACTIVE_PATH');
+      const Aleg = sessionStorage.getItem('bp_active_path');
+
+      const fat   = Snew?.fatloss     || Sleg?.fatLoss     || null;
+      const maint = Snew?.maint       || Sleg?.maintenance || null;
+      const muscle= Snew?.muscle      || Sleg?.muscleGain  || null;
+      scaled = { fat, maint, muscle };
+
+      const U = Unew || Uleg || {};
+      user = {
+        tdee: Number(U.tdee ?? U.TDEE ?? U.calories ?? 0),
+        protein: Number(U.protein ?? U.protein_g ?? 0),
+        mealsPerDay: Number(U.mealsPerDay ?? U.meals ?? 4)
+      };
+
+      const rawPath = (Anew || Aleg || 'maintenance').toLowerCase();
+      currentPath = rawPath.startsWith('fat') ? 'fat' : rawPath.startsWith('muscle') ? 'muscle' : 'maint';
+    }
+
+    async function ensureFallbackBundles(){
+      const hasAny =
+        (scaled.fat && (scaled.fat.recipes?.length || scaled.fat.days?.length)) ||
+        (scaled.maint && (scaled.maint.recipes?.length || scaled.maint.days?.length)) ||
+        (scaled.muscle && (scaled.muscle.days?.length || scaled.muscle.recipes?.length));
+      if (hasAny) return;
+
+      const data = await fetch('./recipes.json').then(r=>r.json()).catch(()=>null);
+      if (!data || !Array.isArray(data)) return;
+
+      const recipes = data.map(r=>({
+        id: r.id, name: r.name, instructions: r.instructions,
+        ingredients: r.ingredients || []
+      }));
+
+      const gl = Array.from(new Set(
+        recipes.flatMap(r => (r.ingredients||[]).map(i => (i.name||'').trim()))
+               .filter(Boolean)
+      )).sort((a,b)=>a.localeCompare(b));
+
+      const days = Array.from({length:7}, (_,i)=>({ day: i+1, meals: [] }));
+
+      scaled = {
+        fat:   { days, recipes, grocery_list: gl },
+        maint: { days, recipes, grocery_list: gl },
+        muscle:{ days, recipes, grocery_list: gl }
+      };
+    }
+
+    /* ===== Header top bars ===== */
+    function perMealTargets(){
+      const pathFactor = (currentPath==='fat') ? 0.85 : (currentPath==='muscle' ? 1.15 : 1.0);
+      const perMealKcal = ((+user.tdee||0) * pathFactor) / Math.max((+user.mealsPerDay||1),1) || 0;
+      const perMealProtein = Math.round((+user.protein||0) / Math.max((+user.mealsPerDay||1),1)) || 0;
+      return { perMealKcal: Math.round(perMealKcal), perMealProtein };
+    }
+
+    function renderUserStats(){
+      const mount = $('#userStats');
+      if (!mount) return;
+      const kcal = Math.round(+user.tdee || 0);
+      const pro = Math.round(+user.protein || 0);
+      const mpd = Math.max(1, +user.mealsPerDay || 4);
+      const { perMealKcal, perMealProtein } = perMealTargets();
+
+      mount.innerHTML = `
+        <span class="pill emph">Your settings</span>
+        <span class="pill">${kcal} kcal/day</span>
+        <span class="pill">${pro} g protein/day</span>
+        <span class="pill">${mpd} meals/day</span>
+        <span class="pill">≈ ${perMealKcal} kcal/meal</span>
+        <span class="pill">≈ ${perMealProtein} g protein/meal</span>
+      `;
+    }
+
+    function updatePathMacroBanner(){
+      const factor = currentPath==='fat' ? 0.85 : currentPath==='muscle' ? 1.15 : 1.0;
+      const kcal = Math.round((user.tdee||0) * factor);
+      $('#path-macros').textContent = `${kcal} kcal · ${round(user.protein)} g protein (${currentPath})`;
+      renderUserStats();
+    }
+
+    /* ==== unit conversions (ONLY DENSITY CHANGED) ==== */
+    function kgpc(v){return{g_per_cup:v}}; function gptb(v){return{g_per_tbsp:v}}; function gpts(v){return{g_per_tsp:v}};
+    const DENSITY=(function(){
+      const map=new Map([
+        ['nonfat greek yogurt',kgpc(245)],['greek yogurt',kgpc(245)],['yogurt',kgpc(245)],['cottage cheese',kgpc(210)],
+        ['light string cheese',gptb(14)],['part-skim mozzarella',kgpc(113)],['unsweetened almond milk',kgpc(240)],
+        ['hummus',kgpc(250)],['tzatziki',kgpc(240)],
+        ['chicken breast',kgpc(140)],['ground turkey',kgpc(150)],['ground beef',kgpc(160)],['top sirloin steak',kgpc(160)],
+        ['salmon',kgpc(170)],['shrimp',kgpc(145)],['egg whites',kgpc(243)],['eggs',gptb(16.7)],['vanilla protein powder',gptb(8)],
+        ['protein powder',gptb(8)],['peanut butter powder',gptb(6)],
+        ['rolled oats',kgpc(80)],['oats',kgpc(80)],['brown rice',kgpc(158)],['quinoa',kgpc(185)],['farro',kgpc(170)],['white jasmine rice',kgpc(158)],
+        ['chickpea pasta',kgpc(140)],['barilla protein+ pasta',kgpc(80)],
+        ['rice cakes',gptb(3.5)],["dave's killer bread",gptb(28)],['ezekiel bread',gptb(34)],['gluten free bread',gptb(28)],['sourdough',gptb(32)],['thin style bagel',gptb(45)],
+        ['whole-wheat tortillas or pitas',gptb(25)],['whole wheat/flour tortillas',gptb(25)],
+        ['avocado',kgpc(230)],['spinach',kgpc(30)],['kale',kgpc(35)],['mixed greens',kgpc(25)],['romaine',kgpc(47)],
+        ['broccoli',kgpc(156)],['asparagus',kgpc(134)],['green beans',kgpc(125)],['green peas',kgpc(145)],['brussels sprouts',kgpc(156)],
+        ['bell peppers',kgpc(150)],['bell peppers + onions',kgpc(155)],['onion',kgpc(160)],['red onion',kgpc(160)],['cherry tomatoes',kgpc(149)],
+        ['cucumber',kgpc(130)],['zucchini',kgpc(180)],['corn kernels',kgpc(165)],
+        ['garlic',gptb(8)],['cilantro',kgpc(16)],['parsley',kgpc(16)],['lemon juice',kgpc(240)],['lime juice',kgpc(240)],
+        ['frozen mixed berries',kgpc(140)],['frozen blueberries',kgpc(155)],['frozen strawberries',kgpc(150)],
+        ['edamame',kgpc(155)],
+        ['black beans',kgpc(172)],['chickpeas',kgpc(164)],['lentils',kgpc(192)],['salsa',kgpc(250)],['marinara',kgpc(250)],
+        ['low-sodium soy sauce',kgpc(240)],['soy sauce',kgpc(240)],
+        ['salt & pepper',gpts(6)],['garlic powder',gpts(3.1)],['onion powder',gpts(2.4)],['paprika',gpts(2.3)],
+        ['cumin',gpts(2.1)],['oregano',gpts(0.8)],['chili powder',gpts(2.6)],['red pepper flakes',gpts(1.8)],
+        ['everything but the bagel seasoning',gpts(3)],['cinnamon',gpts(2.6)],
+        ['fairlife fat free milk',kgpc(240)],['unsweetened soy milk',kgpc(240)],['skim milk',kgpc(240)],['unsweetened oat milk',kgpc(240)],
+
+        /* NEW — robust nuts & seeds aliases */
+        ['almonds', kgpc(140)],
+        ['almond',  kgpc(140)],
+        ['sliced almonds', kgpc(140)],
+        ['slivered almonds', kgpc(140)],
+        ['chia seeds', gptb(12)],
+        ['chia seed', gptb(12)],
+        ['chia', gptb(12)]
+      ]);
+
+      const FALLBACK={g_per_cup:240};
+
+      function findRule(name){
+        const key=_key(name);
+        if(map.has(key)) return map.get(key);
+
+        // Two-way fuzzy: match if input contains key OR key contains input
+        for(const [mk,rule] of map.entries()){
+          const mkk=_key(mk);
+          if(key.includes(mkk) || mkk.includes(key)) return rule;
+        }
+        return FALLBACK;
+      }
+      return{findRule};
+    })();
+
+    function countUnits(grams,name){
+      const key=_key(name); if(!(grams>0))return '';
+      if(key.includes('string cheese')){
+        const per=28, n=Math.max(1,Math.round(grams/per));
+        return `${n} ${n===1?'piece':'pieces'}`;
+      }
+      if(key.includes('egg white'))return '';
+      if(key==='egg'||key==='eggs'||key.includes('large egg')||(key.includes('egg')&&!key.includes('white'))){
+        const per=50, n=Math.max(1,Math.round(grams/per)); return `${n} ${n===1?'egg':'eggs'}`;
+      }
+      if(key.includes('bread')){
+        let per=30; if(key.includes('ezekiel'))per=34; else if(key.includes('dave'))per=28;
+        const n=Math.max(1,Math.round(grams/per)); return `${n} ${n===1?'slice':'slices'}`;
+      }
+      if(key.includes('tortilla')||key.includes('pita')||key.includes('bagel')){
+        const per= key.includes('bagel') ? 90 : 40;
+        const n=Math.max(1,Math.round(grams/per)); return `${n} ${n===1?(key.includes('bagel')?'bagel':'piece'):'pieces'}`;
+      }
+      return '';
+    }
+    function toFriendlyFraction(x){
+      if(!(x>0))return null;
+      const t={0.125:'⅛',0.1667:'⅙',0.25:'¼',0.3333:'⅓',0.375:'⅜',0.5:'½',0.625:'⅝',0.6667:'⅔',0.75:'¾',0.875:'⅞'};
+      function m(v){let best=null,err=1e9;for(const k of Object.keys(t).map(Number)){const d=Math.abs(v-k);if(d<err){err=d;best=k;}}return (best!=null&&Math.abs(v-best)<0.06)?t[best]:null;}
+      if(x>=0.25){const w=Math.floor(x), f=x-w, fr=m(f); if(fr&&w) return `${w} ${fr}`; if(fr) return fr; return String(Math.round(x*100)/100);}
+      return null;
+    }
+    function cupsToTbspTsp(cups){
+      const tbsp=cups*16, whole=Math.floor(tbsp+1e-9); let tsp=(tbsp-whole)*3; tsp=Math.round(tsp*4)/4;
+      function nearestStr(val,unit){const w=Math.floor(val), frac=val-w, opts=[{v:0,s:''},{v:1/8,s:'⅛'},{v:1/6,s:'⅙'},{v:1/4,s:'¼'},{v:1/3,s:'⅓'},{v:1/2,s:'½'},{v:2/3,s:'⅔'},{v:3/4,s:'¾'},{v:7/8,s:'⅞'}]; let best=opts[0],err=1e9; for(const o of opts){const e=Math.abs(frac-o.v); if(e<err){err=e;best=o;}} if(!best.s&&w===0)return''; if(!best.s)return`${w} ${unit}${w>1?'s':''}`; if(w===0)return`${best.s} ${unit}`; return`${w} ${best.s} ${unit}${w>1?'s':''}`;}
+      const parts=[]; if(whole>0)parts.push(nearestStr(whole,'tbsp')); if(tsp>0)parts.push(nearestStr(tsp,'tsp')); return parts.filter(Boolean).join(' + ');
+    }
+    function gramsToVolumeString(grams,name){
+      if(!(grams>0))return '';
+      const count=countUnits(grams,name); if(count) return count;
+      const rule=DENSITY.findRule(name); let cups=null;
+      if(rule.g_per_cup){cups=grams/rule.g_per_cup;}
+      else if(rule.g_per_tbsp){const tbsp=grams/rule.g_per_tbsp; if(tbsp>=4){cups=tbsp/16;} else {return cupsToTbspTsp(tbsp/16) || `${Math.round(tbsp)} tbsp`;}}
+      else if(rule.g_per_tsp){const tsp=grams/rule.g_per_tsp; if(tsp>=12){cups=tsp/48;} else {return cupsToTbspTsp((tsp/3)/16) || `${Math.round(tsp)} tsp`;}}
+      else {cups=grams/240;}
+      if(!(cups>0))return '';
+      if(cups>=0.25){const f=toFriendlyFraction(cups); if(f){const unit=(f==='1'?'cup':'cups'); return `${f} ${unit}`.replace('1 cups','1 cup');}}
+      return cupsToTbspTsp(cups) || '';
+    }
+
+    function extractMethod(it){
+      const m=(it.method||it.cooking||'').toString().trim();
+      if(m) return m;
+      const name=(it.name||'').toLowerCase();
+      const tags=(it.tags||[]).map(x=>String(x).toLowerCase());
+      const bank=['grilled','baked','roasted','air-fried','sauteed','sautéed','pan-seared','poached','steamed','cooked','raw','drained & rinsed','drained','rinsed'];
+      for(const w of bank){ if(name.includes(w)||tags.includes(w)) return w.replace('sautéed','sauteed'); }
+      return '';
+    }
+
+    // NEW: flavoring detector (for "to taste")
+    function isFlavoring(name){
+      const k=_key(name);
+      return (
+        k.includes('salt') ||
+        k.includes('pepper') ||
+        k.includes('seasoning') ||
+        k.includes('seasonings') ||
+        k.includes('spice') ||
+        k.includes('spices') ||
+        k.includes('herb') ||
+        k.includes('garlic powder') ||
+        k.includes('onion powder') ||
+        k.includes('paprika') ||
+        k.includes('cumin') ||
+        k.includes('oregano') ||
+        k.includes('red pepper flakes') ||
+        k.includes('chili powder') ||
+        k.includes('everything but the bagel') ||
+        k.includes('cinnamon')
+      );
+    }
+
+    // Swap deny list & groups  —— UPDATED: added rice cakes, everything but the bagel seasoning, and bell peppers + onions
+    const DENY_SWAP_KEYS = new Set([
+      'eggs','egg','egg whites','liquid egg whites','cucumber',
+      'rice cakes','everything but the bagel seasoning','bell peppers + onions'
+    ].map(_key));
+    const denySwap = (name)=> DENY_SWAP_KEYS.has(_key(name));
+
+    const SWAP_GROUPS = {
+      lean_proteins: ['Chicken breast','Lean ground turkey','Lean ground beef 93%','Top sirloin steak','Salmon','Shrimp'],
+      green_veg: ['Broccoli','Asparagus','Green beans','Green peas','Brussels sprouts','Zucchini','Mixed greens'],
+      grains_starches: ['Brown rice','Quinoa','Farro','White jasmine rice','Barilla Protein+ Pasta','Baked potato','Red potatoes','Mashed potatoes','Sweet potato','Whole wheat/flour tortillas'],
+      breads: ["Ezekiel bread","Dave's Killer Whole Grain Bread","Gluten free bread","Sourdough","Thin style bagel"],
+      dairy_milks: ['Fairlife fat free milk','Unsweetened almond milk','Unsweetened soy milk','Skim milk','Unsweetened oat milk']
+    };
+
+    const MACROS_PER_100G = {
+      'Chicken breast': {k:165,p:31},
+      'Lean ground turkey': {k:170,p:23},
+      'Lean ground beef 93%': {k:176,p:26},
+      'Top sirloin steak': {k:208,p:26},
+      'Salmon': {k:208,p:22},
+      'Shrimp': {k:99,p:24},
+
+      'Broccoli': {k:34,p:2.8}, 'Asparagus': {k:20,p:2.2}, 'Green beans': {k:31,p:1.8}, 'Green peas': {k:81,p:5.4}, 'Brussels sprouts': {k:43,p:3.4},
+      'Zucchini': {k:17,p:1.2}, 'Mixed greens': {k:20,p:2},
+
+      'Brown rice': {k:123,p:2.7}, 'Quinoa': {k:120,p:4.4}, 'Farro': {k:125,p:4.2}, 'White jasmine rice': {k:129,p:2.7},
+      'Barilla Protein+ Pasta': {k:160,p:10}, 'Baked potato': {k:93,p:2.5}, 'Red potatoes': {k:87,p:2.2}, 'Mashed potatoes': {k:83,p:1.7}, 'Sweet potato': {k:86,p:1.6},
+      'Whole wheat/flour tortillas': {k:300,p:8},
+
+      "Ezekiel bread": {k:260,p:12}, "Dave's Killer Whole Grain Bread": {k:260,p:10}, "Gluten free bread": {k:250,p:4}, "Sourdough": {k:260,p:8}, "Thin style bagel": {k:250,p:10},
+
+      'Fairlife fat free milk': {k:34,p:6.8}, 'Unsweetened almond milk': {k:15,p:0.6}, 'Unsweetened soy milk': {k:33,p:3.3}, 'Skim milk': {k:34,p:3.4}, 'Unsweetened oat milk': {k:45,p:1.0},
+
+      'Black beans': {k:132,p:8.9}, 'Chickpeas': {k:164,p:8.9}, 'Lentils': {k:116,p:9}, 'Bell peppers + onions': {k:30,p:1}, 'Bell peppers': {k:26,p:1},
+      'Sugar-free enchilada sauce': {k:25,p:1}, 'Marinara': {k:65,p:1.8}, 'Salsa': {k:29,p:1.5}
+    };
+    function macrosOf(name){
+      const key = Object.keys(MACROS_PER_100G).find(k => _key(k) === _key(name));
+      return key ? MACROS_PER_100G[key] : null;
+    }
+
+    // === Simple per-path scaler (results page) ===
+    function isProteinAnchor(ing){
+      const amt=Math.max(+ing.amount_g||0,1e-6);
+      const density=(+ing.protein_g||0)/amt;
+      const name=(ing.name||'').toLowerCase();
+      const byName=/(chicken|turkey|beef|sirloin|salmon|tuna|shrimp|egg(?! white)|yogurt|cottage|tofu|tempeh|edamame|mozzarella|parmesan|protein|deli|ham)/i.test(name);
+      return density>=0.12 || byName;
+    }
+    function roundToStep(x,step){return Math.round(x/step)*step;}
+    function roundForKitchen(grams,name){
+      const n=(name||"").toLowerCase();
+      const isNutsSeeds = /(almond|walnut|pecan|cashew|peanut|pistachio|hazelnut|chia|flax|hemp|sunflower seed|pumpkin seed)/.test(n);
+
+      if(grams<5){
+        const rounded = roundToStep(grams,0.5);
+        // For nuts/seeds, never allow 0 — show at least 0.5 g so units render
+        return isNutsSeeds ? Math.max(0.5, rounded) : Math.max(0, rounded);
+      }
+      if(/(oil|extract|spice|salt|pepper|cinnamon|garlic|ginger|oregano|basil)/.test(n)) return roundToStep(grams,0.5);
+      if(/(leaf|spinach|greens|romaine|arugula|kale)/.test(n)) return roundToStep(grams,5);
+      return roundToStep(grams,1);
+    }
+    function sumMacros(ings){ return ings.reduce((a,i)=>{a.cal+=(+i.calories_kcal||0);a.pro+=(+i.protein_g||0);return a;},{cal:0,pro:0}); }
+
+    function scaleIngredientsForTargets(baseIngredients, calTarget, proTarget){
+      const recipe={ingredients: baseIngredients.map(x=>({...x}))};
+      const base=sumMacros(recipe.ingredients);
+      if(!base.cal && !base.pro) return recipe.ingredients;
+
+      const primaryBase = base.cal>0 ? base.cal : Math.max(base.pro*4,1e-6);
+      const primaryTgt  = calTarget>0 ? calTarget : Math.max(proTarget*4,1e-6);
+      const s = primaryTgt/primaryBase;
+
+      recipe.ingredients.forEach(ing=>{
+        const g=+ing.amount_g||0, k=+ing.calories_kcal||0, p=+ing.protein_g||0;
+        ing.amount_g = g*s; ing.calories_kcal=k*s; ing.protein_g=p*s;
+      });
+
+      const scaledPro = recipe.ingredients.reduce((a,i)=>a+(+i.protein_g||0),0);
+      let deltaPro = (+proTarget||0) - scaledPro;
+      const TOL=2;
+
+      if(Math.abs(deltaPro)>TOL){
+        const anchors = recipe.ingredients
+          .map((ing,idx)=>({idx,ing,density:(+ing.protein_g||0)/Math.max(+ing.amount_g||0,1e-6)}))
+          .filter(({ing,density})=>isProteinAnchor(ing) && density>0);
+
+        const densitySum = anchors.reduce((a,x)=>a+x.density,0);
+        if(anchors.length && densitySum>0){
+          anchors.forEach(({idx,density})=>{
+            const ing=recipe.ingredients[idx];
+            const proteinShare=(density/densitySum)*deltaPro;
+            const gramsChange = proteinShare/density;
+            const prevAmt=Math.max(+ing.amount_g||0,1e-6);
+            ing.amount_g=Math.max(0,prevAmt+gramsChange);
+            const ratio=ing.amount_g/prevAmt;
+            ing.calories_kcal=(+ing.calories_kcal||0)*ratio;
+            ing.protein_g=(+ing.protein_g||0)*ratio;
+          });
+        }
+      }
+
+      const calNow=recipe.ingredients.reduce((a,i)=>a+(+i.calories_kcal||0),0);
+      const norm = calTarget>0 ? (calTarget/Math.max(calNow,1e-6)) : 1;
+      if(Math.abs(1-norm)>0.01){
+        recipe.ingredients.forEach(ing=>{
+          ing.amount_g=(+ing.amount_g||0)*norm;
+          ing.calories_kcal=(+ing.calories_kcal||0)*norm;
+          ing.protein_g=(+ing.protein_g||0)*norm;
+        });
+      }
+
+      recipe.ingredients.forEach(ing=>{ ing.amount_g = roundForKitchen(+ing.amount_g||0, ing.name||""); });
+      return recipe.ingredients;
+    }
+
+    // —— ensure flavorings show "to taste", chia shows measured amount ——
+    function formatIngRight(grams,name){
+      const key = _key(name);
+
+      // Flavoring items are "to taste" regardless of grams
+      if (isFlavoring(name)) return 'to taste';
+
+      // Chia seeds must always show an amount (from recipes.json and scaled)
+      if (key.includes('chia')) {
+        if (grams > 0) {
+          const parts = [`${round(grams)} g`];
+          const vol = gramsToVolumeString(grams, name);
+          if (vol) parts.push(vol);
+          return parts.join(' • ');
+        }
+        return `0 g`;
+      }
+
+      // Normal ingredients
+      if (grams > 0) {
+        const parts=[`${round(grams)} g`];
+        const vol=gramsToVolumeString(grams,name);
+        if(vol) parts.push(vol);
+        return parts.join(' • ');
+      }
+      return '';
+    }
+    // ————————————————————————————————————————————————————————————————
+
+    // Keep current per-serving snapshot for grocery + batch
+    let currentPerServing = []; // [{key, title, ingredients:[{name,amount_g,...}]}]
+
+    // ====== DATA SOURCING (critical) ======
+    function getBaseSelectedRecipes(){
+      const base = readJSON('BASE_RECIPES');
+      if (Array.isArray(base) && base.length) return base;
+      // last resort: try SCALED bundles (may not have real ingredients)
+      const list = scaled[currentPath]?.recipes || [];
+      return list.map(r=>({
+        id: r.id || slug(r.name||'recipe'),
+        name: r.name || 'Recipe',
+        instructions: Array.isArray(r.instructions)? r.instructions : (r.instructions ? [r.instructions] : []),
+        ingredients: Array.isArray(r.ingredients) ? r.ingredients : []
+      }));
+    }
+
+    // ====== Rendering ======
+    function renderPlan(){
+      const mount=$('#days'); mount.innerHTML='';
+      const bundle=scaled[currentPath]; const data=bundle?.days||[];
+      const days=Array.from({length:7},(_,i)=>data[i]||{day:i+1,meals:[]});
+      if(!days.length){ mount.innerHTML='<p class="macro">No days found.</p>'; return; }
+      days.forEach((d,idx)=>{
+        const wrap=document.createElement('div');
+        wrap.className='day';
+        wrap.innerHTML=`<div style="font-weight:600;margin-bottom:8px;">Day ${idx+1}</div>`;
+        (d.meals||[]).forEach(m=>{
+          const title=m.name||m.title||'Meal';
+          const kcal = round(m.calories_kcal ?? m.calories ?? 0);
+          const prot = round(m.protein_g ?? m.protein ?? 0);
+          const row=document.createElement('div');
+          row.className='meal';
+          row.innerHTML=`<div>${escapeHtml(title)}</div><div class="macro">${kcal} kcal • ${prot} g protein</div>`;
+          wrap.appendChild(row);
+        });
+        mount.appendChild(wrap);
+      });
+    }
+
+    function whichSwapGroupFor(name){
+      const n=(name||'').toLowerCase();
+      if (denySwap(name)) return null;
+      if (n.includes('bread') || n.includes('bagel')) return 'breads';
+      if ((/tortilla|pita|rice|quinoa|farro|potato|jasmine|pasta/.test(n))) return 'grains_starches';
+      if (/milk/.test(n) || /almond milk|soy milk|oat milk|skim milk|fairlife/.test(n)) return 'dairy_milks';
+      if (/broccoli|asparagus|green bean|green peas|brussels|zucchini|mixed greens/.test(n)) return 'green_veg';
+      if (/chicken|turkey|beef|sirloin|salmon|shrimp/.test(n)) return 'lean_proteins';
+      return null;
+    }
+
+    function applySwapPreservingProtein(ing, newName){
+      const mOld = macrosOf(ing.name);
+      const mNew = macrosOf(newName);
+      const amt  = +ing.amount_g || 0;
+
+      let newAmt = amt;
+      if (mOld && mNew && amt>0){
+        const oldPro = (mOld.p/100)*amt;
+        newAmt = Math.max(1, (oldPro / Math.max(mNew.p,0.0001)) * 100);
+      }
+
+      const k = mNew ? (mNew.k/100)*newAmt : +ing.calories_kcal||0;
+      const p = mNew ? (mNew.p/100)*newAmt : +ing.protein_g||0;
+
+      return {
+        ...ing,
+        name: newName,
+        amount_g: roundForKitchen(newAmt,newName),
+        calories_kcal: k,
+        protein_g: p
+      };
+    }
+
+    function renderRecipes(){
+      const mount=$('#recipeList'); mount.innerHTML='';
+      const baseRecipes = getBaseSelectedRecipes();
+      if(!baseRecipes.length){ mount.innerHTML='<div class="recipe"><h4>No recipes loaded</h4></div>'; return; }
+
+      const { perMealKcal, perMealProtein } = perMealTargets();
+      currentPerServing = [];
+
+      baseRecipes.forEach(r=>{
+        const baseIngs = Array.isArray(r.ingredients) ? r.ingredients.filter(x=>x && x.name) : [];
+        const pathIngs = USE_SAFE_SCALING ? scaleIngredientsForTargets(baseIngs, perMealKcal, perMealProtein) : baseIngs;
+
+        const recKey = (r.id != null ? String(r.id) : slug(r.name || 'recipe'));
+        if (!(recKey in servingsByRecipe)) servingsByRecipe[recKey] = 1;
+
+        currentPerServing.push({ key: recKey, title: r.name || 'Recipe', ingredients: pathIngs.map(x=>({...x})) });
+
+        const card=document.createElement('div'); card.className='recipe';
+
+        const title=document.createElement('h4'); title.textContent = r.name || 'Recipe';
+        const macro=document.createElement('div'); macro.className='macro-pill';
+        macro.textContent = `${Math.round(perMealKcal)} kcal • ${perMealProtein} g protein`;
+        const macroBatch=document.createElement('div'); macro.className='macro-pill macro-batch';
+        const macroWrap=document.createElement('div'); macroWrap.appendChild(macro);
+
+        const toolbar=document.createElement('div'); toolbar.className='card-toolbar';
+        const stepper=document.createElement('div'); stepper.className='stepper';
+        const minus=document.createElement('button'); minus.type='button'; minus.textContent='–';
+        const input=document.createElement('input'); input.type='number'; input.min='1'; input.max='12'; input.value=servingsByRecipe[recKey]; input.inputMode='numeric';
+        const plus=document.createElement('button'); plus.type='button'; plus.textContent='+';
+        stepper.appendChild(minus); stepper.appendChild(input); stepper.appendChild(plus);
+        const stepperLabel=document.createElement('span'); stepperLabel.className='macro'; stepperLabel.textContent='Servings';
+        toolbar.appendChild(stepperLabel); toolbar.appendChild(stepper);
+
+        card.appendChild(title);
+        card.appendChild(macroWrap);
+        card.appendChild(toolbar);
+
+        const ingTitle=document.createElement('div'); ingTitle.style.marginTop='8px'; ingTitle.innerHTML='<strong>Ingredients</strong>';
+        card.appendChild(ingTitle);
+
+        const ingContainer=document.createElement('div'); card.appendChild(ingContainer);
+
+        const onSwap = ()=>{ if (applyBatchToGrocery) refreshGroceryFromAllRecipes(); };
+
+        function formatIngredientRow(it, idx, listRef, factor){
+          const leftName = (it.display_name || it.name || '').toString().trim() || 'ingredient';
+          const method = extractMethod(it);
+          const gramsBase = isFinite(+it.amount_g) && +it.amount_g>0 ? +it.amount_g : 0;
+          const grams = gramsBase * (factor || 1);
+          const qty = formatIngRight(grams,leftName);
+
+          const row = document.createElement('div');
+          row.className = 'ing-row';
+
+          const left = document.createElement('div');
+          left.className = 'ing-left';
+          left.innerHTML = escapeHtml(leftName) + (method ? `, <span class="method">${escapeHtml(method)}</span>` : '');
+          row.appendChild(left);
+
+          const right = document.createElement('div');
+          right.className = 'ing-right';
+          const qtyEl = document.createElement('div');
+          qtyEl.className='ing-qty';
+          qtyEl.textContent = qty;
+          right.appendChild(qtyEl);
+
+          const gKey = whichSwapGroupFor(leftName);
+          if (gKey && !denySwap(leftName)){
+            const select = document.createElement('select');
+            select.className='swap';
+            select.setAttribute('aria-label','Keep or swap ingredient');
+            const currentKey = _key(leftName);
+
+            const keep = document.createElement('option');
+            keep.value = currentKey;
+            keep.textContent = `Keep: ${leftName}`;
+            keep.selected = true;
+            select.appendChild(keep);
+
+            const og = document.createElement('optgroup');
+            og.label = 'Swap to…';
+            SWAP_GROUPS[gKey].forEach(nm=>{
+              if (_key(nm) === currentKey) return;
+              if (denySwap(nm)) return;
+              const opt=document.createElement('option');
+              opt.value = _key(nm);
+              opt.textContent = nm;
+              og.appendChild(opt);
+            });
+            if (og.children.length){
+              select.appendChild(og);
+              const wrap=document.createElement('span'); wrap.className='swap-wrap';
+              const help=document.createElement('span'); help.className='swap-help'; help.textContent='Keep or swap…';
+              wrap.appendChild(select); wrap.appendChild(help);
+              right.appendChild(wrap);
+
+              select.addEventListener('change',(e)=>{
+                const v = e.target.value;
+                if (v === currentKey) return;
+                const pickedName = [...Object.keys(MACROS_PER_100G)].find(k => _key(k)===v) ||
+                                   SWAP_GROUPS[gKey].find(n=>_key(n)===v) || leftName;
+                const updated = applySwapPreservingProtein(it, pickedName);
+                listRef[idx] = updated;                 // update per-serving list
+                qtyEl.textContent = formatIngRight((updated.amount_g||0) * (factor||1), pickedName);
+                left.innerHTML = escapeHtml(pickedName) + (method ? `, <span class="method">${escapeHtml(method)}</span>` : '');
+                onSwap && onSwap();                     // refresh grocery if needed
+              });
+            }
+          }
+
+          row.appendChild(right);
+          return row;
+        }
+
+        function renderIngredientRows(servingsFactor){
+          ingContainer.innerHTML='';
+          pathIngs.forEach((it,idx)=>{
+            const row = formatIngredientRow(it, idx, pathIngs, servingsMode==='batch' ? servingsFactor : 1);
+            ingContainer.appendChild(row);
+          });
+        }
+
+        const instrTitle=document.createElement('div'); instrTitle.style.marginTop='8px'; instrTitle.innerHTML='<strong>Instructions</strong>';
+        const ul=document.createElement('ul');
+        const lines = Array.isArray(r.instructions) ? r.instructions.filter(s => s && !/^Directions:?$/i.test(String(s).trim())) : (r.instructions ? [r.instructions] : []);
+        if (!lines.length) ul.innerHTML = '<li>—</li>';
+        else lines.forEach(i=>{ const li=document.createElement('li'); li.textContent=i; ul.appendChild(li); });
+
+        card.appendChild(instrTitle); card.appendChild(ul);
+
+        const { perMealKcal: pmk, perMealProtein: pmp } = perMealTargets();
+        function setServings(val){
+          const v = Math.max(1, Math.min(12, Number(val)||1));
+          servingsByRecipe[recKey] = v;
+          input.value = v;
+          if (v>1){
+            macroBatch.textContent = `Batch: ${Math.round(pmk*v)} kcal • ${Math.round(pmp*v)} g protein`;
+            if (!macroBatch.isConnected) macroWrap.appendChild(macroBatch);
+          } else {
+            macroBatch.remove();
+          }
+          renderIngredientRows(v);
+          if (applyBatchToGrocery) refreshGroceryFromAllRecipes();
+        }
+        minus.addEventListener('click',()=>setServings(Number(input.value)-1));
+        plus.addEventListener('click',()=>setServings(Number(input.value)+1));
+        input.addEventListener('change',()=>setServings(Number(input.value)));
+
+        if (servingsMode==='batch') { toolbar.style.display='flex'; setServings(servingsByRecipe[recKey]); }
+        else { toolbar.style.display='none'; renderIngredientRows(1); }
+
+        mount.appendChild(card);
+      });
+    }
+
+    /* Grocery list from current recipes (per-person or batch when opted) —— UPDATED */
+    function computeGroceryArray(){
+      // Build from what's actually on the page
+      if (Array.isArray(currentPerServing) && currentPerServing.length){
+        const map = new Map(); // name -> grams
+        currentPerServing.forEach(r=>{
+          const factor = (servingsMode==='batch' && applyBatchToGrocery)
+            ? Math.max(1, Number(servingsByRecipe[r.key]||1))
+            : 1; // always 1× in Per-Person mode
+          (r.ingredients||[]).forEach(it=>{
+            const rawName = (it.display_name||it.name||'').trim();
+            if (!rawName) return;
+            const g = Math.max(0, +it.amount_g||0) * factor;
+            if(!g) return;
+            const k = rawName.toLowerCase();
+            map.set(k, (map.get(k)||0) + g);
+          });
+        });
+
+        const out = Array.from(map.entries()).map(([k,g])=>{
+          const pretty = k.replace(/\b\w/g, c=>c.toUpperCase());
+          const qtyStr = g > 0 ? `${Math.round(g)} g` : '';
+          const vol = gramsToVolumeString(g, k);
+          const tail = [qtyStr, vol].filter(Boolean).join(' • ');
+          return tail ? `${pretty} — ${tail}` : pretty;
+        });
+        if (out.length) return out.sort((a,b)=>a.localeCompare(b, undefined, {sensitivity:'base'}));
+      }
+
+      // Fallbacks (legacy bundles)
+      const bundle = scaled[currentPath] || {};
+      if (Array.isArray(bundle.grocery_list) && bundle.grocery_list.length) {
+        return bundle.grocery_list.slice();
+      }
+      if (bundle.grocery && typeof bundle.grocery === 'object') {
+        return Object.values(bundle.grocery).flat();
+      }
+      return [];
+    }
+
+    function renderGrocery(){
+      const rawList = computeGroceryArray();
+
+      const expanded = [];
+      rawList.forEach(label=>{
+        if(!label) return;
+        let s = String(label).trim();
+        s = s.replace(/^(spice|spices|seasoning|seasonings|herbs):\s*/i, '');
+        const parts = s.split(',').map(p=>p.trim()).filter(Boolean);
+        if(parts.length > 1){
+          parts.forEach(p=>{
+            const clean = p.replace(/^\d+\s*[.)-]?\s*/, '').replace(/\s+/g,' ').trim();
+            if(clean) expanded.push(clean);
+          });
+        }else{
+          const cleanSingle = s.replace(/^\d+\s*[.)-]?\s*/, '').replace(/\s+/g,' ').trim();
+          if(cleanSingle) expanded.push(cleanSingle);
+        }
+      });
+
+      const seen = new Set();
+      const list = [];
+      expanded.forEach(item=>{
+        const key = item.toLowerCase();
+        if(!seen.has(key)){ seen.add(key); list.push(item); }
+      });
+      list.sort((a,b)=>a.localeCompare(b, undefined, {sensitivity:'base'}));
+
+      const allEl   = document.getElementById('groceryAll');
+      const buyEl   = document.getElementById('groceryToBuy');
+      const countEl = document.getElementById('glCount');
+      const btnClear= document.getElementById('glClear');
+      const btnAll  = document.getElementById('glSelectAll');
+
+      allEl.innerHTML=''; buyEl.innerHTML='';
+      const key='bp_gl_checks_' + (currentPath || 'maint');
+      const saved = new Set(JSON.parse(localStorage.getItem(key) || '[]'));
+
+      list.forEach(label=>{
+        const li=document.createElement('li');
+        li.innerHTML=`<input type="checkbox" ${saved.has(label)?"checked":""} data-label="${label}"><span>${label}</span>`;
+        allEl.appendChild(li);
+      });
+
+      function sync(){
+        const checked=[...allEl.querySelectorAll('input[type=checkbox]:checked')].map(cb=>cb.getAttribute('data-label'));
+        buyEl.innerHTML='';
+        checked.forEach(lbl=>{const li=document.createElement('li'); li.textContent=lbl; buyEl.appendChild(li);});
+        countEl.textContent = checked.length ? `${checked.length} item(s) to buy` : 'No items selected';
+        localStorage.setItem(key, JSON.stringify(checked));
+      }
+      allEl.addEventListener('change', sync);
+      btnClear?.addEventListener('click', ()=>{ allEl.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.checked=false); sync(); });
+      btnAll?.addEventListener('click',   ()=>{ allEl.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.checked=true);  sync(); });
+      sync();
+    }
+
+    function refreshGroceryFromAllRecipes(){ renderGrocery(); }
+
+    function renderAll(){
+      renderUserStats();
+      renderPlan();
+      renderRecipes();
+      renderGrocery();
+      updatePathMacroBanner();
+    }
+
+    // Tabs
+    $$('.tabs .btn').forEach(b=>{
+      b.addEventListener('click',()=>{
+        $$('.tabs .btn').forEach(x=>x.classList.remove('active'));
+        b.classList.add('active');
+        const tab=b.getAttribute('data-tab');
+        $('#panel-plan').style.display = (tab==='plan')?'block':'none';
+        $('#panel-recipes').style.display=(tab==='recipes')?'block':'none';
+        $('#panel-grocery').style.display=(tab==='grocery')?'block':'none';
+      });
+    });
+
+    // Path switch
+    $$('.pathbar .btn').forEach(b=>{
+      b.addEventListener('click',()=>{
+        $$('.pathbar .btn').forEach(x=>x.classList.remove('active'));
+        b.classList.add('active');
+        currentPath = b.dataset.path==='fat' ? 'fat' : (b.dataset.path==='muscle' ? 'muscle' : 'maint');
+        sessionStorage.setItem('ACTIVE_PATH', currentPath);
+        sessionStorage.setItem('bp_active_path', currentPath);
+        renderAll();
+      });
+    });
+
+    // Affiliate fade
+    const af=$('#affiliate');
+    const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){af.classList.add('visible');io.disconnect();}})},{threshold:0.1});
+    io.observe(af);
+
+    // Servings toolbar events
+    function wireServingsBar(){
+      const bPer = $('#modePer'), bBatch = $('#modeBatch');
+      const chk = $('#applyBatchToGrocery');
+      const setAllTwo = $('#setAllTwo');
+      const resetAll = $('#resetAll');
+
+      function setMode(m){
+        servingsMode = m;
+        bPer.classList.toggle('active', m==='per');
+        bBatch.classList.toggle('active', m==='batch');
+        renderRecipes();
+        if (m==='batch' && chk.checked){ applyBatchToGrocery=true; renderGrocery(); }
+        else if (m==='per'){ applyBatchToGrocery=false; chk.checked=false; renderGrocery(); }
+      }
+      bPer.addEventListener('click',()=>setMode('per'));
+      bBatch.addEventListener('click',()=>setMode('batch'));
+      chk.addEventListener('change',()=>{ applyBatchToGrocery = chk.checked; renderGrocery(); });
+      setAllTwo.addEventListener('click',()=>{
+        Object.keys(servingsByRecipe).forEach(k=>servingsByRecipe[k]=2);
+        renderRecipes(); if (applyBatchToGrocery) renderGrocery();
+      });
+      resetAll.addEventListener('click',()=>{
+        Object.keys(servingsByRecipe).forEach(k=>servingsByRecipe[k]=1);
+        renderRecipes(); if (applyBatchToGrocery) renderGrocery();
+      });
+    }
+
+    (async () => {
+      loadFromStorage();
+      await ensureFallbackBundles();
+      $$('.pathbar .btn').forEach(b=>{
+        if ((currentPath==='fat' && b.dataset.path==='fat') ||
+            (currentPath==='maint' && b.dataset.path==='maint') ||
+            (currentPath==='muscle' && b.dataset.path==='muscle')) b.classList.add('active');
+      });
+      wireServingsBar();
+      renderAll();
+    })();
+  })();
+  </script>
 </body>
 </html>
+
