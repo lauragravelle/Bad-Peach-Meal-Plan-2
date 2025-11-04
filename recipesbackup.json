@@ -1,0 +1,2046 @@
+[
+  {
+    "id": "high_protein_oats_berries_bowl",
+    "name": "High Protein Oats & Berries Bowl",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {
+        "ingredient": "30 g (⅓ cup) rolled oats",
+        "amount_g": 30.0,
+        "amount_cups": 0.3333333333333333
+      },
+      {
+        "ingredient": "140 g (½ cup) nonfat Greek yogurt",
+        "amount_g": 140.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "30 g (1 scoop) vanilla protein powder",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "70 g (½ cup) thawed berries",
+        "amount_g": 70.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "5 g (1 tsp) chia seeds",
+        "amount_g": 5.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Cinnamon to taste (optional)",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Mix oats with desired water amount and microwave 1-2 minutes. Stir in other ingredients."
+    ]
+  },
+  {
+    "id": "vanilla_berry_protein_shake",
+    "name": "Vanilla-Berry Protein Shake",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {
+        "ingredient": "35 g (or 1 serving) vanilla protein powder",
+        "amount_g": 35.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "90 g (⅔ cup) frozen mixed berries",
+        "amount_g": 90.0,
+        "amount_cups": 0.6666666666666666
+      },
+      {
+        "ingredient": "10 g (2 tsp) chia seeds",
+        "amount_g": 10.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "150 g (⅔ cup) plain nonfat Greek yogurt",
+        "amount_g": 150.0,
+        "amount_cups": 0.6666666666666666
+      },
+      {
+        "ingredient": "360 ml (1½ cups) water",
+        "amount_g": 0.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "Optional: spinach or kale to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Add all ingredients to a blender and blend until smooth.\nNotes\nUse different protein powder flavors as desired."
+    ]
+  },
+  {
+    "id": "cottage_cheese_eggs_avocado_toast",
+    "name": "Cottage Cheese Eggs & Avocado Toast",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {
+        "ingredient": "100 g (½ cup) low-fat cottage cheese",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "1 large egg (50 g)",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "2 egg whites (66 g or ¼ cup liquid egg whites)",
+        "amount_g": 66.0,
+        "amount_cups": 66.0
+      },
+      {
+        "ingredient": "2 slices (90 g) Ezekiel or Dave’s Killer Bread",
+        "amount_g": 90.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "50 g (¼ avocado), mashed",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Everything but the Bagel seasoning to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Scramble eggs with cottage cheese in a nonstick skillet. Toast the bread and spread avocado on top. Sprinkle with seasoning and serve."
+    ]
+  },
+  {
+    "id": "blueberry_protein_pancakes",
+    "name": "Blueberry Protein Pancakes",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {
+        "ingredient": "50 g (⅓ cup) Kodiak pancake mix",
+        "amount_g": 50.0,
+        "amount_cups": 0.3333333333333333
+      },
+      {
+        "ingredient": "1 whole egg (50 g)",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "2 egg whites (66 g or ¼ cup liquid egg whites)",
+        "amount_g": 66.0,
+        "amount_cups": 66.0
+      },
+      {
+        "ingredient": "2 g (½ tsp) baking powder",
+        "amount_g": 2.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "40 g (3 tbsp) nonfat plain Greek yogurt",
+        "amount_g": 40.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "10 g (1 tbsp) vanilla protein powder",
+        "amount_g": 10.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "50 g (⅓ cup) blueberries (fresh or frozen)",
+        "amount_g": 50.0,
+        "amount_cups": 0.3333333333333333
+      },
+      {
+        "ingredient": "10 g (2 tsp) real maple syrup (drizzle)",
+        "amount_g": 10.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Mix all ingredients (except syrup) into a smooth batter. Cook pancakes on a nonstick skillet until golden.\nMeal Prep Tips\nCan also be made as waffles. Batch cook, freeze, and reheat in toaster for easy prep."
+    ]
+  },
+  {
+    "id": "egg_scramble_toast",
+    "name": "Egg Scramble & Toast",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {
+        "ingredient": "2 large eggs (100 g)",
+        "amount_g": 100.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "4 egg whites (132 g or ½ cup liquid egg whites)",
+        "amount_g": 132.0,
+        "amount_cups": 132.0
+      },
+      {
+        "ingredient": "100 g (1 cup) sautéed veggies (bell pepper + onion)",
+        "amount_g": 100.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "40 g (¼ cup) black beans",
+        "amount_g": 40.0,
+        "amount_cups": 0.25
+      },
+      {
+        "ingredient": "1 slice (45 g) Ezekiel or Dave’s Killer Bread",
+        "amount_g": 45.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Sauté veggies and black beans in a nonstick skillet. Scramble in whole eggs and egg whites. Toast the bread and top with egg scramble. Optional: garnish with Cholula and minced cilantro."
+    ]
+  },
+  {
+    "id": "high_protein_yogurt_parfait",
+    "name": "High Protein Yogurt Parfait",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {
+        "ingredient": "170 g (⅔ cup) nonfat Greek yogurt",
+        "amount_g": 170.0,
+        "amount_cups": 0.6666666666666666
+      },
+      {
+        "ingredient": "15-30 g (1-2 tbsp) vanilla protein powder",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "10 g (1 tbsp) chia seeds",
+        "amount_g": 10.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "10 g (1 tbsp) almonds",
+        "amount_g": 10.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "80 g (½ cup) thawed berries",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      }
+    ],
+    "directions": [
+      "Mix yogurt, chia seeds and protein. Top with berries and almonds."
+    ]
+  },
+  {
+    "id": "veggie_egg_white_frittata_muffins",
+    "name": "Veggie Egg White Frittata Muffins",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {
+        "ingredient": "1 cup liquid egg whites",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "½ cup diced mixed vegetables (bell peppers, spinach, mushrooms)",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "1 oz reduced-fat feta cheese",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Salt and pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Preheat oven to 375°F (190°C). Spray muffin tin with nonstick spray. Heat nonstick spray in a skillet and sauté vegetables 3-4 minutes. Divide vegetables evenly into 4 muffin cups. Pour egg whites over vegetables and top with feta. Bake 20-25 minutes or until set.\nMeal Prep Tips\nStore in fridge for 4 days or freeze up to 1 month. Microwave ~30 seconds to reheat."
+    ]
+  },
+  {
+    "id": "egg_avocado_ham_veggie_bagel_sandwich",
+    "name": "Egg, Avocado & Ham Veggie Bagel Sandwich",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {
+        "ingredient": "1 thin-style bagel (55 g, Dave’s Killer or O’Doughs)",
+        "amount_g": 55.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "½ cup (125 g) liquid egg whites",
+        "amount_g": 125.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "1 whole egg (50 g)",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "2 oz (56 g) lean deli ham (Kirkland 98% fat-free)",
+        "amount_g": 56.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "2 Tbsp (30 g) mashed avocado",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "½ cup diced mixed vegetables (bell peppers, spinach, mushrooms)",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Salt, pepper, everything but the bagel seasoning",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional: 1 Tbsp (15 g) light cream cheese (+35 kcal, +2 g protein)",
+        "amount_g": 15.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Sauté peppers/onions with spray 2-3 minutes. Add egg whites + egg; season and cook into patty. Warm ham 30 sec per side. Toast bagel and layer all ingredients on bagel.\nMeal Prep Tips\nMake 2-3 sandwiches, wrap in foil, refrigerate ≤3 days, reheat in toaster or air fryer ~3 minutes."
+    ]
+  },
+  {
+    "id": "mexican_burrito_bowl",
+    "name": "Mexican Burrito Bowl",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) grilled chicken breast, sliced",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (½ cup) cooked brown rice",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "100 g (½ cup) black beans, drained & rinsed",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "75 g (1 cup) bell peppers + onions, sautéed",
+        "amount_g": 75.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "60 g (2 cups) romaine, chopped",
+        "amount_g": 60.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "80 g (½ cup) cherry tomatoes, halved",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "50 g (⅓ medium) avocado, sliced",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "30 g (2 tbsp) nonfat plain Greek yogurt",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Fresh cilantro + lime juice; salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional spices: chili powder, cumin, paprika, garlic/onion powder",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Layer rice and beans. Add chicken, peppers/onions, romaine, tomatoes, avocado. Top with yogurt, cilantro, lime, and seasonings."
+    ]
+  },
+  {
+    "id": "southwest_chicken_bowl",
+    "name": "Southwest Chicken Bowl",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) grilled chicken breast, diced",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (½ cup) cooked quinoa",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "150 g (1 cup) roasted sweet potato cubes",
+        "amount_g": 150.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "80 g (½ cup) corn kernels",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "100 g (½ cup) black beans, drained & rinsed",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "60 g (2 cups) spinach, chopped",
+        "amount_g": 60.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "Fresh cilantro + lime; salt & pepper",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional spices: smoked paprika, cumin, garlic powder",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Add quinoa and sweet potatoes. Top with chicken, corn, beans, spinach. Finish with cilantro, lime, and season."
+    ]
+  },
+  {
+    "id": "mediterranean_power_bowl",
+    "name": "Mediterranean Power Bowl",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) grilled chicken breast, sliced",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (½ cup) cooked quinoa",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "100 g (½ cup) chickpeas, drained & rinsed",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "80 g (½ cup) cucumber, diced",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "80 g (½ cup) cherry tomatoes, halved",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "60 g (2 cups) spinach, chopped",
+        "amount_g": 60.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "40 g (2 tbsp) hummus",
+        "amount_g": 40.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "30 g (2 tbsp) tzatziki",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Lemon juice + parsley; salt & pepper",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional spices: oregano, basil, garlic powder, red pepper flakes",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Layer quinoa, chickpeas, spinach. Add chicken, cucumber, tomatoes. Top with hummus and tzatziki, lemon, herbs, and seasonings."
+    ]
+  },
+  {
+    "id": "teriyaki_chicken_veggies_rice_bowl",
+    "name": "Teriyaki Chicken, Veggies & Rice Bowl",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) grilled chicken breast, cubed",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (½ cup) cooked brown rice",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "80 g (1 cup) broccoli florets, steamed",
+        "amount_g": 80.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "80 g (½ cup) shelled edamame",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "40 g (2 tbsp) G. Hughes sugar-free teriyaki sauce",
+        "amount_g": 40.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Sesame seeds (optional); salt & pepper",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional flavoring: fresh garlic, fresh ginger, green onion garnish",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Add rice, then chicken, broccoli, edamame. Drizzle teriyaki; add optional flavorings and seasonings to the chicken/vegetable mix."
+    ]
+  },
+  {
+    "id": "ginger_garlic_salmon_bowl",
+    "name": "Ginger & Garlic Salmon Bowl",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "120 g (4.2 oz) cooked salmon fillet, flaked",
+        "amount_g": 120.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (½ cup) cooked quinoa",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "60 g (2 cups) spinach, chopped",
+        "amount_g": 60.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "80 g (½ cup) cucumber, diced",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "80 g (½ cup) shelled edamame",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "40 g (¼ cup) red onion, thinly sliced",
+        "amount_g": 40.0,
+        "amount_cups": 0.25
+      },
+      {
+        "ingredient": "20 g (1 tbsp) low-sodium soy sauce; salt & pepper",
+        "amount_g": 20.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional flavoring: fresh garlic, fresh ginger, sesame seeds",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Base of quinoa and spinach. Top with salmon, cucumber, edamame, onion. Drizzle soy and optional flavorings on salmon while cooking or over finished bowl."
+    ]
+  },
+  {
+    "id": "steak_sweet_potato_roasted_vegetables_bowl",
+    "name": "Steak, Sweet Potato & Roasted Vegetables Bowl",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "120 g (4.2 oz) grilled sirloin steak, sliced",
+        "amount_g": 120.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "150 g (1 cup) roasted Brussels sprouts",
+        "amount_g": 150.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "100 g (1 cup) roasted bell peppers + zucchini",
+        "amount_g": 100.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "150 g (1 cup) roasted sweet potato cubes",
+        "amount_g": 150.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "40 g (1 cup) arugula; salt & pepper",
+        "amount_g": 40.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "Optional herbs: garlic, rosemary, thyme",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Season and cook steak and vegetables with optional herbs. Arugula base. Add roasted vegetables, potatoes, and steak."
+    ]
+  },
+  {
+    "id": "caprese_high_protein_chicken_pasta_bowl",
+    "name": "Caprese High Protein Chicken & Pasta Bowl",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) grilled chicken breast, sliced",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "85 g (1 cup) cooked Barilla Protein+ rotini pasta",
+        "amount_g": 85.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "100 g (½ cup) cherry tomatoes, halved",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "40 g (2 cups) spinach, chopped",
+        "amount_g": 40.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "40 g (¼ cup) part-skim mozzarella pieces",
+        "amount_g": 40.0,
+        "amount_cups": 0.25
+      },
+      {
+        "ingredient": "10 g (2 tbsp) fresh basil, chopped",
+        "amount_g": 10.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "20 g (2 tsp) balsamic glaze; salt & pepper",
+        "amount_g": 20.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional seasonings: oregano, garlic powder",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Season and cook chicken. Combine pasta, spinach, tomatoes, mozzarella, basil. Top with chicken; drizzle balsamic."
+    ]
+  },
+  {
+    "id": "salmon_sushi_bowl_cooked",
+    "name": "Salmon Sushi Bowl (Cooked)",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "120 g (4.2 oz) cooked salmon fillet, flaked",
+        "amount_g": 120.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (½ cup) cooked brown rice",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "80 g (½ cup) shelled edamame",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "80 g (½ cup) cucumber, diced",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "60 g (½ cup) shredded carrots",
+        "amount_g": 60.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "50 g (⅓ medium) avocado, sliced",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "40 g (2 cups) spinach, chopped",
+        "amount_g": 40.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "2 g (1 tsp) nori crumbles",
+        "amount_g": 2.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "20 g (1 tbsp) low-sodium soy sauce; salt & pepper to taste",
+        "amount_g": 20.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional flavoring: sesame seeds, fresh ginger, green onion garnish",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Add rice and spinach. Top with salmon, edamame, cucumber, carrots, avocado. Add nori, soy, and seasonings/garnishes to taste."
+    ]
+  },
+  {
+    "id": "chicken_sweet_potato_black_bean_bowl",
+    "name": "Chicken, Sweet Potato & Black Bean Bowl",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "63 g (2.2 oz) grilled chicken breast, diced",
+        "amount_g": 63.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (⅔ cup) roasted sweet potato cubes",
+        "amount_g": 100.0,
+        "amount_cups": 0.6666666666666666
+      },
+      {
+        "ingredient": "80 g (⅓ cup) black beans, drained & rinsed",
+        "amount_g": 80.0,
+        "amount_cups": 0.3333333333333333
+      },
+      {
+        "ingredient": "60 g (2 cups) spinach, chopped",
+        "amount_g": 60.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "80 g (1 cup) bell peppers, roasted/sautéed",
+        "amount_g": 80.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "60 g (⅓ cup) corn kernels",
+        "amount_g": 60.0,
+        "amount_cups": 0.3333333333333333
+      },
+      {
+        "ingredient": "30 g (2 tbsp) plain nonfat Greek yogurt",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Fresh cilantro + lime; salt & pepper",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional spices: cumin, smoked paprika, chili powder",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Cook chicken with spices. Place spinach in a bowl, add sweet potato, black beans, peppers, corn, chicken. Top with yogurt, cilantro, and lime."
+    ]
+  },
+  {
+    "id": "simple_basics_chicken_baked_potato_green_peas",
+    "name": "Simple Basics: Chicken + Baked Potato + Green Peas",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) grilled chicken breast",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "150 g (1 medium) baked potato",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (1 cup) green peas",
+        "amount_g": 100.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "30 g (2 tbsp) plain nonfat Greek yogurt (potato topping)",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional seasonings: garlic, parsley, lemon, G Hughes sugar free sauce of choice",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Serve chicken with baked potato (topped with Greek yogurt) and peas."
+    ]
+  },
+  {
+    "id": "simple_basics_salmon_sweet_potato_broccoli",
+    "name": "Simple Basics: Salmon + Sweet Potato + Broccoli",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "120 g (4.2 oz) grilled salmon fillet",
+        "amount_g": 120.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "150 g (1 cup) roasted sweet potato",
+        "amount_g": 150.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "100 g (1 cup) broccoli, steamed",
+        "amount_g": 100.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "Salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional seasonings: dill, lemon, garlic, G Hughes sugar free sauce of choice",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Serve salmon with sweet potato and broccoli."
+    ]
+  },
+  {
+    "id": "simple_basics_steak_mashed_potatoes_asparagus",
+    "name": "Simple Basics: Steak + Mashed Potatoes + Asparagus",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "120 g (4.2 oz) grilled top sirloin steak",
+        "amount_g": 120.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "150 g (1 cup) mashed red potatoes (with plain nonfat Greek yogurt)",
+        "amount_g": 150.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "100 g (1 cup) asparagus, roasted",
+        "amount_g": 100.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "Salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional seasonings: rosemary, thyme, garlic, G Hughes sugar free sauce of choice",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Serve steak with mashed potatoes and asparagus."
+    ]
+  },
+  {
+    "id": "high_protein_pasta_bake",
+    "name": "High Protein Pasta Bake",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) cooked ground turkey (93%+ lean)",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "85 g (1 cup) cooked Barilla Protein+ pasta",
+        "amount_g": 85.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "60 g (2 cups) spinach, chopped",
+        "amount_g": 60.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "100 g (½ cup) sugar-free marinara sauce",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "60 g (¼ cup) nonfat cottage cheese",
+        "amount_g": 60.0,
+        "amount_cups": 0.25
+      },
+      {
+        "ingredient": "20 g (2 tbsp) part-skim mozzarella",
+        "amount_g": 20.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Garlic powder, onion powder, dried basil, dried oregano, salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Mix pasta, marinara, cottage cheese, spinach, turkey. Place in baking dish, top with mozzarella; bake until bubbly."
+    ]
+  },
+  {
+    "id": "chicken_black_bean_enchiladas",
+    "name": "Chicken & Black Bean Enchiladas",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "120 g (4.2 oz) cooked ground or shredded chicken breast",
+        "amount_g": 120.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "40 g (1 small) whole-grain tortilla",
+        "amount_g": 40.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (½ cup) black beans, drained & rinsed",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "75 g (½ cup) bell peppers + onions, sautéed",
+        "amount_g": 75.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "100 g (½ cup) sugar-free enchilada sauce",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "30 g (2 tbsp) plain nonfat Greek yogurt (topping)",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Fresh cilantro + lime; salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional spices: chili powder, cumin, smoked paprika",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Fill tortilla with chicken, beans, peppers/onions. Roll into dish, pour over sauce; bake to heat through. Top with yogurt, cilantro, lime."
+    ]
+  },
+  {
+    "id": "ground_beef_or_turkey_tacos",
+    "name": "Ground Beef or Turkey Tacos",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "120 g (4.2 oz) cooked lean ground beef or turkey",
+        "amount_g": 120.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "2 small (50 g) corn tortillas",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "80 g (½ cup) black beans, drained & rinsed",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "75 g (½ cup) peppers + onions, sautéed",
+        "amount_g": 75.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "60 g (2 cups) romaine, shredded",
+        "amount_g": 60.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "80 g (½ cup) cherry tomatoes, diced",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "50 g (⅓ medium) avocado, sliced",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "30 g (2 tbsp) nonfat Greek yogurt",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Fresh cilantro + lime; salt & pepper",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional spices: chili powder, cumin, garlic powder",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Fill tortillas with meat, beans, peppers/onions, romaine, tomatoes, avocado. Top with yogurt, cilantro, lime."
+    ]
+  },
+  {
+    "id": "spaghetti_with_ground_turkey_bolognese",
+    "name": "Spaghetti with Ground Turkey Bolognese",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) cooked ground turkey (93%+ lean)",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "85 g (1 cup) cooked Barilla Protein+ spaghetti noodles",
+        "amount_g": 85.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "100 g (½ cup) sugar-free marinara sauce",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "40 g (2 cups) side mixed greens salad",
+        "amount_g": 40.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "10 g (2 tsp) olive oil (on salad)",
+        "amount_g": 10.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Garlic powder, basil, oregano, salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Cook turkey and then simmer in marinara. Serve over pasta with salad on the side."
+    ]
+  },
+  {
+    "id": "stir_fry_chicken_or_shrimp",
+    "name": "Stir Fry - Chicken or Shrimp",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) grilled shrimp or chicken breast",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (½ cup) cooked brown rice",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "80 g (1 cup) broccoli florets",
+        "amount_g": 80.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "80 g (1 cup) snap peas",
+        "amount_g": 80.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "80 g (1 cup) bell peppers + carrots",
+        "amount_g": 80.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "20 g (1 tbsp) low-sodium soy sauce",
+        "amount_g": 20.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Garlic, ginger, salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Stir-fry protein with veggies, soy sauce and seasonings. Serve over rice."
+    ]
+  },
+  {
+    "id": "white_chicken_chili",
+    "name": "White Chicken Chili",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) shredded chicken breast",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (½ cup) white beans, drained & rinsed",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "75 g (½ cup) peppers, diced",
+        "amount_g": 75.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "40 g (¼ cup) onion, diced",
+        "amount_g": 40.0,
+        "amount_cups": 0.25
+      },
+      {
+        "ingredient": "100 g (½ cup) low-sodium chicken broth",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "30 g (2 tbsp) plain nonfat Greek yogurt (to finish)",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Fresh cilantro; salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional spices: cumin, garlic powder, smoked paprika",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Simmer chicken, beans, peppers, onion, broth and spices. Finish with yogurt and cilantro."
+    ]
+  },
+  {
+    "id": "chicken_sweet_potato_black_bean_tacos",
+    "name": "Chicken, Sweet Potato & Black Bean Tacos",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "60 g (½ cup) roasted sweet potato cubes",
+        "amount_g": 60.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "2 small (50 g) corn tortillas",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "80 g (½ cup) black beans, drained & rinsed",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "75 g (½ cup) bell peppers, sautéed",
+        "amount_g": 75.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "66 g (2.3 oz) grilled chicken breast, diced",
+        "amount_g": 66.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Fresh cilantro + lime; salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional spices: chili powder, cumin, smoked paprika",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Cook chicken and black beans with spices in skillet. Warm tortillas; fill with sweet potato, beans, peppers, chicken. Top with cilantro and lime."
+    ]
+  },
+  {
+    "id": "chicken_potato_brussels_sprouts_sheet_pan",
+    "name": "Chicken, Potato & Brussels Sprouts Sheet Pan",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) chicken breast, cut into strips or cubes",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "150 g (1 cup) red potatoes, cut into wedges",
+        "amount_g": 150.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "100 g (1 cup) Brussels sprouts, halved",
+        "amount_g": 100.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "40 g (¼ cup) red onion, sliced",
+        "amount_g": 40.0,
+        "amount_cups": 0.25
+      },
+      {
+        "ingredient": "5 g (1 tsp) olive oil (light spray or drizzle)",
+        "amount_g": 5.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Salt and pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Fresh parsley, chopped (for garnish)",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional spices: garlic, smoked paprika, thyme, rosemary",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Preheat oven to 400°F (200°C). Place chicken, potatoes, Brussels sprouts, and red onion on a parchment-lined sheet pan. Lightly spray or drizzle with olive oil and season. Roast 25-30 minutes, flipping halfway, until chicken is cooked and potatoes are tender."
+    ]
+  },
+  {
+    "id": "beef_or_turkey_red_bean_chili_crock_pot",
+    "name": "Beef or Turkey & Red Bean Chili (Crock Pot)",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) cooked lean ground turkey or lean ground beef",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (½ cup) kidney beans, drained & rinsed",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "100 g (½ cup) black beans, drained & rinsed",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "100 g (½ cup) diced tomatoes in juice",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "75 g (½ cup) peppers + onions, chopped",
+        "amount_g": 75.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "100 g (½ cup) low-sodium chicken broth",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "30 g (2 tbsp) plain nonfat Greek yogurt (topping)",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Fresh cilantro; salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional spices: chili powder, cumin, smoked paprika, salsa",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Add all ingredients to crock pot; cook 4-6 hours. Top with yogurt and cilantro."
+    ]
+  },
+  {
+    "id": "chicken_fajitas_crock_pot",
+    "name": "Chicken Fajitas (Crock Pot)",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) boneless skinless chicken breast, sliced",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (½ cup) bell peppers, sliced",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "100 g (½ cup) onions, sliced",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "80 g (½ cup) black beans, drained & rinsed",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "2 small corn tortillas (50 g total)",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Fresh cilantro, lime juice, salt and pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Seasonings: chili powder, cumin, smoked paprika, garlic",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Place chicken, peppers, onions, and seasonings in crock pot. Cook 4-6 hours. Warm tortillas; fill with crock-pot mixture, black beans, cilantro, and lime juice."
+    ]
+  },
+  {
+    "id": "chicken_lentil_vegetable_soup_crock_pot",
+    "name": "Chicken, Lentil & Vegetable Soup (Crock Pot)",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) shredded chicken breast",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (½ cup) lentils",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "75 g (½ cup) carrots, diced",
+        "amount_g": 75.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "75 g (½ cup) celery, diced",
+        "amount_g": 75.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "50 g (1 cup) kale, chopped",
+        "amount_g": 50.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "100 g (½ cup) diced tomatoes",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "250 g (2 cups) low-sodium chicken broth",
+        "amount_g": 250.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "Seasonings: garlic, thyme, rosemary",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Fresh parsley; salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Add all to crock pot; cook 4-6 hours on low until tender. Garnish with parsley."
+    ]
+  },
+  {
+    "id": "bbq_pulled_chicken_sandwiches",
+    "name": "BBQ Pulled Chicken Sandwiches",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) shredded chicken breast",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "40 g (2 tbsp) G. Hughes sugar-free BBQ sauce",
+        "amount_g": 40.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "1 whole-grain bun (60 g)",
+        "amount_g": 60.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (1 cup) green beans, sautéed",
+        "amount_g": 100.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "Seasonings: smoked paprika, garlic powder; salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Slow-cook chicken with BBQ sauce; shred. Serve on bun with green beans on the side."
+    ]
+  },
+  {
+    "id": "greek_chicken_powerhouse_salad",
+    "name": "Greek Chicken Powerhouse Salad",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "120 g (4.2 oz) grilled chicken breast, sliced",
+        "amount_g": 120.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "60 g (2 cups) spinach + kale mix, chopped",
+        "amount_g": 60.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "80 g (½ cup) cherry tomatoes, halved",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "80 g (½ cup) cucumber, diced",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "80 g (½ cup) chickpeas, drained & rinsed",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "20 g (2 tbsp) Kalamata olives, sliced",
+        "amount_g": 20.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "30 g (2 tbsp) plain nonfat Greek yogurt",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "10 g (2 tsp) tahini",
+        "amount_g": 10.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "10 g (1 tbsp) slivered almonds or walnuts",
+        "amount_g": 10.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Fresh parsley and Greek seasoning, lemon, salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Mix greens, tomatoes, cucumber, chickpeas. Top with chicken and olives. Whisk yogurt, tahini, lemon, parsley; drizzle. Sprinkle nuts."
+    ]
+  },
+  {
+    "id": "high_protein_chicken_caesar",
+    "name": "High-Protein Chicken Caesar",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "150 g (5.3 oz) grilled chicken breast, sliced",
+        "amount_g": 150.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "80 g (2½ cups) romaine, chopped",
+        "amount_g": 80.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "40 g (1½ cups) baby spinach",
+        "amount_g": 40.0,
+        "amount_cups": 1.0
+      },
+      {
+        "ingredient": "30 g (2 tbsp) part-skim Parmesan, shaved",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "50 g (3 tbsp) plain nonfat Greek yogurt",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "10 g (1 tbsp) olive oil",
+        "amount_g": 10.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "10 g (2 tsp) lemon juice",
+        "amount_g": 10.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Lemon juice, Dijon mustard, garlic, salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Whisk yogurt, oil, lemon, Dijon, garlic for dressing. Mix greens, chicken, Parmesan. Drizzle dressing."
+    ]
+  },
+  {
+    "id": "quinoa_taco_salad",
+    "name": "Quinoa Taco Salad",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "100 g (½ cup) cooked quinoa",
+        "amount_g": 100.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "80 g (½ cup) black beans, drained & rinsed",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "120 g (4.2 oz) cooked shredded chicken breast",
+        "amount_g": 120.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "60 g (2 cups) romaine, chopped",
+        "amount_g": 60.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "80 g (½ cup) cherry tomatoes, halved",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "40 g (¼ cup) red onion, diced",
+        "amount_g": 40.0,
+        "amount_cups": 0.25
+      },
+      {
+        "ingredient": "50 g (⅓ medium) avocado, diced",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Fresh cilantro + lime juice to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional spices: cumin, chili powder",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Mix all ingredients in a bowl."
+    ]
+  },
+  {
+    "id": "salmon_apple_power_salad",
+    "name": "Salmon & Apple Power Salad",
+    "meal_type": "dinner",
+    "ingredients": [
+      {
+        "ingredient": "120 g (4.2 oz) grilled salmon fillet, flaked",
+        "amount_g": 120.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "60 g (2 cups) spinach + arugula mix, chopped",
+        "amount_g": 60.0,
+        "amount_cups": 2.0
+      },
+      {
+        "ingredient": "80 g (½ cup) cucumber, diced",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "40 g (¼ cup) red onion, thinly sliced",
+        "amount_g": 40.0,
+        "amount_cups": 0.25
+      },
+      {
+        "ingredient": "80 g (½ cup) shelled edamame",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "80 g (½ cup) Granny Smith apple, diced (skin on)",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "15 g (1 tbsp) walnuts, chopped",
+        "amount_g": 15.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "10 g (2 tbsp) part-skim feta, crumbled",
+        "amount_g": 10.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Lemon Vinaigrette",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "20 g (1½ tbsp) fresh lemon juice",
+        "amount_g": 20.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "5 g (1 tsp) olive oil",
+        "amount_g": 5.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Dijon mustard, garlic, oregano; salt & pepper to taste",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Mix greens, cucumber, onion, edamame, apple. Top with salmon, walnuts, feta. Whisk vinaigrette and drizzle on top."
+    ]
+  },
+  {
+    "id": "boiled_eggs_edamame_hummus_veggies",
+    "name": "Boiled Eggs, Edamame, Hummus & Veggies",
+    "meal_type": "snack",
+    "ingredients": [
+      {
+        "ingredient": "2 boiled eggs (100 g)",
+        "amount_g": 100.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "125 g (¾ cup) steamed shelled edamame",
+        "amount_g": 125.0,
+        "amount_cups": 0.75
+      },
+      {
+        "ingredient": "40 g (2 tbsp) store-bought hummus",
+        "amount_g": 40.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (1 cup) raw veggies (cucumber, bell pepper, carrots, celery, broccoli, etc.)",
+        "amount_g": 100.0,
+        "amount_cups": 1.0
+      }
+    ],
+    "directions": [
+      "Boil eggs in advance. Microwave frozen edamame and season (salt or Everything But The Bagel seasoning). Serve with hummus and fresh veggies for dipping."
+    ]
+  },
+  {
+    "id": "edamame_avocado_toast_string_cheese",
+    "name": "Edamame Avocado Toast & String Cheese",
+    "meal_type": "snack",
+    "ingredients": [
+      {
+        "ingredient": "2 slices (90 g) Dave’s Killer Bread or Ezekiel bread",
+        "amount_g": 90.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "50 g (¼ cup) mashed avocado",
+        "amount_g": 50.0,
+        "amount_cups": 0.25
+      },
+      {
+        "ingredient": "100 g (¾ cup) frozen shelled edamame",
+        "amount_g": 100.0,
+        "amount_cups": 0.75
+      },
+      {
+        "ingredient": "20 g (2 tbsp) hemp hearts",
+        "amount_g": 20.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "28 g (1 stick) light string cheese",
+        "amount_g": 28.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Toast bread. Microwave edamame. Spread avocado on toast, top with edamame and hemp hearts. Season as desired. Serve string cheese on the side."
+    ]
+  },
+  {
+    "id": "barebell_protein_bar_protein_yogurt",
+    "name": "Barebell Protein Bar & Protein Yogurt",
+    "meal_type": "snack",
+    "ingredients": [
+      {
+        "ingredient": "1 Barebell protein bar",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "1 Oikos Pro yogurt cup",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Eat together as a high-protein, grab-and-go snack."
+    ]
+  },
+  {
+    "id": "pbfit_banana_rice_cakes_oikos_yogurt",
+    "name": "PBfit Banana Rice Cakes & Oikos Yogurt",
+    "meal_type": "snack",
+    "ingredients": [
+      {
+        "ingredient": "2 rice cakes (28 g)",
+        "amount_g": 28.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "16 g (¼ cup dry) PBfit powder (mixed with water to spread)",
+        "amount_g": 16.0,
+        "amount_cups": 0.25
+      },
+      {
+        "ingredient": "120 g (1 medium) banana, sliced",
+        "amount_g": 120.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "5 g (1 tsp) hemp seeds",
+        "amount_g": 5.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "150 g (⅔ cup) Oikos Pro yogurt (any flavor)",
+        "amount_g": 150.0,
+        "amount_cups": 0.6666666666666666
+      },
+      {
+        "ingredient": "5 g (1 tsp) honey",
+        "amount_g": 5.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Mix PBfit with water to form a spread. Spread onto rice cakes, top with banana slices, hemp seeds, and drizzle with honey. Serve yogurt on the side."
+    ]
+  },
+  {
+    "id": "tuna_avocado_crackers_plate",
+    "name": "Tuna & Avocado Crackers Plate",
+    "meal_type": "snack",
+    "ingredients": [
+      {
+        "ingredient": "1 can (120 g) tuna in water, drained",
+        "amount_g": 120.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "50 g (¼ avocado), mashed",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "20 g (2 tbsp) red onion, diced",
+        "amount_g": 20.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "30 g (2 tbsp) celery, chopped",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "6 whole grain crackers (30 g)",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g (1 cup) raw veggies (carrots, cucumber, bell pepper) or 100 g (¾ cup) fresh fruit",
+        "amount_g": 100.0,
+        "amount_cups": 1.0
+      }
+    ],
+    "directions": [
+      "Mash avocado and mix with tuna, onion, and celery. Season as desired. Serve with crackers and veggies or fruit on the side."
+    ]
+  },
+  {
+    "id": "high_protein_mini_charcuterie_snack_box",
+    "name": "High Protein Mini Charcuterie Snack Box",
+    "meal_type": "snack",
+    "ingredients": [
+      {
+        "ingredient": "120 g (4 oz) nitrate-free deli turkey or chicken breast slices",
+        "amount_g": 120.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "40 g (2 slices) part-skim mozzarella or 2 light string cheeses",
+        "amount_g": 40.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "40 g hummus (single-serve pack)",
+        "amount_g": 40.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "6 whole grain crackers (30 g)",
+        "amount_g": 30.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "100 g raw veggies (cucumber, bell pepper, carrots, celery)",
+        "amount_g": 100.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Optional: add 50 g fresh fruit",
+        "amount_g": 50.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Roll deli turkey or chicken into bite-sized rolls. Pair with cheese, crackers, hummus, and veggies. Add fruit if desired. Serve chilled."
+    ]
+  },
+  {
+    "id": "shrimp_cocktail_with_avocado_rice_cakes",
+    "name": "Shrimp Cocktail with Avocado Rice Cakes",
+    "meal_type": "snack",
+    "ingredients": [],
+    "directions": [
+      "Prep shrimp or purchase pre-cooked. Spread avocado over rice cakes, sprinkle with hemp seeds. Garnish with lemon and parsley if desired. Serve with cocktail sauce."
+    ]
+  },
+  {
+    "id": "high_protein_berry_cheesecake_bowl",
+    "name": "High Protein Berry Cheesecake Bowl",
+    "meal_type": "snack",
+    "ingredients": [
+      {
+        "ingredient": "200 g (¾ cup) plain nonfat Greek yogurt",
+        "amount_g": 200.0,
+        "amount_cups": 0.75
+      },
+      {
+        "ingredient": "20 g (2 tbsp) vanilla whey protein",
+        "amount_g": 20.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "40 g (¼ cup) low-fat cottage cheese",
+        "amount_g": 40.0,
+        "amount_cups": 0.25
+      },
+      {
+        "ingredient": "80 g (½ cup) mixed berries of choice",
+        "amount_g": 80.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "5 g (1 tsp) graham cracker crumbs or oats for crunch",
+        "amount_g": 5.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Stevia to taste if desired",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Blend yogurt, protein powder, and cottage cheese until creamy. Stir in berries and sprinkle with graham crumbs. Chill ~15 minutes before eating."
+    ]
+  },
+  {
+    "id": "apple_cinnamon_protein_parfait",
+    "name": "Apple Cinnamon Protein Parfait",
+    "meal_type": "snack",
+    "ingredients": [
+      {
+        "ingredient": "150 g (⅔ cup) plain nonfat Greek yogurt",
+        "amount_g": 150.0,
+        "amount_cups": 0.6666666666666666
+      },
+      {
+        "ingredient": "20 g (2 tbsp) vanilla whey protein",
+        "amount_g": 20.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "1 medium apple (180 g), diced & microwaved with cinnamon until soft",
+        "amount_g": 180.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "20 g (2 tbsp) walnuts, chopped",
+        "amount_g": 20.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Stevia to taste if desired",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Mix yogurt and protein until smooth. Layer with warm cinnamon-apple mixture. Sprinkle walnuts on top."
+    ]
+  },
+  {
+    "id": "ninja_creami_vanilla_berries_frozen_yogurt",
+    "name": "Ninja Creami Vanilla & Berries Frozen Yogurt",
+    "meal_type": "snack",
+    "ingredients": [
+      {
+        "ingredient": "200 g (¾ cup) plain nonfat Greek yogurt",
+        "amount_g": 200.0,
+        "amount_cups": 0.75
+      },
+      {
+        "ingredient": "90 g (⅔ cup) frozen mixed berries",
+        "amount_g": 90.0,
+        "amount_cups": 0.6666666666666666
+      },
+      {
+        "ingredient": "120 ml (½ cup) Fairlife fat-free milk",
+        "amount_g": 0.0,
+        "amount_cups": 0.5
+      },
+      {
+        "ingredient": "10 g (1 tbsp) vanilla whey protein",
+        "amount_g": 10.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Stevia (to taste if desired)",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      },
+      {
+        "ingredient": "Vanilla extract (to taste)",
+        "amount_g": 0.0,
+        "amount_cups": 0.0
+      }
+    ],
+    "directions": [
+      "Mix all ingredients. Freeze in Ninja Creami pint container overnight. Spin once (re-spin with more milk if needed). Mix in or top with berries before serving."
+    ]
+  }
+]

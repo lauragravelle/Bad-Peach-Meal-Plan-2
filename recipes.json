@@ -1,0 +1,695 @@
+{
+  "recipes": [
+    {
+      "id": "high_protein_oats_berries_bowl",
+      "name": "High Protein Oats & Berries Bowl",
+      "meal_type": "breakfast",
+      "instructions": "Mix oats with desired water amount and microwave 1-2 minutes. Stir in other ingredients.",
+      "ingredients": [
+        { "name": "Rolled oats", "amount_g": 30.0, "calories_kcal": 113.7, "protein_g": 4.0, "fdcId": "175028" },
+        { "name": "Nonfat greek yogurt", "amount_g": 140.0, "calories_kcal": 85.4, "protein_g": 14.4, "fdcId": "330137" },
+        { "name": "Vanilla whey protein powder", "amount_g": 30.0, "calories_kcal": 120.0, "protein_g": 24.0, "fdcId": "173180" },
+        { "name": "Mixed berries - fresh or frozen", "amount_g": 70.0, "calories_kcal": 35.0, "protein_g": 0.4, "fdcId": "174803" },
+        { "name": "Chia seeds", "amount_g": 5.0, "calories_kcal": 24.3, "protein_g": 0.8, "fdcId": "170554" },
+        { "name": "Cinnamon", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171849" }
+      ]
+    },
+    {
+      "id": "vanilla_berry_protein_shake",
+      "name": "Vanilla-Berry Protein Shake",
+      "meal_type": "breakfast",
+      "instructions": "Add all ingredients to a blender and blend until smooth.\nNotes\nUse different protein powder flavors as desired.",
+      "ingredients": [
+        { "name": "Vanilla whey protein powder", "amount_g": 35.0, "calories_kcal": 140.0, "protein_g": 28.0, "fdcId": "173180" },
+        { "name": "Mixed berries - fresh or frozen", "amount_g": 90.0, "calories_kcal": 45.0, "protein_g": 0.5, "fdcId": "174803" },
+        { "name": "Chia seeds", "amount_g": 10.0, "calories_kcal": 48.6, "protein_g": 1.6, "fdcId": "170554" },
+        { "name": "Nonfat greek yogurt", "amount_g": 150.0, "calories_kcal": 91.5, "protein_g": 15.4, "fdcId": "330137" },
+        { "name": "Water", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169301" },
+        { "name": "Spinach", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "2401036" }
+      ]
+    },
+    {
+      "id": "cottage_cheese_eggs_avocado_toast",
+      "name": "Cottage Cheese Eggs & Avocado Toast",
+      "meal_type": "breakfast",
+      "instructions": "Scramble eggs with cottage cheese in a nonstick skillet. Toast the bread and spread avocado on top. Sprinkle with seasoning and serve.",
+      "ingredients": [
+        { "name": "Low-fat cottage cheese", "amount_g": 100.0, "calories_kcal": 81.0, "protein_g": 11.1, "fdcId": "169079" },
+        { "name": "Large egg", "amount_g": 50.0, "calories_kcal": 71.5, "protein_g": 6.3, "fdcId": "747997" },
+        { "name": "Egg whites or liquid egg whites", "amount_g": 66.0, "calories_kcal": 34.3, "protein_g": 7.3, "fdcId": "747997" },
+        { "name": "Dave’s Killer Bread", "amount_g": 90.0, "calories_kcal": 220.0, "protein_g": 12, "fdcId": "170772" },
+        { "name": "Avocado", "amount_g": 50.0, "calories_kcal": 80.0, "protein_g": 1.0, "fdcId": "173573" },
+        { "name": "Everything but the bagel seasoning", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "174901" }
+      ]
+    },
+    {
+      "id": "blueberry_protein_pancakes",
+      "name": "Blueberry Protein Pancakes",
+      "meal_type": "breakfast",
+      "instructions": "Mix all ingredients (except syrup) into a smooth batter. Cook pancakes on a nonstick skillet until golden.\nMeal Prep Tips\nCan also be made as waffles. Batch cook, freeze, and reheat in toaster for easy prep.",
+      "ingredients": [
+        { "name": "Kodiak pancake mix", "amount_g": 50.0, "calories_kcal": 190.0, "protein_g": 12.0, "fdcId": "172774" },
+        { "name": "Large egg", "amount_g": 50.0, "calories_kcal": 71.5, "protein_g": 6.3, "fdcId": "747997" },
+        { "name": "Egg whites or liquid egg whites", "amount_g": 66.0, "calories_kcal": 34.3, "protein_g": 7.3, "fdcId": "747997" },
+        { "name": "Baking powder", "amount_g": 2.0, "calories_kcal": 1.1, "protein_g": 0.0, "fdcId": "172805" },
+        { "name": "Nonfat greek yogurt", "amount_g": 40.0, "calories_kcal": 24.4, "protein_g": 4.1, "fdcId": "330137" },
+        { "name": "Vanilla whey protein powder", "amount_g": 10.0, "calories_kcal": 40.0, "protein_g": 8.0, "fdcId": "173180" },
+        { "name": "Blueberries - fresh or frozen", "amount_g": 50.0, "calories_kcal": 28.5, "protein_g": 0.3, "fdcId": "173951" },
+        { "name": "Real maple syrup", "amount_g": 10.0, "calories_kcal": 26.0, "protein_g": 0.0, "fdcId": "169661" }
+      ]
+    },
+    {
+      "id": "egg_scramble_toast",
+      "name": "Egg Scramble & Toast",
+      "meal_type": "breakfast",
+      "instructions": "Sauté veggies and black beans in a nonstick skillet. Scramble in whole eggs and egg whites. Toast the bread and top with egg scramble. Optional: garnish with Cholula and minced cilantro.",
+      "ingredients": [
+        { "name": "Large egg", "amount_g": 100.0, "calories_kcal": 143.0, "protein_g": 12.6, "fdcId": "747997" },
+        { "name": "Egg whites or liquid egg whites", "amount_g": 132.0, "calories_kcal": 68.6, "protein_g": 14.5, "fdcId": "747997" },
+        { "name": "Mixed vegetables - onions and peppers", "amount_g": 100.0, "calories_kcal": 35.0, "protein_g": 2.0, "fdcId": "172283" },
+        { "name": "Black beans", "amount_g": 40.0, "calories_kcal": 52.8, "protein_g": 3.6, "fdcId": "173734" },
+        { "name": "Dave’s Killer Bread", "amount_g": 45.0, "calories_kcal": 110, "protein_g": 6, "fdcId": "170772" }
+      ]
+    },
+    {
+      "id": "high_protein_yogurt_parfait",
+      "name": "High Protein Yogurt Parfait",
+      "meal_type": "breakfast",
+      "instructions": "Mix yogurt, chia seeds and protein. Top with berries and almonds.",
+      "ingredients": [
+        { "name": "Nonfat greek yogurt", "amount_g": 170.0, "calories_kcal": 103.7, "protein_g": 17.5, "fdcId": "330137" },
+        { "name": "Vanilla whey protein powder", "amount_g": 30.0, "calories_kcal": 120.0, "protein_g": 24.0, "fdcId": "173180" },
+        { "name": "Chia seeds", "amount_g": 10.0, "calories_kcal": 48.6, "protein_g": 1.6, "fdcId": "170554" },
+        { "name": "Almonds", "amount_g": 10.0, "calories_kcal": 57.9, "protein_g": 2.1, "fdcId": "170567" },
+        { "name": "Mixed berries - fresh or frozen", "amount_g": 80.0, "calories_kcal": 40.0, "protein_g": 0.5, "fdcId": "174803" }
+      ]
+    },
+    {
+      "id": "veggie_egg_white_frittata_muffins",
+      "name": "Veggie Egg White Frittata Muffins",
+      "meal_type": "breakfast",
+      "instructions": "Preheat oven to 375°F (190°C). Spray muffin tin with nonstick spray. Heat nonstick spray in a skillet and sauté vegetables 3-4 minutes. Divide vegetables evenly into 4 muffin cups. Pour egg whites over vegetables and top with feta. Bake 20-25 minutes or until set.\nMeal Prep Tips\nStore in fridge for 4 days or freeze up to 1 month. Microwave ~30 seconds to reheat.",
+      "ingredients": [
+        { "name": "Liquid egg whites", "amount_g": 243, "calories_kcal": 126, "protein_g": 26, "fdcId": "173462" },
+        { "name": "Onions and peppers", "amount_g": 72, "calories_kcal": 47, "protein_g": 0.5, "fdcId": "172283" },
+        { "name": "Reduced-fat feta cheese", "amount_g": 28, "calories_kcal": 50, "protein_g": 5, "fdcId": "172215" },
+        { "name": "Salt and pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170109" }
+      ]
+    },
+    {
+      "id": "egg_avocado_ham_veggie_bagel_sandwich",
+      "name": "Egg, Avocado & Ham Veggie Bagel Sandwich",
+      "meal_type": "breakfast",
+      "instructions": "Sáuté peppers/onions with spray 2-3 minutes. Add egg whites + egg; season and cook into patty. Warm ham 30 sec per side. Toast bagel and layer all ingredients on bagel.\nMeal Prep Tips\nMake 2-3 sandwiches, wrap in foil, refrigerate ≤3 days, reheat in toaster or air fryer ~3 minutes.",
+      "ingredients": [
+        { "name": "Thin-style whole grain bagel", "amount_g": 55.0, "calories_kcal": 150.0, "protein_g": 5.5, "fdcId": "174901" },
+        { "name": "Liquid egg whites", "amount_g": 125.0, "calories_kcal": 65.0, "protein_g": 13.8, "fdcId": "173462" },
+        { "name": "Large egg", "amount_g": 50.0, "calories_kcal": 71.5, "protein_g": 6.3, "fdcId": "747997" },
+        { "name": "Lean deli ham", "amount_g": 56.0, "calories_kcal": 67.2, "protein_g": 10.3, "fdcId": "168092" },
+        { "name": "Avocado", "amount_g": 30.0, "calories_kcal": 48.0, "protein_g": 0.6, "fdcId": "173573" },
+        { "name": "Onions and peppers", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "172283" },
+        { "name": "Salt, pepper, everything but the bagel seasoning", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "174901" },
+        { "name": "Light cream cheese", "amount_g": 15.0, "calories_kcal": 26.0, "protein_g": 1.5, "fdcId": "173443" }
+      ]
+    },
+    {
+      "id": "mexican_burrito_bowl",
+      "name": "Mexican Burrito Bowl",
+      "meal_type": "dinner",
+      "instructions": "Layer rice and beans. Add chicken, peppers/onions, romaine, tomatoes, avocado. Top with yogurt, cilantro, lime, and seasonings.",
+      "ingredients": [
+        { "name": "Chicken breast - cooked", "amount_g": 150.0, "calories_kcal": 213.0, "protein_g": 29.8, "fdcId": "173686" },
+        { "name": "Brown rice", "amount_g": 100.0, "calories_kcal": 130.0, "protein_g": 2.7, "fdcId": "169757" },
+        { "name": "Black beans", "amount_g": 100.0, "calories_kcal": 132.0, "protein_g": 8.9, "fdcId": "173734" },
+        { "name": "Onions and peppers", "amount_g": 75.0, "calories_kcal": 23.2, "protein_g": 0.8, "fdcId": "172283" },
+        { "name": "Romaine", "amount_g": 60.0, "calories_kcal": 10.2, "protein_g": 0.7, "fdcId": "169247" },
+        { "name": "Cherry tomatoes", "amount_g": 80.0, "calories_kcal": 14.4, "protein_g": 0.7, "fdcId": "170461" },
+        { "name": "Avocado", "amount_g": 50.0, "calories_kcal": 80.0, "protein_g": 1.0, "fdcId": "173573" },
+        { "name": "Nonfat greek yogurt", "amount_g": 30.0, "calories_kcal": 18.3, "protein_g": 3.1, "fdcId": "330137" },
+        { "name": "Fresh cilantro + lime juice; salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "168156" },
+        { "name": "Spices: chili powder, cumin, paprika, garlic/onion powder", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": null }
+      ]
+    },
+    {
+      "id": "southwest_chicken_bowl",
+      "name": "Southwest Chicken Bowl",
+      "meal_type": "dinner",
+      "instructions": "Add quinoa and sweet potatoes. Top with chicken, corn, beans, spinach. Finish with cilantro, lime, and season.",
+      "ingredients": [
+        { "name": "Chicken breast - cooked", "amount_g": 150.0, "calories_kcal": 213.0, "protein_g": 29.8, "fdcId": "173686" },
+        { "name": "Quinoa - cooked", "amount_g": 100.0, "calories_kcal": 120.0, "protein_g": 4.4, "fdcId": "168917" },
+        { "name": "Sweet potato", "amount_g": 150.0, "calories_kcal": 135.0, "protein_g": 3.0, "fdcId": "170134" },
+        { "name": "Corn", "amount_g": 80.0, "calories_kcal": 76.8, "protein_g": 2.7, "fdcId": "168920" },
+        { "name": "Black beans", "amount_g": 100.0, "calories_kcal": 132.0, "protein_g": 8.9, "fdcId": "173734" },
+        { "name": "Spinach", "amount_g": 60.0, "calories_kcal": 13.8, "protein_g": 1.7, "fdcId": "2401036" },
+        { "name": "Fresh cilantro + lime; salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169997" },
+        { "name": "Spices: smoked paprika, cumin, garlic powder", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171325" }
+      ]
+    },
+    {
+      "id": "mediterranean_power_bowl",
+      "name": "Mediterranean Power Bowl",
+      "meal_type": "dinner",
+      "instructions": "Layer quinoa, chickpeas, spinach. Add chicken, cucumber, tomatoes. Top with hummus and tzatziki, lemon, herbs, and seasonings.",
+      "ingredients": [
+        { "name": "Chicken breast - cooked", "amount_g": 150.0, "calories_kcal": 213.0, "protein_g": 29.8, "fdcId": "173686" },
+        { "name": "Quinoa - cooked", "amount_g": 100.0, "calories_kcal": 120.0, "protein_g": 4.4, "fdcId": "168917" },
+        { "name": "Chickpeas", "amount_g": 100.0, "calories_kcal": 164.0, "protein_g": 8.9, "fdcId": "2644282" },
+        { "name": "Cucumber", "amount_g": 80.0, "calories_kcal": 12.8, "protein_g": 0.6, "fdcId": "169225" },
+        { "name": "Cherry tomatoes", "amount_g": 80.0, "calories_kcal": 14.4, "protein_g": 0.7, "fdcId": "170461" },
+        { "name": "Spinach", "amount_g": 60.0, "calories_kcal": 13.8, "protein_g": 1.7, "fdcId": "2401036" },
+        { "name": "Hummus", "amount_g": 40.0, "calories_kcal": 66.4, "protein_g": 3.2, "fdcId": "174289" },
+        { "name": "Tzatziki", "amount_g": 30.0, "calories_kcal": 25.8, "protein_g": 1.1, "fdcId": null },
+        { "name": "Lemon juice + parsley; salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170416" },
+        { "name": "Spices: oregano, basil, garlic powder, red pepper flakes", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171325" }
+      ]
+    },
+    {
+      "id": "teriyaki_chicken_veggies_rice_bowl",
+      "name": "Teriyaki Chicken, Veggies & Rice Bowl",
+      "meal_type": "dinner",
+      "instructions": "Add rice, then chicken, broccoli, edamame. Drizzle teriyaki; add optional flavorings and seasonings to the chicken/vegetable mix.",
+      "ingredients": [
+        { "name": "Chicken breast - cooked", "amount_g": 150.0, "calories_kcal": 213.0, "protein_g": 29.8, "fdcId": "173686" },
+        { "name": "Brown rice - cooked", "amount_g": 100.0, "calories_kcal": 130.0, "protein_g": 2.7, "fdcId": "169757" },
+        { "name": "Broccoli florets", "amount_g": 80.0, "calories_kcal": 20.0, "protein_g": 3.1, "fdcId": "170382" },
+        { "name": "Edamame - frozen shelled", "amount_g": 80.0, "calories_kcal": 96.8, "protein_g": 9.5, "fdcId": "168411" },
+        { "name": "G. Hughes sugar-free teriyaki sauce", "amount_g": 40.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171167" },
+        { "name": "Sesame seeds ; salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169416" },
+        { "name": "Flavoring: fresh garlic, fresh ginger, green onion garnish", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170006" }
+      ]
+    },
+    {
+      "id": "ginger_garlic_salmon_bowl",
+      "name": "Ginger & Garlic Salmon Bowl",
+      "meal_type": "dinner",
+      "instructions": "Base of quinoa and spinach. Top with salmon, cucumber, edamame, onion. Drizzle soy and optional flavorings on salmon while cooking or over finished bowl.",
+      "ingredients": [
+        { "name": "Salmon - cooked", "amount_g": 120.0, "calories_kcal": 220.8, "protein_g": 35.9, "fdcId": "173707" },
+        { "name": "Quinoa - cooked", "amount_g": 100.0, "calories_kcal": 120.0, "protein_g": 4.4, "fdcId": "168917" },
+        { "name": "Spinach", "amount_g": 60.0, "calories_kcal": 13.8, "protein_g": 1.7, "fdcId": "2401036" },
+        { "name": "Cucumber", "amount_g": 80.0, "calories_kcal": 12.8, "protein_g": 0.6, "fdcId": "169225" },
+        { "name": "Edamame - frozen shelled", "amount_g": 80.0, "calories_kcal": 96.8, "protein_g": 9.5, "fdcId": "168411" },
+        { "name": "Red onion", "amount_g": 40.0, "calories_kcal": 16.0, "protein_g": 0.4, "fdcId": "790577" },
+        { "name": "Low-sodium soy sauce; salt & pepper", "amount_g": 20.0, "calories_kcal": 10.6, "protein_g": 1.6, "fdcId": "172473" },
+        { "name": "Flavoring: fresh garlic, fresh ginger, sesame seeds", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170150" }
+      ]
+    },
+    {
+      "id": "steak_sweet_potato_roasted_vegetables_bowl",
+      "name": "Steak, Sweet Potato & Roasted Vegetables Bowl",
+      "meal_type": "dinner",
+      "instructions": "Season and cook steak and vegetables with optional herbs. Arugula base. Add roasted vegetables, potatoes, and steak.",
+      "ingredients": [
+        { "name": "Top sirloin steak - cooked", "amount_g": 120.0, "calories_kcal": 240.0, "protein_g": 26.4, "fdcId": "2727574" },
+        { "name": "Brussel sprouts", "amount_g": 150.0, "calories_kcal": 64.5, "protein_g": 4.8, "fdcId": "2685575" },
+        { "name": "Bell peppers + zucchini", "amount_g": 100.0, "calories_kcal": 78.0, "protein_g": 4.5, "fdcId": "169204" },
+        { "name": "Sweet potato", "amount_g": 150.0, "calories_kcal": 135.0, "protein_g": 3.0, "fdcId": "170134" },
+        { "name": "Arugula", "amount_g": 40.0, "calories_kcal": 10.0, "protein_g": 1.0, "fdcId": "169387" },
+        { "name": "Herbs: garlic, rosemary, thyme", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "173470" }
+      ]
+    },
+    {
+      "id": "caprese_high_protein_chicken_pasta_bowl",
+      "name": "Caprese High Protein Chicken & Pasta Bowl",
+      "meal_type": "dinner",
+      "instructions": "Season and cook chicken. Combine pasta, spinach, tomatoes, mozzarella, basil. Top with chicken; drizzle balsamic.",
+      "ingredients": [
+        { "name": "Chicken breast - cooked", "amount_g": 150.0, "calories_kcal": 213.0, "protein_g": 29.8, "fdcId": "173686" },
+        { "name": "Barilla protein+ pasta", "amount_g": 85.0, "calories_kcal": 290.0, "protein_g": 20.0, "fdcId": "174276" },
+        { "name": "Cherry tomatoes", "amount_g": 100.0, "calories_kcal": 18.0, "protein_g": 0.9, "fdcId": "170461" },
+        { "name": "Spinach", "amount_g": 40.0, "calories_kcal": 9.2, "protein_g": 1.2, "fdcId": "2401036" },
+        { "name": "Part-skim mozzarella", "amount_g": 40.0, "calories_kcal": 114.4, "protein_g": 10.0, "fdcId": "2057284" },
+        { "name": "Fresh basil", "amount_g": 10.0, "calories_kcal": 2.3, "protein_g": 0.3, "fdcId": "172232" },
+        { "name": "Balsamic glaze", "amount_g": 20.0, "calories_kcal": 30.0, "protein_g": 0.0, "fdcId": "172241" },
+        { "name": "Seasonings: oregano, garlic powder", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171325" }
+      ]
+    },
+    {
+      "id": "salmon_sushi_bowl_cooked",
+      "name": "Salmon Sushi Bowl (Cooked)",
+      "meal_type": "dinner",
+      "instructions": "Add rice and spinach. Top with salmon, edamame, cucumber, carrots, avocado. Add nori, soy, and seasonings/garnishes to taste.",
+      "ingredients": [
+        { "name": "Salmon - cooked", "amount_g": 120.0, "calories_kcal": 220.8, "protein_g": 35.9, "fdcId": "173707" },
+        { "name": "Brown rice - cooked", "amount_g": 100.0, "calories_kcal": 130.0, "protein_g": 2.7, "fdcId": "169757" },
+        { "name": "Edamame - frozen shelled", "amount_g": 80.0, "calories_kcal": 96.8, "protein_g": 9.5, "fdcId": "168411" },
+        { "name": "Cucumber", "amount_g": 80.0, "calories_kcal": 12.8, "protein_g": 0.6, "fdcId": "169225" },
+        { "name": "Carrots", "amount_g": 60.0, "calories_kcal": 24.6, "protein_g": 0.5, "fdcId": "170393" },
+        { "name": "Avocado", "amount_g": 50.0, "calories_kcal": 80.0, "protein_g": 1.0, "fdcId": "173573" },
+        { "name": "Spinach", "amount_g": 40.0, "calories_kcal": 9.2, "protein_g": 1.2, "fdcId": "2401036" },
+        { "name": "Nori crumbles", "amount_g": 2.0, "calories_kcal": 0.7, "protein_g": 0.1, "fdcId": "2259796" },
+        { "name": "Low-sodium soy sauce", "amount_g": 20.0, "calories_kcal": 10.6, "protein_g": 1.6, "fdcId": "172473" },
+        { "name": "Flavoring: sesame seeds, fresh ginger, green onion garnish", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170006" }
+      ]
+    },
+    {
+      "id": "chicken_sweet_potato_black_bean_bowl",
+      "name": "Chicken, Sweet Potato & Black Bean Bowl",
+      "meal_type": "dinner",
+      "instructions": "Cook chicken with spices. Place spinach in a bowl, add sweet potato, black beans, peppers, corn, chicken. Top with yogurt, cilantro, and lime.",
+      "ingredients": [
+        { "name": "Chicken breast - cooked", "amount_g": 63.0, "calories_kcal": 89.5, "protein_g": 12.5, "fdcId": "173686" },
+        { "name": "Sweet potato", "amount_g": 100.0, "calories_kcal": 90.0, "protein_g": 2.0, "fdcId": "170134" },
+        { "name": "Black beans", "amount_g": 80.0, "calories_kcal": 105.6, "protein_g": 7.1, "fdcId": "173734" },
+        { "name": "Spinach", "amount_g": 60.0, "calories_kcal": 13.8, "protein_g": 1.7, "fdcId": "2401036" },
+        { "name": "Bell peppers", "amount_g": 80.0, "calories_kcal": 24.8, "protein_g": 0.8, "fdcId": "2258588" },
+        { "name": "Corn", "amount_g": 60.0, "calories_kcal": 57.6, "protein_g": 2.0, "fdcId": "168920" },
+        { "name": "Nonfat greek yogurt", "amount_g": 30.0, "calories_kcal": 18.3, "protein_g": 3.1, "fdcId": "330137" },
+        { "name": "Fresh cilantro + lime; salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169997" },
+        { "name": "Spices: cumin, smoked paprika, chili powder", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171319" }
+      ]
+    },
+    {
+      "id": "simple_basics_chicken_baked_potato_green_peas",
+      "name": "Simple Basics: Chicken + Baked Potato + Green Peas",
+      "meal_type": "dinner",
+      "instructions": "Serve chicken with baked potato (topped with Greek yogurt) and peas.",
+      "ingredients": [
+        { "name": "Chicken breast - cooked", "amount_g": 150.0, "calories_kcal": 213.0, "protein_g": 29.8, "fdcId": "173686" },
+        { "name": "Baked potato", "amount_g": 150.0, "calories_kcal": 135.0, "protein_g": 3.0, "fdcId": "170134" },
+        { "name": "Green peas", "amount_g": 100.0, "calories_kcal": 81.0, "protein_g": 5.4, "fdcId": "170419" },
+        { "name": "Nonfat greek yogurt", "amount_g": 30.0, "calories_kcal": 18.3, "protein_g": 3.1, "fdcId": "330137" },
+        { "name": "Salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170109" },
+        { "name": "Seasonings: garlic, parsley, lemon, G Hughes sugar free sauce", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170416" }
+      ]
+    },
+    {
+      "id": "simple_basics_salmon_sweet_potato_broccoli",
+      "name": "Simple Basics: Salmon + Sweet Potato + Broccoli",
+      "meal_type": "dinner",
+      "instructions": "Serve salmon with sweet potato and broccoli.",
+      "ingredients": [
+        { "name": "Salmon - cooked", "amount_g": 120.0, "calories_kcal": 220.8, "protein_g": 35.9, "fdcId": "173707" },
+        { "name": "Sweet potato", "amount_g": 150.0, "calories_kcal": 135.0, "protein_g": 3.0, "fdcId": "170134" },
+        { "name": "Broccoli florets", "amount_g": 100.0, "calories_kcal": 25.0, "protein_g": 3.8, "fdcId": "170382" },
+        { "name": "Salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170109" },
+        { "name": "Seasonings: dill, lemon, garlic, G Hughes sugar free sauce", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169878" }
+      ]
+    },
+    {
+      "id": "simple_basics_steak_mashed_potatoes_asparagus",
+      "name": "Simple Basics: Steak + Mashed Potatoes + Asparagus",
+      "meal_type": "dinner",
+      "instructions": "Serve steak with mashed potatoes and asparagus.",
+      "ingredients": [
+        { "name": "Top sirloin steak - cooked", "amount_g": 120.0, "calories_kcal": 240.0, "protein_g": 26.4, "fdcId": "2727574" },
+        { "name": "Red potatoes", "amount_g": 150.0, "calories_kcal": 150.0, "protein_g": 2.6, "fdcId": "169307" },
+        { "name": "Asparagus", "amount_g": 100.0, "calories_kcal": 14.0, "protein_g": 0.6, "fdcId": "169232" },
+        { "name": "Salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170109" },
+        { "name": "Seasonings: rosemary, thyme, garlic, G Hughes sugar free sauce", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "173470" }
+      ]
+    },
+    {
+      "id": "high_protein_pasta_bake",
+      "name": "High Protein Pasta Bake",
+      "meal_type": "dinner",
+      "instructions": "Mix pasta, marinara, cottage cheese, spinach, turkey. Place in baking dish, top with mozzarella; bake until bubbly.",
+      "ingredients": [
+        { "name": "Lean ground turkey - cooked", "amount_g": 150.0, "calories_kcal": 330.0, "protein_g": 40.6, "fdcId": "746785" },
+        { "name": "Barilla protein+ pasta", "amount_g": 85.0, "calories_kcal": 290.0, "protein_g": 20.0, "fdcId": "174276" },
+        { "name": "Spinach", "amount_g": 60.0, "calories_kcal": 13.8, "protein_g": 1.7, "fdcId": "2401036" },
+        { "name": "Sugar-free marinara sauce", "amount_g": 100.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169878" },
+        { "name": "Low-fat cottage cheese", "amount_g": 60.0, "calories_kcal": 48.6, "protein_g": 6.7, "fdcId": "169079" },
+        { "name": "Part-skim mozzarella", "amount_g": 20.0, "calories_kcal": 57.2, "protein_g": 5.0, "fdcId": "2057284" },
+        { "name": "Garlic powder, onion powder, dried basil, dried oregano, salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171325" }
+      ]
+    },
+    {
+      "id": "chicken_black_bean_enchiladas",
+      "name": "Chicken & Black Bean Enchiladas",
+      "meal_type": "dinner",
+      "instructions": "Fill tortilla with chicken, beans, peppers/onions. Roll into dish, pour over sauce; bake to heat through. Top with yogurt, cilantro, lime.",
+      "ingredients": [
+        { "name": "Chicken - ground or lean chicken breasts", "amount_g": 120.0, "calories_kcal": 226.8, "protein_g": 27.9, "fdcId": "171117" },
+        { "name": "Whole-grain tortilla", "amount_g": 40.0, "calories_kcal": 96.0, "protein_g": 3.2, "fdcId": "2512378" },
+        { "name": "Black beans", "amount_g": 100.0, "calories_kcal": 132.0, "protein_g": 8.9, "fdcId": "173734" },
+        { "name": "Bell peppers + onions", "amount_g": 75.0, "calories_kcal": 23.2, "protein_g": 0.8, "fdcId": "2258588" },
+        { "name": "Sugar-free enchilada sauce", "amount_g": 100.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169878" },
+        { "name": "Nonfat greek yogurt", "amount_g": 30.0, "calories_kcal": 18.3, "protein_g": 3.1, "fdcId": "330137" },
+        { "name": "Fresh cilantro + lime; salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169997" },
+        { "name": "Spices: chili powder, cumin, smoked paprika", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171329" }
+      ]
+    },
+    {
+      "id": "ground_beef_or_turkey_tacos",
+      "name": "Classic Tacos",
+      "meal_type": "dinner",
+      "instructions": "Fill tortillas with meat, beans, peppers/onions, romaine, tomatoes, avocado. Top with yogurt, cilantro, lime.",
+      "ingredients": [
+        { "name": "Lean ground beef - cooked", "amount_g": 120.0, "calories_kcal": 240.0, "protein_g": 33.6, "fdcId": "174754" },
+        { "name": "Corn tortillas", "amount_g": 50.0, "calories_kcal": 48.0, "protein_g": 1.7, "fdcId": "167656" },
+        { "name": "Black beans", "amount_g": 80.0, "calories_kcal": 105.6, "protein_g": 7.1, "fdcId": "173734" },
+        { "name": "Peppers + onions", "amount_g": 75.0, "calories_kcal": 23.2, "protein_g": 0.8, "fdcId": "170462" },
+        { "name": "Romaine", "amount_g": 60.0, "calories_kcal": 10.2, "protein_g": 0.7, "fdcId": "169247" },
+        { "name": "Cherry tomatoes", "amount_g": 80.0, "calories_kcal": 14.4, "protein_g": 0.7, "fdcId": "170461" },
+        { "name": "Avocado", "amount_g": 50.0, "calories_kcal": 80.0, "protein_g": 1.0, "fdcId": "173573" },
+        { "name": "Nonfat greek yogurt", "amount_g": 30.0, "calories_kcal": 18.3, "protein_g": 3.1, "fdcId": "330137" },
+        { "name": "Fresh cilantro + lime; salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169997" },
+        { "name": "Spices: chili powder, cumin, garlic powder", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171325" }
+      ]
+    },
+    {
+      "id": "spaghetti_with_ground_turkey_bolognese",
+      "name": "Spaghetti with Ground Turkey Bolognese",
+      "meal_type": "dinner",
+      "instructions": "Cook turkey and then simmer in marinara. Serve over pasta with salad on the side.",
+      "ingredients": [
+        { "name": "Lean ground turkey - cooked", "amount_g": 150.0, "calories_kcal": 330.0, "protein_g": 40.6, "fdcId": "746785" },
+        { "name": "Barilla protein+ pasta", "amount_g": 85.0, "calories_kcal": 290.0, "protein_g": 20.0, "fdcId": "332282" },
+        { "name": "Sugar-free marinara sauce", "amount_g": 100.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169878" },
+        { "name": "Mixed greens salad", "amount_g": 40.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169057" },
+        { "name": "Extra virgin olive oil", "amount_g": 10.0, "calories_kcal": 88.4, "protein_g": 0.0, "fdcId": "171443" },
+        { "name": "Garlic powder, basil, oregano, salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171325" }
+      ]
+    },
+    {
+      "id": "stir_fry_chicken_or_shrimp",
+      "name": "Stir Fry",
+      "meal_type": "dinner",
+      "instructions": "Stir-fry protein with veggies, soy sauce and seasonings. Serve over rice.",
+      "ingredients": [
+        { "name": "Shrimp - cooked", "amount_g": 150.0, "calories_kcal": 213.0, "protein_g": 29.8, "fdcId": "173686" },
+        { "name": "Brown rice - cooked", "amount_g": 100.0, "calories_kcal": 130.0, "protein_g": 2.7, "fdcId": "169757" },
+        { "name": "Broccoli florets", "amount_g": 80.0, "calories_kcal": 20.0, "protein_g": 3.1, "fdcId": "170382" },
+        { "name": "Snap peas", "amount_g": 80.0, "calories_kcal": 64.8, "protein_g": 4.3, "fdcId": "169965" },
+        { "name": "Bell peppers + carrots", "amount_g": 80.0, "calories_kcal": 24.8, "protein_g": 0.8, "fdcId": "2258588" },
+        { "name": "Low-sodium soy sauce", "amount_g": 20.0, "calories_kcal": 10.6, "protein_g": 1.6, "fdcId": "172473" },
+        { "name": "Garlic, ginger, salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170109" }
+      ]
+    },
+    {
+      "id": "white_chicken_chili",
+      "name": "White Chicken Chili",
+      "meal_type": "dinner",
+      "instructions": "Simmer chicken, beans, peppers, onion, broth and spices. Finish with yogurt and cilantro.",
+      "ingredients": [
+        { "name": "Chicken - cooked", "amount_g": 150.0, "calories_kcal": 213.0, "protein_g": 29.8, "fdcId": "173686" },
+        { "name": "Great northern beans", "amount_g": 100.0, "calories_kcal": 114.0, "protein_g": 7.3, "fdcId": "175192" },
+        { "name": "Peppers", "amount_g": 75.0, "calories_kcal": 23.2, "protein_g": 0.8, "fdcId": "169396" },
+        { "name": "Onion", "amount_g": 40.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170000" },
+        { "name": "Low-sodium chicken broth", "amount_g": 100.0, "calories_kcal": 6.0, "protein_g": 0.6, "fdcId": "171609" },
+        { "name": "Nonfat greek yogurt", "amount_g": 30.0, "calories_kcal": 18.3, "protein_g": 3.1, "fdcId": "330137" },
+        { "name": "Fresh cilantro; salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169997" },
+        { "name": "Spices: cumin, garlic powder, smoked paprika", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171325" }
+      ]
+    },
+    {
+      "id": "chicken_sweet_potato_black_bean_tacos",
+      "name": "Chicken, Sweet Potato & Black Bean Tacos",
+      "meal_type": "dinner",
+      "instructions": "Cook chicken and black beans with spices in skillet. Warm tortillas; fill with sweet potato, beans, peppers, chicken. Top with cilantro and lime.",
+      "ingredients": [
+        { "name": "Sweet potato=", "amount_g": 60.0, "calories_kcal": 54.0, "protein_g": 1.2, "fdcId": "170134" },
+        { "name": "Corn tortillas", "amount_g": 50.0, "calories_kcal": 48.0, "protein_g": 1.7, "fdcId": "167656" },
+        { "name": "Black beans", "amount_g": 80.0, "calories_kcal": 105.6, "protein_g": 7.1, "fdcId": "173734" },
+        { "name": "Bell peppers", "amount_g": 75.0, "calories_kcal": 23.2, "protein_g": 0.8, "fdcId": "2258588" },
+        { "name": "Chicken - cooked", "amount_g": 66.0, "calories_kcal": 93.7, "protein_g": 13.1, "fdcId": "173686" },
+        { "name": "Fresh cilantro + lime; salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169997" },
+        { "name": "Spices: chili powder, cumin, smoked paprika", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171329" }
+      ]
+    },
+    {
+      "id": "chicken_potato_brussels_sprouts_sheet_pan",
+      "name": "Chicken, Potato & Brussels Sprouts Sheet Pan",
+      "meal_type": "dinner",
+      "instructions": "Preheat oven to 400°F (200°C). Place chicken, potatoes, Brussels sprouts, and red onion on a parchment-lined sheet pan. Lightly spray or drizzle with olive oil and season. Roast 25-30 minutes, flipping halfway, until chicken is cooked and potatoes are tender.",
+      "ingredients": [
+        { "name": "Chicken - cooked", "amount_g": 150.0, "calories_kcal": 213.0, "protein_g": 29.8, "fdcId": "173686" },
+        { "name": "Red potatoes", "amount_g": 150.0, "calories_kcal": 150.0, "protein_g": 2.6, "fdcId": "169307" },
+        { "name": "Brussel sprouts", "amount_g": 100.0, "calories_kcal": 43.0, "protein_g": 3.4, "fdcId": "2685575" },
+        { "name": "Red onion", "amount_g": 40.0, "calories_kcal": 16.0, "protein_g": 0.4, "fdcId": "790577" },
+        { "name": "Extra virgin olive oil", "amount_g": 5.0, "calories_kcal": 44.2, "protein_g": 0.0, "fdcId": "171443" },
+        { "name": "Salt and pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170109" },
+        { "name": "Fresh parsley", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170416" },
+        { "name": "Spices: garlic, smoked paprika, thyme, rosemary", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "173470" }
+      ]
+    },
+    {
+      "id": "beef_or_turkey_red_bean_chili_crock_pot",
+      "name": "Classic Red Chili",
+      "meal_type": "dinner",
+      "instructions": "Add all ingredients to crock pot; cook 4-6 hours. Top with yogurt and cilantro.",
+      "ingredients": [
+        { "name": "Lean ground turkey - cooked", "amount_g": 150.0, "calories_kcal": 330.0, "protein_g": 40.6, "fdcId": "746785" },
+        { "name": "Kidney beans", "amount_g": 100.0, "calories_kcal": 127.0, "protein_g": 8.7, "fdcId": "169885" },
+        { "name": "Black beans", "amount_g": 100.0, "calories_kcal": 132.0, "protein_g": 8.9, "fdcId": "173734" },
+        { "name": "Diced tomatoes - canned", "amount_g": 100.0, "calories_kcal": 18.0, "protein_g": 0.9, "fdcId": "333281" },
+        { "name": "Peppers + onions", "amount_g": 75.0, "calories_kcal": 23.2, "protein_g": 0.8, "fdcId": "170462" },
+        { "name": "Low-sodium chicken broth", "amount_g": 100.0, "calories_kcal": 6.0, "protein_g": 0.6, "fdcId": "171609" },
+        { "name": "Nonfat greek yogurt", "amount_g": 30.0, "calories_kcal": 18.3, "protein_g": 3.1, "fdcId": "330137" },
+        { "name": "Fresh cilantro; salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169997" },
+        { "name": "Spices: chili powder, cumin, smoked paprika, salsa", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171329" }
+      ]
+    },
+    {
+      "id": "chicken_fajitas_crock_pot",
+      "name": "Chicken Fajitas",
+      "meal_type": "dinner",
+      "instructions": "Place chicken, peppers, onions, and seasonings in crock pot. Cook 4-6 hours. Warm tortillas; fill with crock-pot mixture, black beans, cilantro, and lime juice.",
+      "ingredients": [
+        { "name": "Chicken - cooked", "amount_g": 150.0, "calories_kcal": 213.0, "protein_g": 29.8, "fdcId": "173686" },
+        { "name": "Bell peppers", "amount_g": 100.0, "calories_kcal": 31.0, "protein_g": 1.0, "fdcId": "2258588" },
+        { "name": "Onions", "amount_g": 100.0, "calories_kcal": 40.0, "protein_g": 1.1, "fdcId": "170000" },
+        { "name": "Black beans", "amount_g": 80.0, "calories_kcal": 105.6, "protein_g": 7.1, "fdcId": "173734" },
+        { "name": "Corn tortillas", "amount_g": 50.0, "calories_kcal": 48.0, "protein_g": 1.7, "fdcId": "167656" },
+        { "name": "Fresh cilantro, lime juice, salt and pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "168156" },
+        { "name": "Seasonings: chili powder, cumin, smoked paprika, garlic", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171325" }
+      ]
+    },
+    {
+      "id": "chicken_lentil_vegetable_soup_crock_pot",
+      "name": "Chicken, Lentil & Vegetable Soup",
+      "meal_type": "dinner",
+      "instructions": "Add all to crock pot; cook 4-6 hours on low until tender. Garnish with parsley.",
+      "ingredients": [
+        { "name": "Chicken - cooked", "amount_g": 150.0, "calories_kcal": 213.0, "protein_g": 29.8, "fdcId": "173686" },
+        { "name": "Lentils", "amount_g": 100.0, "calories_kcal": 116.0, "protein_g": 9.0, "fdcId": "2644283" },
+        { "name": "Carrots", "amount_g": 75.0, "calories_kcal": 30.8, "protein_g": 0.7, "fdcId": "170393" },
+        { "name": "Celery", "amount_g": 75.0, "calories_kcal": 12.0, "protein_g": 0.5, "fdcId": "2346405" },
+        { "name": "Kale", "amount_g": 50.0, "calories_kcal": 15.0, "protein_g": 1.0, "fdcId": "2709602" },
+        { "name": "Tomatoes", "amount_g": 100.0, "calories_kcal": 18.0, "protein_g": 0.9, "fdcId": "170051" },
+        { "name": "Low-sodium chicken broth", "amount_g": 250.0, "calories_kcal": 15.0, "protein_g": 1.5, "fdcId": "171609" },
+        { "name": "Seasonings: garlic, thyme, rosemary", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "173470" },
+        { "name": "Fresh parsley; salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170416" }
+      ]
+    },
+    {
+      "id": "bbq_pulled_chicken_sandwiches",
+      "name": "BBQ Pulled Chicken Sandwiches",
+      "meal_type": "dinner",
+      "instructions": "Slow-cook chicken with BBQ sauce; shred. Serve on bun with green beans on the side.",
+      "ingredients": [
+        { "name": "Chicken - cooked", "amount_g": 150.0, "calories_kcal": 213.0, "protein_g": 29.8, "fdcId": "173686" },
+        { "name": "G. Hughes sugar-free bbq sauce", "amount_g": 40.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169878" },
+        { "name": "Whole-grain bun", "amount_g": 60.0, "calories_kcal": 159.0, "protein_g": 5.4, "fdcId": "2512378" },
+        { "name": "Green beans", "amount_g": 100.0, "calories_kcal": 25.0, "protein_g": 0.5, "fdcId": "169237" },
+        { "name": "Seasonings: smoked paprika, garlic powder; salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171325" }
+      ]
+    },
+    {
+      "id": "greek_chicken_powerhouse_salad",
+      "name": "Greek Chicken Powerhouse Salad",
+      "meal_type": "dinner",
+      "instructions": "Mix greens, tomatoes, cucumber, chickpeas. Top with chicken and olives. Whisk yogurt, tahini, lemon, parsley; drizzle. Sprinkle nuts.",
+      "ingredients": [
+        { "name": "Chicken - cooked", "amount_g": 120.0, "calories_kcal": 170.4, "protein_g": 23.8, "fdcId": "173686" },
+        { "name": "Spinach + kale mix", "amount_g": 60.0, "calories_kcal": 13.8, "protein_g": 1.7, "fdcId": "2401036" },
+        { "name": "Cherry tomatoes", "amount_g": 80.0, "calories_kcal": 14.4, "protein_g": 0.7, "fdcId": "170461" },
+        { "name": "Cucumber", "amount_g": 80.0, "calories_kcal": 12.8, "protein_g": 0.6, "fdcId": "169225" },
+        { "name": "Chickpeas", "amount_g": 80.0, "calories_kcal": 131.2, "protein_g": 7.1, "fdcId": "2644282" },
+        { "name": "Kalamata olives", "amount_g": 20.0, "calories_kcal": 35.0, "protein_g": 0.3, "fdcId": "172926" },
+        { "name": "Nonfat greek yogurt", "amount_g": 30.0, "calories_kcal": 18.3, "protein_g": 3.1, "fdcId": "330137" },
+        { "name": "Tahini", "amount_g": 10.0, "calories_kcal": 59.5, "protein_g": 1.7, "fdcId": "168604" },
+        { "name": "Almonds", "amount_g": 10.0, "calories_kcal": 57.9, "protein_g": 2.1, "fdcId": "170567" },
+        { "name": "Fresh parsley and greek seasoning, lemon, salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170416" }
+      ]
+    },
+    {
+      "id": "high_protein_chicken_caesar",
+      "name": "High-Protein Chicken Caesar",
+      "meal_type": "dinner",
+      "instructions": "Whisk yogurt, oil, lemon, Dijon, garlic for dressing. Mix greens, chicken, Parmesan. Drizzle dressing.",
+      "ingredients": [
+        { "name": "Chicken - cooked", "amount_g": 150.0, "calories_kcal": 213.0, "protein_g": 29.8, "fdcId": "173686" },
+        { "name": "Romaine", "amount_g": 80.0, "calories_kcal": 13.6, "protein_g": 1.0, "fdcId": "169247" },
+        { "name": "Baby spinach", "amount_g": 40.0, "calories_kcal": 9.2, "protein_g": 1.2, "fdcId": "2401036" },
+        { "name": "Part-skim parmesan", "amount_g": 30.0, "calories_kcal": 126.0, "protein_g": 11.4, "fdcId": "170847" },
+        { "name": "Nonfat greek yogurt", "amount_g": 50.0, "calories_kcal": 30.5, "protein_g": 5.2, "fdcId": "330137" },
+        { "name": "Extra virgin olive oil", "amount_g": 10.0, "calories_kcal": 88.4, "protein_g": 0.0, "fdcId": "171443" },
+        { "name": "Lemon juice", "amount_g": 10.0, "calories_kcal": 2.2, "protein_g": 0.0, "fdcId": "167747" },
+        { "name": "Lemon juice, dijon mustard, garlic, salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "167747" }
+      ]
+    },
+    {
+      "id": "quinoa_taco_salad",
+      "name": "Quinoa Taco Salad",
+      "meal_type": "dinner",
+      "instructions": "Mix all ingredients in a bowl.",
+      "ingredients": [
+        { "name": "Quinoa - cooked", "amount_g": 100.0, "calories_kcal": 120.0, "protein_g": 4.4, "fdcId": "168917" },
+        { "name": "Black beans", "amount_g": 80.0, "calories_kcal": 105.6, "protein_g": 7.1, "fdcId": "173734" },
+        { "name": "Chicken - cooked", "amount_g": 120.0, "calories_kcal": 170.4, "protein_g": 23.8, "fdcId": "173686" },
+        { "name": "Romaine", "amount_g": 60.0, "calories_kcal": 10.2, "protein_g": 0.7, "fdcId": "169247" },
+        { "name": "Cherry tomatoes", "amount_g": 80.0, "calories_kcal": 14.4, "protein_g": 0.7, "fdcId": "170461" },
+        { "name": "Red onion", "amount_g": 40.0, "calories_kcal": 16.0, "protein_g": 0.4, "fdcId": "790577" },
+        { "name": "Avocado", "amount_g": 50.0, "calories_kcal": 80.0, "protein_g": 1.0, "fdcId": "173573" },
+        { "name": "Fresh cilantro + lime juice", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "168156" },
+        { "name": "Salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170109" },
+        { "name": "Spices: cumin, chili powder", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "171319" }
+      ]
+    },
+    {
+      "id": "salmon_apple_power_salad",
+      "name": "Salmon & Apple Power Salad",
+      "meal_type": "dinner",
+      "instructions": "Mix greens, cucumber, onion, edamame, apple. Top with salmon, walnuts, feta. Whisk vinaigrette and drizzle on top.",
+      "ingredients": [
+        { "name": "Grilled salmon fillet, flaked", "amount_g": 120.0, "calories_kcal": 249.6, "protein_g": 24.0, "fdcId": "169243" },
+        { "name": "Spinach + arugula mix", "amount_g": 60.0, "calories_kcal": 13.8, "protein_g": 1.7, "fdcId": "2401036" },
+        { "name": "Cucumber", "amount_g": 80.0, "calories_kcal": 12.8, "protein_g": 0.6, "fdcId": "169225" },
+        { "name": "Red onion", "amount_g": 40.0, "calories_kcal": 16.0, "protein_g": 0.4, "fdcId": "790577" },
+        { "name": "Edamame - frozen shelled", "amount_g": 80.0, "calories_kcal": 96.8, "protein_g": 9.5, "fdcId": "168411" },
+        { "name": "Granny smith apple", "amount_g": 80.0, "calories_kcal": 42.0, "protein_g": 0.2, "fdcId": "1750342" },
+        { "name": "Walnuts", "amount_g": 15.0, "calories_kcal": 98.1, "protein_g": 2.3, "fdcId": "170187" },
+        { "name": "Part-skim feta", "amount_g": 10.0, "calories_kcal": 26.5, "protein_g": 1.4, "fdcId": "170847" },
+        { "name": "Lemon vinaigrette", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "167802" },
+        { "name": "Fresh lemon juice", "amount_g": 20.0, "calories_kcal": 4.4, "protein_g": 0.1, "fdcId": "167747" },
+        { "name": "Olive oil", "amount_g": 5.0, "calories_kcal": 44.2, "protein_g": 0.0, "fdcId": "171443" },
+        { "name": "Dijon mustard, garlic, oregano; salt & pepper", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "169891" }
+      ]
+    },
+    {
+      "id": "boiled_eggs_edamame_hummus_veggies",
+      "name": "Boiled Eggs, Edamame, Hummus & Veggies",
+      "meal_type": "snack",
+      "instructions": "Boil eggs in advance. Microwave frozen edamame and season (salt or Everything But The Bagel seasoning). Serve with hummus and fresh veggies for dipping.",
+      "ingredients": [
+        { "name": "Large egg", "amount_g": 100.0, "calories_kcal": 143.0, "protein_g": 12.6, "fdcId": "747997" },
+        { "name": "Edamame - frozen shelled", "amount_g": 125.0, "calories_kcal": 151.2, "protein_g": 14.9, "fdcId": "168411" },
+        { "name": "Hummus", "amount_g": 40.0, "calories_kcal": 66.4, "protein_g": 3.2, "fdcId": "174289" },
+        { "name": "Raw veggies", "amount_g": 100.0, "calories_kcal": 35.0, "protein_g": 2.0, "fdcId": "174287" }
+      ]
+    },
+    {
+      "id": "edamame_avocado_toast_string_cheese",
+      "name": "Edamame Avocado Toast & String Cheese",
+      "meal_type": "snack",
+      "instructions": "Toast bread. Microwave edamame. Spread avocado on toast, top with edamame and hemp hearts. Season as desired. Serve string cheese on the side.",
+      "ingredients": [
+        { "name": "Dave’s Killer Bread", "amount_g": 90.0, "calories_kcal": 220.0, "protein_g": 12, "fdcId": "170772" },
+        { "name": "Avocado", "amount_g": 50.0, "calories_kcal": 80.0, "protein_g": 1.0, "fdcId": "173573" },
+        { "name": "Edamame - frozen shelled", "amount_g": 100.0, "calories_kcal": 121.0, "protein_g": 11.9, "fdcId": "168411" },
+        { "name": "Hemp hearts", "amount_g": 20.0, "calories_kcal": 113.4, "protein_g": 6.4, "fdcId": "170148" },
+        { "name": "Light string cheese", "amount_g": 28.0, "calories_kcal": 59.9, "protein_g": 7.0, "fdcId": "1858692" }
+      ]
+    },
+    {
+      "id": "barebell_protein_bar_protein_yogurt",
+      "name": "Barebell Protein Bar & Protein Yogurt",
+      "meal_type": "snack",
+      "instructions": "Eat together as a high-protein, grab-and-go snack.",
+      "ingredients": [
+        { "name": "1 Barebell protein bar", "amount_g": 55, "calories_kcal": 200, "protein_g": 20, "fdcId": "173158" },
+        { "name": "Oikos protein yogurt", "amount_g": 170, "calories_kcal": 160, "protein_g": 25, "fdcId": "171297" }
+      ]
+    },
+    {
+      "id": "pbfit_banana_rice_cakes_oikos_yogurt",
+      "name": "PBfit Banana Rice Cakes & Oikos Yogurt",
+      "meal_type": "snack",
+      "instructions": "Mix PBfit with water to form a spread. Spread onto rice cakes, top with banana slices, hemp seeds, and drizzle with honey. Serve yogurt on the side.",
+      "ingredients": [
+        { "name": "Rice cakes", "amount_g": 28.0, "calories_kcal": 108.4, "protein_g": 2.2, "fdcId": "168107" },
+        { "name": "Pbfit powder", "amount_g": 16.0, "calories_kcal": 54.4, "protein_g": 8.0, "fdcId": "167806" },
+        { "name": "Banana", "amount_g": 120.0, "calories_kcal": 106.8, "protein_g": 1.3, "fdcId": "173945" },
+        { "name": "Hemp seeds", "amount_g": 5.0, "calories_kcal": 27.6, "protein_g": 1.6, "fdcId": "170148" },
+        { "name": "Oikos protein yogurt", "amount_g": 150.0, "calories_kcal": 90.0, "protein_g": 15.0, "fdcId": "171297" },
+        { "name": "Honey", "amount_g": 5.0, "calories_kcal": 15.0, "protein_g": 0.0, "fdcId": "169640" }
+      ]
+    },
+    {
+      "id": "tuna_avocado_crackers_plate",
+      "name": "Tuna & Avocado Crackers Plate",
+      "meal_type": "snack",
+      "instructions": "Mash avocado and mix with tuna, onion, and celery. Season as desired. Serve with crackers and veggies or fruit on the side.",
+      "ingredients": [
+        { "name": "Tuna in water", "amount_g": 120.0, "calories_kcal": 144.0, "protein_g": 31.0, "fdcId": "334194" },
+        { "name": "Avocado", "amount_g": 50.0, "calories_kcal": 80.0, "protein_g": 1.0, "fdcId": "173573" },
+        { "name": "Red onion", "amount_g": 20.0, "calories_kcal": 8.0, "protein_g": 0.2, "fdcId": "790577" },
+        { "name": "Celery", "amount_g": 30.0, "calories_kcal": 4.8, "protein_g": 0.2, "fdcId": "2346405" },
+        { "name": "Whole grain crackers", "amount_g": 30.0, "calories_kcal": 135.0, "protein_g": 2.4, "fdcId": "174084" },
+        { "name": "Raw veggies", "amount_g": 100.0, "calories_kcal": 35.0, "protein_g": 2.0, "fdcId": "174287" }
+      ]
+    },
+    {
+      "id": "high_protein_mini_charcuterie_snack_box",
+      "name": "High Protein Mini Charcuterie Snack Box",
+      "meal_type": "snack",
+      "instructions": "Roll deli turkey or chicken into bite-sized rolls. Pair with cheese, crackers, hummus, and veggies. Add fruit if desired. Serve chilled.",
+      "ingredients": [
+        { "name": "Nitrate-free deli turkey or chicken breast slices", "amount_g": 120.0, "calories_kcal": 198.0, "protein_g": 37.2, "fdcId": "173874" },
+        { "name": "Part-skim mozzarella or 2 light string cheeses", "amount_g": 40.0, "calories_kcal": 114.4, "protein_g": 10.0, "fdcId": "2057284" },
+        { "name": "Hummus", "amount_g": 40.0, "calories_kcal": 66.4, "protein_g": 3.2, "fdcId": "174289" },
+        { "name": "Whole grain crackers", "amount_g": 30.0, "calories_kcal": 135.0, "protein_g": 2.4, "fdcId": "174084" },
+        { "name": "Raw veggies", "amount_g": 100.0, "calories_kcal": 35.0, "protein_g": 2.0, "fdcId": "174287" },
+        { "name": "Fresh fruit", "amount_g": 50.0, "calories_kcal": 30.0, "protein_g": 0.3, "fdcId": "172232" }
+      ]
+    },
+    {
+      "id": "high_protein_berry_cheesecake_bowl",
+      "name": "High Protein Berry Cheesecake Bowl",
+      "meal_type": "snack",
+      "instructions": "Blend yogurt, protein powder, and cottage cheese until creamy. Stir in berries and sprinkle with graham crumbs. Chill ~15 minutes before eating.",
+      "ingredients": [
+        { "name": "Nonfat greek yogurt", "amount_g": 200.0, "calories_kcal": 122.0, "protein_g": 20.6, "fdcId": "330137" },
+        { "name": "Vanilla whey protein powder", "amount_g": 20.0, "calories_kcal": 80.0, "protein_g": 16.0, "fdcId": "173180" },
+        { "name": "Low-fat cottage cheese", "amount_g": 40.0, "calories_kcal": 32.4, "protein_g": 4.4, "fdcId": "169079" },
+        { "name": "Mixed berries - fresh or frozen", "amount_g": 80.0, "calories_kcal": 40.0, "protein_g": 0.5, "fdcId": "174803" },
+        { "name": "Graham cracker crumbs", "amount_g": 5.0, "calories_kcal": 18.9, "protein_g": 0.7, "fdcId": "175083" },
+        { "name": "Stevia", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170679" }
+      ]
+    },
+    {
+      "id": "apple_cinnamon_protein_parfait",
+      "name": "Apple Cinnamon Protein Parfait",
+      "meal_type": "snack",
+      "instructions": "Mix yogurt and protein until smooth. Layer with warm cinnamon-apple mixture. Sprinkle walnuts on top.",
+      "ingredients": [
+        { "name": "Nonfat greek yogurt", "amount_g": 150.0, "calories_kcal": 91.5, "protein_g": 15.4, "fdcId": "330137" },
+        { "name": "Vanilla whey protein protein", "amount_g": 20.0, "calories_kcal": 80.0, "protein_g": 18.0, "fdcId": "173180" },
+        { "name": "Apple", "amount_g": 180.0, "calories_kcal": 95.0, "protein_g": 0.5, "fdcId": "174988" },
+        { "name": "Walnuts", "amount_g": 20.0, "calories_kcal": 130.8, "protein_g": 3.0, "fdcId": "170187" },
+        { "name": "Stevia", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170679" }
+      ]
+    },
+    {
+      "id": "ninja_creami_vanilla_berries_frozen_yogurt",
+      "name": "Ninja Creami Vanilla & Berries Frozen Yogurt",
+      "meal_type": "snack",
+      "instructions": "Mix all ingredients. Freeze in Ninja Creami pint container overnight. Spin once (re-spin with more milk if needed). Mix in or top with berries before serving.",
+      "ingredients": [
+        { "name": "Nonfat greek yogurt", "amount_g": 200.0, "calories_kcal": 122.0, "protein_g": 20.6, "fdcId": "330137" },
+        { "name": "Mixed berries - fresh or frozen", "amount_g": 90.0, "calories_kcal": 45.0, "protein_g": 0.5, "fdcId": "174803" },
+        { "name": "Fairlife fat-free milk", "amount_g": 120, "calories_kcal": 70, "protein_g": 11, "fdcId": "170887" },
+        { "name": "Vanilla whey protein powder", "amount_g": 10.0, "calories_kcal": 40.0, "protein_g": 8.0, "fdcId": "173180" },
+        { "name": "Stevia", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "170679" },
+        { "name": "Vanilla extract", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": "173471" }
+      ]
+    },
+    {
+      "id": "shrimp_cocktail_with_avocado_rice_cakes",
+      "name": "Shrimp Cocktail with Avocado Rice Cakes",
+      "meal_type": "snack",
+      "instructions": "Prep shrimp or purchase pre-cooked. Spread avocado over rice cakes, sprinkle with hemp seeds. Garnish with lemon and parsley if desired. Serve with cocktail sauce.",
+      "ingredients": [
+        { "name": "Cooked shrimp", "amount_g": 80.0, "calories_kcal": 82.0, "protein_g": 17.0, "fdcId": null },
+        { "name": "Mashed avocado", "amount_g": 50.0, "calories_kcal": 80.0, "protein_g": 1.0, "fdcId": null },
+        { "name": "Rice cakes", "amount_g": 28.0, "calories_kcal": 108.0, "protein_g": 2.2, "fdcId": null },
+        { "name": "Hemp seeds", "amount_g": 5.0, "calories_kcal": 27.6, "protein_g": 1.6, "fdcId": null },
+        { "name": "Cocktail sauce", "amount_g": 15.0, "calories_kcal": 15.0, "protein_g": 0.3, "fdcId": null },
+        { "name": "Lemon juice & parsley", "amount_g": 0.0, "calories_kcal": 0.0, "protein_g": 0.0, "fdcId": null }
+      ]
+    }
+  ]
+}

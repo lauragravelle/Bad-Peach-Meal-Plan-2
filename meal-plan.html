@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bad Peach – 7-Day Meal Plan Generator</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <meta name="description" content="Select recipes and generate a 7-day meal plan with grocery list." />
+  <style>
+    :root{
+      /* existing palette (left intact) */
+      --bg:#FEF5EE;
+      --paper:#FFFFFF;
+      --ink:#111111;
+      --text:#333333;
+      --muted:#6B6B6B;
+      --blush1:#F3D4C9;
+      --blush2:#E9BFAF;
+      --border:#EDE7E2;
+      --accent:#111111;
+      --accent2:#C78F7A;
+      --radius:18px;
+      --shadow:0 14px 32px rgba(0,0,0,.10);
+
+      /* brand-only colors used for header + buttons */
+      --brand-cream:#fffefc;
+      --brand-blushL:#FFEFEA;
+      --brand-blushD:#ebcac2;
+      --brand-black:#191919;
+
+      /* status colors (unchanged) */
+      --ok:#1a7f37;
+      --ok-ghost:#d9fbe0;
+      --warn:#b3261e;
+      --warn-ghost:#fde4e2;
+      --focus:#C78F7A1F;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.45}
+    h1,h2,h3{font-family:"Times New Roman",Times,serif;margin:0 0 .6rem;color:var(--ink)}
+    h1{font-size:clamp(1.8rem,3.6vw,2.6rem);letter-spacing:.3px}
+    h2{font-size:clamp(1.15rem,1.9vw,1.35rem)}
+    .container{max-width:1200px;margin:0 auto;padding:0 16px}
+
+    /* ===== Header (hero) – badges removed previously ===== */
+    .hero{
+      background:linear-gradient(180deg,var(--brand-blushL),var(--brand-blushD));
+      color:var(--brand-black);
+      border-bottom:1px solid var(--border);
+    }
+    .hero .container{padding:26px 16px}
+    .brand{font-size:.85rem;letter-spacing:.25em;color:var(--brand-black);opacity:.95}
+    .sub{opacity:.9;max-width:920px}
+
+    /* cards & layout */
+    .shell{max-width:1120px;margin:18px auto;padding:0 16px}
+    .card{background:var(--paper);border-radius:22px;box-shadow:var(--shadow);padding:18px;margin:18px 0;border:1px solid var(--border)}
+    .row{display:grid;gap:12px}
+    @media(min-width:900px){ .row.cols-3{grid-template-columns:1fr 1fr 1fr} }
+    label{font-size:.9rem;font-weight:800;letter-spacing:.04em;display:block;margin:0 0 6px;color:var(--ink)}
+
+    /* Make inputs/select uniform size */
+    input[type="number"], select{
+      width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:14px;background:#fff;
+      font-size:1rem;outline:none;transition:border-color .15s ease, box-shadow .15s ease;
+      height:44px; /* ensures identical height for number + select */
+      line-height:20px;
+    }
+    input[type="number"]:focus, select:focus{border-color:var(--accent2);box-shadow:0 0 0 4px var(--focus)}
+    small.note{display:block;margin-top:6px;color:var(--muted)}
+
+    .panel{background:linear-gradient(180deg,rgba(233,191,175,.35),rgba(233,191,175,.16));border:1px solid var(--border);
+      padding:14px;border-radius:16px}
+
+    /* buttons (base) */
+    .btn{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--accent);border-radius:999px;padding:12px 18px;background:#fff;
+      color:var(--accent);cursor:pointer;font-weight:800}
+    .btn.fill{background:var(--accent);color:#fff}
+    .btn.secondary{border-color:var(--accent2);background:var(--accent2);color:#fff}
+    .btn:active{transform:translateY(1px)}
+    .muted{color:var(--muted)}
+
+    /* calculator helper row */
+    .calc-cta{
+      margin-top:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+      background:rgba(255,255,255,.75);border:1px solid var(--border);border-radius:12px;padding:10px 12px
+    }
+    .calc-cta p{margin:0;color:var(--text);font-size:.95rem}
+    .btn.calc{
+      border-radius:6px;border:2px solid var(--brand-black);background:#fff;color:var(--brand-black);
+    }
+    .btn.calc:hover{background:var(--brand-black);color:#fff}
+
+    /* ===== Recipe Select section – status UI & style only ===== */
+    .pill{
+      display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:#fff;
+      border:1px solid var(--border);font-size:.84rem;font-weight:800;
+      transition:background-color .15s ease, color .15s ease, border-color .15s ease;
+    }
+    .pill.ok{background:var(--ok-ghost);color:var(--ok);border-color:var(--ok)}
+    .pill.warn{background:var(--warn-ghost);color:var(--warn);border-color:var(--warn)}
+
+    .recipe-grid{
+      border:1px dashed var(--border);border-radius:16px;padding:10px;background:#fff;min-height:56px;
+      transition:border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
+    }
+    .recipe-grid.ok{border-color:var(--ok);box-shadow:inset 0 0 0 3px var(--ok-ghost)}
+    .recipe-grid.warn{border-color:var(--warn);box-shadow:inset 0 0 0 3px var(--warn-ghost)}
+
+    .recipe-item{display:flex;gap:10px;align-items:flex-start;padding:9px 6px;border-bottom:1px dashed var(--border)}
+    .recipe-item:last-child{border-bottom:0}
+    .recipe-title{font-weight:700;letter-spacing:.01em}
+
+    /* per-meal target pills next to section titles */
+    .permeal{
+      display:inline-flex;gap:6px;flex-wrap:wrap;margin-left:8px;vertical-align:middle
+    }
+    .permeal .mini{
+      display:inline-flex;align-items:center;padding:4px 8px;border-radius:999px;border:1px solid var(--border);
+      background:#fff;font-size:.78rem;font-weight:800;color:#444
+    }
+    .permeal .mini.emph{background:#FFEFEA;border-color:#ebcac2;color:#191919}
+
+    /* CTA: prominent + always visible while scrolling */
+    .cta{
+      display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px;
+
+      position:sticky;bottom:12px;
+      background:rgba(255,255,255,0.92);
+      backdrop-filter:saturate(140%) blur(4px);
+      padding:12px;border:1px solid var(--border);
+      border-radius:14px;box-shadow:var(--shadow);
+      z-index:5;
+    }
+    /* Brand-forward buttons for the CTA only */
+    .cta .btn{border-radius:6px}
+    .cta .btn.brand{
+      border:2px solid var(--brand-black);
+      background:var(--brand-black);
+      color:#fff;
+      box-shadow:0 10px 24px rgba(0,0,0,.18);
+      padding:14px 20px;
+      font-size:1.05rem;
+    }
+    .cta .btn.brand:hover{filter:brightness(0.95)}
+    .cta .btn.brand.secondary{
+      border-color:var(--brand-blushD);
+      background:var(--brand-blushD);
+      color:#fff;
+    }
+    .cta .btn.brand.secondary:hover{filter:brightness(0.98)}
+
+    /* CTA readiness line */
+    .cta-ready{
+      margin-left:auto;font-weight:800;font-size:.95rem;
+      color:var(--ok);display:none; /* show only when all sections match */
+    }
+    .cta-ready.show{display:inline-flex;gap:8px;align-items:center}
+    .cta-ready .check{width:18px;height:18px;border-radius:50%;background:var(--ok);display:inline-block;position:relative}
+    .cta-ready .check::after{
+      content:"";position:absolute;left:5px;top:2px;width:6px;height:10px;border:3px solid #fff;border-top:0;border-left:0;transform:rotate(45deg)
+    }
+
+    @media (max-width:640px){
+      .cta .btn{flex:1 1 100%}
+      .cta-ready{flex:1 1 100%;justify-content:flex-start;margin-left:0;margin-top:6px}
+      .permeal{display:block;margin:6px 0 0 0}
+    }
+
+    /* hint text under section titles */
+    .section-hint{display:inline-block;margin-left:8px;font-size:.85rem;color:var(--muted)}
+
+    /* snack disabled look when 3 meals/day */
+    .snack-disabled .section-title,
+    .snack-disabled .section-hint{opacity:.6}
+    .snack-disabled .recipe-grid{opacity:.65}
+
+    .disabled{opacity:.45;pointer-events:none}
+
+    /* --- Performance helpers (Meal Plan page) --- */
+    @supports (content-visibility: auto) {
+      /* Defer painting of off-screen containers without changing layout or visuals */
+      .card,
+      .recipe-grid {
+        content-visibility: auto;
+        contain-intrinsic-size: 600px; /* placeholder to prevent jumpiness */
+      }
+      /* Rows are small; give them a sensible intrinsic size and isolate paints */
+      .recipe-item {
+        content-visibility: auto;
+        contain-intrinsic-size: 90px;
+        contain: paint;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Hero -->
+  <div class="hero">
+    <div class="container">
+      <div class="brand">BAD PEACH</div>
+      <h1>7-Day Meal Plan Generator</h1>
+      <p class="sub">Enter calories &amp; protein, set repetition per meal, then choose the exact recipes. Lunch will be leftovers from last night’s dinner.</p>
+    </div>
+  </div>
+
+  <div class="shell">
+    <!-- Targets (unchanged structure; added calculator helper + uniform field sizing) -->
+    <section class="card">
+      <h2>YOUR TARGETS</h2>
+      <div class="row cols-3" style="margin-top:10px">
+        <div>
+          <label for="calories">DAILY CALORIES</label>
+          <input id="calories" type="number" value="2000" />
+          <small class="note">TDEE = average calories you burn daily.</small>
+        </div>
+        <div>
+          <label for="protein">DAILY PROTEIN (G)</label>
+          <input id="protein" type="number" value="130" />
+          <small class="note">Protein target is divided across meals.</small>
+        </div>
+        <div>
+          <label for="mealsPerDay">MEALS PER DAY</label>
+          <select id="mealsPerDay">
+            <option value="3">3 (Breakfast, Lunch, Dinner)</option>
+            <option value="4" selected>4 (Breakfast, Lunch, Snack, Dinner)</option>
+          </select>
+          <small class="note">Calories &amp; protein split evenly across meals.</small>
+        </div>
+      </div>
+
+      <!-- Calculator helper -->
+      <div class="calc-cta" role="note" aria-label="TDEE and protein calculator">
+        <p>Unsure of your TDEE calories and protein grams per day? Use the Bad Peach <strong>calories and protein calculator</strong> to get custom numbers for your fitness goals and lifestyle.</p>
+        <a class="btn calc" href="https://bad-peach-calculator.vercel.app" target="_blank" rel="noopener">Open Bad Peach Calculator</a>
+      </div>
+
+      <div class="panel" style="margin-top:16px">
+        <h3 style="margin:0 0 6px">REPETITION SETTINGS</h3>
+        <p class="muted" style="margin-top:0">How many unique recipes rotate during the week for each meal type.</p>
+        <div class="row cols-3">
+          <div>
+            <label for="breakfastRotation">BREAKFAST: # OF RECIPES</label>
+            <select id="breakfastRotation">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+          <div>
+            <label for="snackRotation">SNACK (IGNORE IF 3 MEALS/DAY)</label>
+            <select id="snackRotation">
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+          <div>
+            <label for="dinnerRotation">DINNER: # OF RECIPES</label>
+            <select id="dinnerRotation">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Choose recipes (polished + status only) -->
+    <section class="card" id="chooseSection">
+      <h2>CHOOSE YOUR RECIPES
+        <span class="section-hint">Pick exactly the number you set above for each meal type.</span>
+      </h2>
+
+      <div class="muted" style="margin:6px 0 10px">
+        Lunch = leftovers from the previous night’s dinner (same food proportions) and is equivalent in calories and protein to the other meals.
+      </div>
+
+      <div class="row cols-3">
+        <div id="block-breakfast">
+          <h2 class="section-title">
+            Breakfast
+            <!-- per-meal targets (auto-filled by JS) -->
+            <span class="permeal" aria-hidden="true">
+              <span class="mini" data-pm="fl">FL: ~— kcal</span>
+              <span class="mini emph" data-pm="maint">Maint: ~— kcal</span>
+              <span class="mini" data-pm="mg">MG: ~— kcal</span>
+              <span class="mini" data-pm="pro">Protein: ~— g</span>
+            </span>
+            <span class="pill" id="breakfastCounter" data-role="counter" data-type="breakfast">Select 3</span>
+            <span class="muted">Total: <span data-total="breakfast">0</span></span>
+          </h2>
+          <div id="breakfastList" class="recipe-grid" aria-live="polite"></div>
+        </div>
+
+        <div id="block-snack">
+          <h2 class="section-title">
+            Snack
+            <span class="permeal" aria-hidden="true">
+              <span class="mini" data-pm="fl">FL: ~— kcal</span>
+              <span class="mini emph" data-pm="maint">Maint: ~— kcal</span>
+              <span class="mini" data-pm="mg">MG: ~— kcal</span>
+              <span class="mini" data-pm="pro">Protein: ~— g</span>
+            </span>
+            <span class="pill" id="snackCounter" data-role="counter" data-type="snack">Select 2</span>
+            <span class="muted">Total: <span data-total="snack">0</span></span>
+          </h2>
+          <div id="snackNote" class="muted" style="margin:6px 0 8px">If 3 meals/day, do not choose snacks.</div>
+          <div id="snackList" class="recipe-grid" aria-live="polite"></div>
+        </div>
+
+        <div id="block-dinner">
+          <h2 class="section-title">
+            Dinner
+            <span class="permeal" aria-hidden="true">
+              <span class="mini" data-pm="fl">FL: ~— kcal</span>
+              <span class="mini emph" data-pm="maint">Maint: ~— kcal</span>
+              <span class="mini" data-pm="mg">MG: ~— kcal</span>
+              <span class="mini" data-pm="pro">Protein: ~— g</span>
+            </span>
+            <span class="pill" id="dinnerCounter" data-role="counter" data-type="dinner">Select 3</span>
+            <span class="muted">Total: <span data-total="dinner">0</span></span>
+          </h2>
+          <div id="dinnerList" class="recipe-grid" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="cta">
+        <button id="generateBtn" class="btn brand">Generate 7-Day Meal Plan</button>
+
+        <!-- readiness line -->
+        <span id="ctaReady" class="cta-ready" aria-live="polite">
+          <span class="check" aria-hidden="true"></span> Ready to generate
+        </span>
+      </div>
+    </section>
+
+    <!-- Modal (unchanged) -->
+    <div id="modalBackdrop" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.35);align-items:center;justify-content:center" aria-hidden="true">
+      <div class="card" style="max-width:560px;margin:16px">
+        <h3>What is TDEE?</h3>
+        <p class="muted">Total Daily Energy Expenditure — the average calories you burn per day. Your plan will show Fat Loss (~85% TDEE), Maintenance (100%), and Muscle Gain (~110%).</p>
+        <div style="text-align:right"><button id="closeModal" class="btn secondary">Close</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Robust recipes.json loader shim (added) === -->
+  <script>
+    (function(){
+      const origFetch = window.fetch.bind(window);
+
+      // Normalize recipes.json responses to always be a plain array
+      window.fetch = async function(resource, init){
+        try{
+          const url = typeof resource === 'string' ? resource : (resource && resource.url) || '';
+          if (/recipes\.json(\?|$)/i.test(url)) {
+            // Always resolve relative to the page and bypass cache during dev
+            const abs = new URL('recipes.json', window.location.href).toString();
+            const res = await origFetch(abs, Object.assign({ cache: 'no-store' }, init));
+            if (!res.ok) return res;
+
+            const data = await res.json();
+            const arr = Array.isArray(data) ? data
+                      : (data && Array.isArray(data.recipes)) ? data.recipes
+                      : null;
+
+            if (!arr) {
+              alert("Failed to load recipes.\nrecipes.json must be an array or {\"recipes\":[...]}\n\nTip: run via Live Server (http://), not file://");
+              return new Response(JSON.stringify([]), { headers: { 'Content-Type': 'application/json' }});
+            }
+
+            // Provide to global for any code that wants it
+            try { window._RECIPES = arr; } catch(_) {}
+
+            // Return normalized array response so existing code works unchanged
+            return new Response(JSON.stringify(arr), { headers: { 'Content-Type': 'application/json' }});
+          }
+        } catch (e) {
+          console.warn('recipes.json shim error:', e);
+        }
+        return origFetch(resource, init);
+      };
+
+      // Preload once so UI can use window._RECIPES if needed
+      (async () => {
+        try {
+          const r = await fetch('recipes.json?preload');
+          const d = await r.json();
+          window._RECIPES = Array.isArray(d) ? d : [];
+        } catch (_) {}
+      })();
+    })();
+  </script>
+
+  <!-- === Passive UI status helper (no business logic changed) === -->
+  <script>
+    (function(){
+      const $ = sel => document.querySelector(sel);
+      const $$ = sel => Array.from(document.querySelectorAll(sel));
+
+      const state = {
+        targets: { breakfast: 3, snack: 2, dinner: 3 },
+        totals:  { breakfast: 0, snack: 0, dinner: 0 },
+      };
+
+      const els = {
+        mealsPerDay: $('#mealsPerDay'),
+        calories:    $('#calories'),
+        protein:     $('#protein'),
+        rot: {
+          breakfast: $('#breakfastRotation'),
+          snack:     $('#snackRotation'),
+          dinner:    $('#dinnerRotation')
+        },
+        counters: {
+          breakfast: $('#breakfastCounter'),
+          snack:     $('#snackCounter'),
+          dinner:    $('#dinnerCounter'),
+        },
+        totals: {
+          breakfast: document.querySelector('[data-total="breakfast"]'),
+          snack:     document.querySelector('[data-total="snack"]'),
+          dinner:    document.querySelector('[data-total="dinner"]'),
+        },
+        grids: {
+          breakfast: $('#breakfastList'),
+          snack:     $('#snackList'),
+          dinner:    $('#dinnerList'),
+        },
+        blocks: {
+          snack:     $('#block-snack')
+        },
+        ctaReady: $('#ctaReady'),
+        perMealBadges: $$('[data-pm]'),
+      };
+
+      function readTargets(){
+        const mpd = parseInt(els.mealsPerDay?.value || '4',10);
+        state.targets.breakfast = parseInt(els.rot.breakfast?.value || '3',10);
+        state.targets.dinner    = parseInt(els.rot.dinner?.value || '3',10);
+        // snack target: 0 if 3 meals/day, else from select
+        state.targets.snack     = (mpd === 3) ? 0 : parseInt(els.rot.snack?.value || '2',10);
+
+        // update pill text
+        ['breakfast','snack','dinner'].forEach(type=>{
+          const pill = els.counters[type];
+          if (!pill) return;
+          const need = state.targets[type];
+          pill.textContent = (type==='snack' && need===0) ? 'Skip (3 meals/day)' : `Select ${need}`;
+        });
+
+        // snack disabled style if 3 meals/day
+        if (els.blocks.snack){
+          els.blocks.snack.classList.toggle('snack-disabled', state.targets.snack===0);
+        }
+
+        // update per-meal target pills
+        updatePerMealBadges();
+      }
+
+      function round(n, d=0){ const p = Math.pow(10,d); return Math.round(n*p)/p; }
+
+      function updatePerMealBadges(){
+        const tdee = parseFloat(els.calories?.value || '0') || 0;
+        const pro  = parseFloat(els.protein?.value  || '0') || 0;
+        const mpd  = parseInt(els.mealsPerDay?.value || '4',10) || 4;
+
+        const pm = {
+          fl:    mpd ? round((tdee*0.85)/mpd) : 0,
+          maint: mpd ? round((tdee*1.00)/mpd) : 0,
+          mg:    mpd ? round((tdee*1.15)/mpd) : 0,
+          pro:   mpd ? round(pro/mpd, 0) : 0
+        };
+
+        els.perMealBadges.forEach(el=>{
+          const key = el.getAttribute('data-pm');
+          if (!key) return;
+          if (key === 'pro') el.textContent = `Protein: ~${pm.pro} g`;
+          else if (key === 'fl') el.textContent = `FL: ~${pm.fl} kcal`;
+          else if (key === 'maint') el.textContent = `Maint: ~${pm.maint} kcal`;
+          else if (key === 'mg') el.textContent = `MG: ~${pm.mg} kcal`;
+        });
+      }
+
+      // Count selected items for a given grid (supports multiple UI patterns)
+      function countSelected(grid){
+        if (!grid) return 0;
+        const checks = grid.querySelectorAll('input[type="checkbox"]:checked');
+        if (checks.length) return checks.length;
+        const pressed = grid.querySelectorAll('[aria-pressed="true"],[aria-selected="true"],.selected,.is-selected');
+        return pressed.length;
+      }
+
+      function updateTotals(){
+        ['breakfast','snack','dinner'].forEach(type=>{
+          state.totals[type] = countSelected(els.grids[type]);
+          if (els.totals[type]) els.totals[type].textContent = String(state.totals[type]);
+        });
+      }
+
+      function paintStatus(){
+        let allOk = true;
+        ['breakfast','snack','dinner'].forEach(type=>{
+          const need = state.targets[type];
+          const have = state.totals[type];
+          const pill = els.counters[type];
+          const grid = els.grids[type];
+          const ok = (have === need);
+          const warn = (have !== need);
+          if (!ok) allOk = false;
+          if (pill){ pill.classList.toggle('ok', ok); pill.classList.toggle('warn', warn); }
+          if (grid){ grid.classList.toggle('ok', ok); grid.classList.toggle('warn', warn); }
+        });
+
+        // toggle readiness line
+        if (els.ctaReady){
+          els.ctaReady.classList.toggle('show', allOk);
+        }
+      }
+
+      function refresh(){ readTargets(); updateTotals(); paintStatus(); }
+
+      // Watch dynamic recipe lists for changes
+      const observer = new MutationObserver(()=>{ refresh(); });
+      ['breakfast','snack','dinner'].forEach(type=>{
+        const g = els.grids[type];
+        if (!g) return;
+        observer.observe(g, { childList:true, subtree:true, attributes:true, attributeFilter:['aria-pressed','aria-selected','class','checked'] });
+        g.addEventListener('click', refresh, true);
+        g.addEventListener('change', refresh, true);
+      });
+
+      // Controls
+      els.mealsPerDay?.addEventListener('change', refresh);
+      els.rot.breakfast?.addEventListener('change', refresh);
+      els.rot.snack?.addEventListener('change', refresh);
+      els.rot.dinner?.addEventListener('change', refresh);
+      els.calories?.addEventListener('input', updatePerMealBadges);
+      els.protein?.addEventListener('input', updatePerMealBadges);
+
+      window.addEventListener('DOMContentLoaded', refresh);
+      window.addEventListener('load', refresh);
+    })();
+  </script>
+
+  <!-- === Intercept & normalize SCALED_RECIPES (even split + grocery clean) === -->
+  <script type="module">
+    /* -------------------- MASTER (unchanged) -------------------- */
+    const MASTER = {
+      items: [
+        /* MEAT */
+        { name: "chicken breast", section: "MEAT", syn: ["chicken", "boneless skinless chicken breast", "chicken breasts"] },
+        { name: "ground turkey", section: "MEAT", syn: ["93% lean ground turkey","lean ground turkey","ground turkey breast"] },
+        { name: "salmon", section: "MEAT", syn: ["atlantic salmon fillet","salmon fillet"] },
+        { name: "shrimp", section: "MEAT", syn: ["raw shrimp","shrimp (peeled & deveined)","peeled deveined shrimp"] },
+
+        /* REFRIGERATED (replaces DAIRY) */
+        { name: "eggs", section: "REFRIGERATED", syn: ["egg","1 egg","2 eggs","large egg","large eggs"] },
+        { name: "egg whites", section: "REFRIGERATED", syn: ["egg white","liquid egg whites","carton egg whites"] },
+        { name: "nonfat Greek yogurt", section: "REFRIGERATED", syn: ["plain nonfat greek yogurt","plain greek yogurt","greek yogurt","non fat greek yogurt","0% greek yogurt","fat free greek yogurt"] },
+        { name: "light string cheese", section: "REFRIGERATED", syn: ["string cheese","light mozzarella string cheese","mozzarella string cheese"] },
+        { name: "low-fat cottage cheese", section: "REFRIGERATED", syn: ["cottage cheese","low fat cottage cheese","1% cottage cheese","2% cottage cheese"] },
+        { name: "part-skim mozzarella", section: "REFRIGERATED", syn: ["part skim mozzarella","mozzarella (part skim)","low-fat mozzarella"] },
+        { name: "hummus", section: "REFRIGERATED" },
+        { name: "tzatziki", section: "REFRIGERATED" },
+        { name: "unsweetened almond milk", section: "REFRIGERATED", syn: ["almond milk unsweetened","unsweetened almondmilk","almondmilk unsweetened"] },
+
+        /* PRODUCE */
+        { name: "avocado", section: "PRODUCE", syn: ["avocados"] },
+        { name: "bell peppers + onions", section: "PRODUCE", syn: ["bell peppers and onions","peppers + onions","bell peppers & onions","bell peppers, onions"] },
+        { name: "cherry tomatoes", section: "PRODUCE", syn: ["grape tomatoes","tomatoes (cherry)"] },
+        { name: "cucumber", section: "PRODUCE", syn: ["cucumbers"] },
+        { name: "zucchini", section: "PRODUCE", syn: ["zucchinis"] },
+        { name: "spinach or kale", section: "PRODUCE", syn: ["spinach","kale","baby spinach","lacinato kale"] },
+        { name: "romaine", section: "PRODUCE", syn: ["romaine lettuce","hearts of romaine"] },
+        { name: "mixed greens", section: "PRODUCE", syn: ["spring mix","power greens"] },
+        { name: "broccoli", section: "PRODUCE" },
+        { name: "corn kernels", section: "PRODUCE", syn: ["corn"] },
+        { name: "cilantro", section: "PRODUCE", syn: ["fresh cilantro"] },
+        { name: "parsley", section: "PRODUCE", syn: ["fresh parsley"] },
+        { name: "lemon juice", section: "PRODUCE", syn: ["fresh lemon juice","lemon"] },
+        { name: "lime juice", section: "PRODUCE", syn: ["fresh lime juice","lime"] },
+        { name: "garlic", section: "PRODUCE", syn: ["fresh garlic","garlic clove","garlic cloves"] },
+        { name: "red onion", section: "PRODUCE", syn: ["purple onion"] },
+
+        /* GRAINS */
+        { name: "rolled oats", section: "GRAINS", syn: ["oats","old fashioned rolled oats"] },
+        { name: "brown rice", section: "GRAINS" },
+        { name: "quinoa", section: "GRAINS" },
+        { name: "farro", section: "GRAINS" },
+        { name: "Dave’s Killer Bread or Ezekiel bread", section: "GRAINS", syn: ["ezekiel bread","dave's killer bread","daves killer bread","2 slices ezekiel or dave’s killer bread"] },
+        { name: "whole-wheat tortillas or pitas", section: "GRAINS", syn: ["whole wheat tortilla","whole wheat pita","pita bread","tortillas"] },
+        { name: "rice cakes", section: "GRAINS", syn: ["plain rice cakes","brown rice cakes"] },
+        { name: "chickpea pasta", section: "GRAINS", syn: ["banza pasta","protein pasta"] },
+
+        /* SPICES */
+        { name: "salt & pepper", section: "SPICES", syn: ["salt and pepper","salt &amp; pepper","salt + pepper"] },
+        { name: "garlic powder", section: "SPICES", syn: ["granulated garlic","garlic pwd"] },
+        { name: "onion powder", section: "SPICES" },
+        { name: "paprika", section: "SPICES", syn: ["smoked paprika","sweet paprika"] },
+        { name: "cumin", section: "SPICES" },
+        { name: "oregano", section: "SPICES" },
+        { name: "chili powder", section: "SPICES" },
+        { name: "red pepper flakes", section: "SPICES" },
+        { name: "everything but the bagel seasoning", section: "SPICES", syn: ["everything bagel seasoning"] },
+        { name: "cinnamon", section: "SPICES" },
+
+        /* FROZEN */
+        { name: "frozen mixed berries", section: "FROZEN", syn: ["mixed berries","berries","frozen berries","thawed berries"] },
+        { name: "frozen blueberries", section: "FROZEN", syn: ["blueberries","frozen blueberry"] },
+        { name: "frozen strawberries", section: "FROZEN", syn: ["strawberries","frozen strawberry"] },
+        { name: "frozen shelled edamame", section: "FROZEN", syn: ["edamame","shelled edamame","frozen edamame"] },
+
+        /* OTHER / PANTRY */
+        { name: "black beans", section: "OTHER", syn: ["canned black beans","black beans drained","black beans (rinsed)","black beans, drained & rinsed"] },
+        { name: "chickpeas", section: "OTHER", syn: ["garbanzo beans","canned chickpeas"] },
+        { name: "salsa", section: "OTHER" },
+        { name: "marinara", section: "OTHER", syn: ["tomato sauce (marinara)"] },
+        { name: "low-sodium soy sauce", section: "OTHER", syn: ["lite soy sauce","reduced sodium soy sauce","soy sauce"] },
+        { name: "vanilla protein powder", section: "OTHER", syn: ["vanilla whey","vanilla plant protein","protein powder vanilla"] },
+        { name: "Orgain chocolate protein shake (for coffee creamer)", section: "OTHER", syn: ["orgain protein shake","orgain plant-based chocolate protein drink"] },
+        { name: "chia seeds", section: "OTHER" },
+        { name: "peanut butter powder", section: "OTHER", syn: ["pb2","powdered peanut butter"] }
+      ]
+    };
+
+    /* -------------------- helpers (unchanged) -------------------- */
+    const stripUnits = (s) => String(s)
+      .replace(/\([^)]*\)/g, m => /[0-9]|cup|tbsp|tsp|g|ml|oz|lb/i.test(m) ? "" : m)
+      .replace(/\b\d+(\.\d+)?\b/g, " ")
+      .replace(/[¼½¾⅓⅔⅛⅜⅝⅞]/g, " ")
+      .replace(/\b(cups?|tbsp|tablespoons?|tsp|teaspoons?|ml|g|grams?|oz|lb|lbs|stick|sticks|slices?|scoops?)\b/gi, " ")
+      .replace(/\bdrained(?:\s*&\s*rinsed)?|rinsed|fresh|frozen|thawed|store-?bought|plain|nonfat|low-?fat|low fat|light\b/gi, " ")
+      .replace(/\bchopped|diced|sliced|minced|crushed|shredded|to taste\b/gi, " ")
+      .replace(/^[a-z]+:\s*/i, "")
+      .replace(/[;]+/g, " ")
+      .replace(/\s{2,}/g, " ")
+      .trim();
+
+    const baseNorm = (s) => stripUnits(s).toLowerCase()
+      .replace(/&/g, "and")
+      .replace(/\+/g, " and ")
+      .replace(/[^a-z0-9\s]/g, "")
+      .replace(/\s{2,}/g, " ")
+      .trim();
+
+    function buildMasterIndex(master){
+      const byKey = new Map();
+      const rows = [];
+      for (const it of master.items) {
+        const all = [it.name, ...(it.syn || [])];
+        const section = it.section || "OTHER";
+        for (const s of all) {
+          const k = baseNorm(s);
+          if (k) byKey.set(k, { name: it.name, section });
+        }
+        rows.push({ name: it.name, section, keys: all.map(baseNorm) });
+      }
+      return { byKey, rows };
+    }
+    const MASTER_IDX = buildMasterIndex(MASTER);
+
+    function guessSectionByName(name){
+      const n = name.toLowerCase();
+      if (/(breast|chicken|beef|turkey|salmon|shrimp|tuna)/.test(n)) return 'MEAT';
+      if (/(yogurt|milk|cheese|cottage|mozzarella|eggs?|egg whites?|hummus|tzatziki)/.test(n)) return 'REFRIGERATED';
+      if (/(frozen|edamame|berries|blueberries|strawberries)/.test(n)) return 'FROZEN';
+      if (/(spinach|kale|lettuce|pepper|onion|tomato|avocado|cilantro|parsley|lemon|lime|broccoli|zucchini|cucumber|garlic|corn)/.test(n)) return 'PRODUCE';
+      if (/(oats|rice|quinoa|bread|pita|tortilla|farro|pasta|cakes)/.test(n)) return 'GRAINS';
+      if (/(salt|pepper|paprika|cumin|oregano|chili|smoked|garlic powder|onion powder|red pepper flakes|everything but the bagel|cinnamon)/.test(n)) return 'SPICES';
+      return 'OTHER';
+    }
+
+    function mapToMaster(raw, fallbackSection){
+      const key = baseNorm(raw);
+      if (!key) return null;
+
+      const ex = MASTER_IDX.byKey.get(key);
+      if (ex) return ex;
+
+      for (const row of MASTER_IDX.rows) {
+        if (row.keys.some(k => key.includes(k) || k.includes(key))) {
+          return { name: row.name, section: row.section };
+        }
+      }
+
+      const cleaned = stripUnits(raw)
+        .replace(/\s*&\s*/g, " & ")
+        .replace(/\s*\+\s*/g, " + ")
+        .replace(/\s{2,}/g, " ")
+        .trim();
+      if (!cleaned) return null;
+      const section = fallbackSection || guessSectionByName(cleaned);
+      const titled = cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+      return { name: titled, section };
+    }
+
+    /* -------------------- Grocery canonicalizer (unchanged) -------------------- */
+    function canonicalizeGrocery(grouped){
+      const out = { MEAT:[], REFRIGERATED:[], PRODUCE:[], GRAINS:[], SPICES:[], FROZEN:[], OTHER:[] };
+      const seen = new Set();
+
+      Object.keys(grouped || {}).forEach(section => {
+        (grouped[section] || []).forEach(item => {
+          String(item).split(/[;]+/).forEach(piece => {
+            const m = mapToMaster(piece, section);
+            if (!m) return;
+            const id = m.section + "::" + m.name.toLowerCase();
+            if (!seen.has(id)) {
+              seen.add(id);
+              out[m.section] ??= [];
+              out[m.section].push(m.name);
+            }
+          });
+        });
+      });
+
+      const cleaned = {};
+      const order = ["MEAT","REFRIGERATED","PRODUCE","GRAINS","SPICES","FROZEN","OTHER"];
+      order.forEach(sec => {
+        if (out[sec] && out[sec].length) cleaned[sec] = out[sec].sort((a,b)=>a.localeCompare(b));
+      });
+      return cleaned;
+    }
+
+    /* ==================== NEW: Even split rebalancer ==================== */
+
+    // Read USER_TARGETS from sessionStorage safely
+    function readUserTargets(){
+      try{
+        const raw = sessionStorage.getItem('USER_TARGETS') || localStorage.getItem('USER_TARGETS');
+        if (!raw) return null;
+        return JSON.parse(raw);
+      }catch(_){ return null; }
+    }
+
+    // Path multipliers from TDEE
+    function pathMultiplier(key){
+      if (key === 'fatloss') return 0.85;
+      if (key === 'maint')   return 1.00;
+      if (key === 'muscle')  return 1.15;
+      return 1.00;
+    }
+
+    // Compute total macros of a meal instance (sum of ingredients)
+    function sumMeal(meal){
+      let c = 0, p = 0;
+      const items = (meal?.ingredients || meal?.items || []);
+      for (const it of items){
+        c += Number(it.calories_kcal ?? 0);
+        p += Number(it.protein_g ?? 0);
+      }
+      return { calories:c, protein:p, items };
+    }
+
+    // Scale all ingredient amounts/macros in a meal by factor s
+    function scaleMeal(meal, s){
+      const items = (meal?.ingredients || meal?.items || []);
+      for (const it of items){
+        if (typeof it.amount_g === 'number') it.amount_g  = +(it.amount_g  * s).toFixed(1);
+        if (typeof it.calories_kcal === 'number') it.calories_kcal = +(it.calories_kcal * s).toFixed(1);
+        if (typeof it.protein_g === 'number') it.protein_g = +(it.protein_g * s).toFixed(2);
+      }
+      if (typeof meal.calories_kcal === 'number' || typeof meal.protein_g === 'number'){
+        const t = sumMeal(meal);
+        if (typeof meal.calories_kcal === 'number') meal.calories_kcal = +t.calories.toFixed(0);
+        if (typeof meal.protein_g    === 'number') meal.protein_g    = +t.protein.toFixed(1);
+      }
+    }
+
+    function getTargetsPerMeal(pathKey, user){
+      const tdee = Number(user?.calories ?? user?.tdee ?? 0);
+      const dailyProtein = Number(user?.protein ?? 0);
+      const mealsPerDay = Math.max(3, Math.min(4, Number(user?.mealsPerDay ?? 4)));
+
+      const dailyCalories = tdee * pathMultiplier(pathKey);
+      return {
+        perMealCal: dailyCalories / mealsPerDay,
+        perMealPro: dailyProtein / mealsPerDay,
+        mealsPerDay
+      };
+    }
+
+    function enumerateMealsInDay(day){
+      const out = [];
+      const keys = ['breakfast','snack','lunch','dinner'];
+      for (const k of keys){
+        if (day && day[k]) out.push({ type:k, ref: day[k] });
+      }
+      if (Array.isArray(day?.meals)){
+        for (const m of day.meals){
+          out.push({ type: (m.type || 'meal'), ref: m });
+        }
+      }
+      return out;
+    }
+
+    function rebalancePath(pathKey, payloadPath, user){
+      if (!payloadPath || !user) return;
+
+      const { perMealCal, perMealPro } = getTargetsPerMeal(pathKey, user);
+
+      for (const day of (payloadPath.days || [])){
+        const meals = enumerateMealsInDay(day);
+        for (const { ref } of meals){
+          const totals = sumMeal(ref);
+          if (totals.items.length === 0) continue;
+
+          const sCal = totals.calories > 0 ? (perMealCal / totals.calories) : 1;
+          const sPro = totals.protein  > 0 ? (perMealPro / totals.protein)  : sCal;
+          let s = (sCal + sPro) / 2;
+
+          if (!isFinite(s) || s <= 0) s = 1;
+          s = Math.max(0.25, Math.min(4, s)); // conservative clamp
+
+          scaleMeal(ref, s);
+        }
+      }
+    }
+
+    function normalizeScaledPayload(payload){
+      if (!payload || typeof payload !== 'object') return payload;
+
+      const user = readUserTargets();
+
+      ['fatloss','maint','muscle'].forEach(key=>{
+        if (payload[key]) rebalancePath(key, payload[key], user);
+      });
+
+      ['fatloss','maint','muscle'].forEach(key => {
+        const p = payload[key];
+        if (!p) return;
+        const grouped = p.grocery && typeof p.grocery === 'object'
+          ? p.grocery
+          : (Array.isArray(p.grocery_list) ? { OTHER: p.grocery_list } : {});
+        const canon = canonicalizeGrocery(grouped);
+        p.grocery = canon;
+        p.grocery_list = Object.values(canon).flat();
+      });
+
+      return payload;
+    }
+
+    const patchStorage = (store) => {
+      const origSet = store.setItem.bind(store);
+      store.setItem = (key, value) => {
+        try{
+          if (key === 'SCALED_RECIPES' && typeof value === 'string' && value.trim().startsWith('{')) {
+            const data = JSON.parse(value);
+            const out  = normalizeScaledPayload(data);
+            value = JSON.stringify(out);
+          }
+        }catch(_){}
+        return origSet(key, value);
+      };
+    };
+    patchStorage(sessionStorage);
+    patchStorage(localStorage);
+  </script>
+
+  <!-- Your existing generator logic (unchanged) -->
+  <script type="module" src="./meal-plan.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+{
+  "lean_proteins": [
+    {
+      "key": "chicken_breast_cooked",
+      "name": "chicken breast cooked"
+    },
+    {
+      "key": "ground_turkey_93_cooked",
+      "name": "lean ground turkey cooked"
+    },
+    {
+      "key": "ground_beef_93_cooked",
+      "name": "lean ground beef cooked"
+    },
+    {
+      "key": "top_sirloin_cooked",
+      "name": "beef top sirloin cooked"
+    },
+    {
+      "key": "salmon_cooked",
+      "name": "salmon cooked"
+    },
+    {
+      "key": "shrimp_cooked",
+      "name": "shrimp cooked"
+    },
+    {
+      "key": "cod_cooked",
+      "name": "cod baked cooked"
+    },
+    {
+      "key": "ground_chicken_cooked",
+      "name": "lean ground chicken cooked"
+    }
+  ],
+
+  "whole_grains_starches": [
+    {
+      "key": "brown_rice_cooked",
+      "name": "rice brown long-grain cooked without salt"
+    },
+    {
+      "key": "jasmine_rice_cooked",
+      "name": "rice white jasmine cooked without salt"
+    },
+    {
+      "key": "quinoa_cooked",
+      "name": "quinoa cooked"
+    },
+    {
+      "key": "farro_cooked",
+      "name": "farro cooked"
+    },
+    {
+      "key": "barilla_protein_plus_pasta_cooked",
+      "name": "Barilla Protein+ pasta"
+    },
+    {
+      "key": "chickpea_pasta_cooked",
+      "name": "chickpea pasta"
+    },
+    {
+      "key": "sweet_potato_baked",
+      "name": "sweet potato baked without salt"
+    },
+    {
+      "key": "potato_baked",
+      "name": "potato baked without salt"
+    },
+    {
+      "key": "red_potatoes_boil_bake",
+      "name": "red potatoes baked without salt"
+    }
+  ],
+
+  "breads": [
+    {
+      "key": "daves_killer_bread",
+      "name": "Dave's Killer Bread 21 Whole Grains"
+    },
+    {
+      "key": "ezekiel_bread",
+      "name": "Ezekiel sprouted grain bread"
+    },
+    {
+      "key": "sourdough_bread",
+      "name": "sourdough bread"
+    },
+    {
+      "key": "gluten_free_bread",
+      "name": "gluten free bread"
+    }
+  ],
+
+  "green_vegetables": [
+    {
+      "key": "broccoli_cooked",
+      "name": "broccoli cooked"
+    },
+    {
+      "key": "zucchini_cooked",
+      "name": "zucchini cooked"
+    },
+    {
+      "key": "spinach_cooked",
+      "name": "spinach cooked"
+    },
+    {
+      "key": "kale_cooked",
+      "name": "kale cooked"
+    },
+    {
+      "key": "asparagus_cooked",
+      "name": "asparagus cooked"
+    },
+    {
+      "key": "green_beans_cooked",
+      "name": "green beans cooked"
+    }
+  ],
+
+  "dairy_nondairy": [
+    {
+      "key": "nonfat_greek_yogurt",
+      "name": "nonfat Greek yogurt plain"
+    },
+    {
+      "key": "fairlife_skim_milk",
+      "name": "Fairlife skim milk"
+    },
+    {
+      "key": "unsweetened_almond_milk",
+      "name": "unsweetened almond milk"
+    },
+    {
+      "key": "light_string_cheese",
+      "name": "light string cheese"
+    },
+    {
+      "key": "part_skim_mozzarella",
+      "name": "part-skim mozzarella cheese"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "Chicken breast - grilled": {"catalogKey":"chicken_breast_cooked","group":"lean_proteins"},
+  "Chicken - cooked": {"catalogKey":"chicken_breast_cooked","group":"lean_proteins"},
+  "Lean ground turkey - cooked": {"catalogKey":"ground_turkey_93_cooked","group":"lean_proteins"},
+  "Lean ground beef cooked": {"catalogKey":"ground_beef_93_cooked","group":"lean_proteins"},
+  "Top sirloin steak - cooked": {"catalogKey":"top_sirloin_cooked","group":"lean_proteins"},
+  "Grilled salmon fillet, flaked": {"catalogKey":"salmon_cooked","group":"lean_proteins"},
+  "Shrimp (cooked)": {"catalogKey":"shrimp_cooked","group":"lean_proteins"},
+  "Cod (cooked)": {"catalogKey":"cod_cooked","group":"lean_proteins"},
+
+  "Brown rice": {"catalogKey":"brown_rice_cooked","group":"whole_grains_starches"},
+  "Farro": {"catalogKey":"farro_cooked","group":"whole_grains_starches"},
+  "Quinoa": {"catalogKey":"quinoa_cooked","group":"whole_grains_starches"},
+  "Jasmine rice": {"catalogKey":"jasmine_rice_cooked","group":"whole_grains_starches"},
+  "Barilla protein+ spaghetti pasta": {"catalogKey":"barilla_protein_plus_pasta_cooked","group":"whole_grains_starches"},
+  "Chickpea pasta": {"catalogKey":"chickpea_pasta_cooked","group":"whole_grains_starches"},
+  "Plain sweet potato": {"catalogKey":"sweet_potato_baked","group":"whole_grains_starches"},
+  "Plain baked potato": {"catalogKey":"potato_baked","group":"whole_grains_starches"},
+  "Red potatoes": {"catalogKey":"red_potatoes_boil_bake","group":"whole_grains_starches"},
+  "Mashed potatoes": {"catalogKey":"mashed_potatoes","group":"whole_grains_starches"},
+
+  "Dave's killer bread whole grain": {"catalogKey":"daves_killer_whole_grain","group":"breads"},
+  "Dave's Killer Bread white done right": {"catalogKey":"daves_killer_white_done_right","group":"breads"},
+  "Ezekiel or dave’s killer bread": {"catalogKey":"ezekiel_bread","group":"breads"},
+  "Gluten free bread": {"catalogKey":"gluten_free_bread","group":"breads"},
+  "Sourdough": {"catalogKey":"sourdough_bread","group":"breads"},
+  "Whole wheat bread": {"catalogKey":"whole_wheat_bread","group":"breads"},
+
+  "Broccoli": {"catalogKey":"broccoli_raw","group":"green_vegetables"},
+  "Asparagus": {"catalogKey":"asparagus_cooked","group":"green_vegetables"},
+  "Brussel sprouts": {"catalogKey":"brussels_sprouts_cooked","group":"green_vegetables"},
+  "Green beans": {"catalogKey":"green_beans_cooked","group":"green_vegetables"},
+  "Green peas": {"catalogKey":"green_peas_cooked","group":"green_vegetables"},
+
+  "Fairlife fat-free milk": {"catalogKey":"fairlife_fat_free_milk","group":"dairy_nondairy"},
+  "Unsweetened almond milk": {"catalogKey":"almond_milk_unsweetened","group":"dairy_nondairy"},
+  "Unsweetened soy milk": {"catalogKey":"soy_milk_unsweetened","group":"dairy_nondairy"},
+  "Unsweetened oat milk": {"catalogKey":"oat_milk_unsweetened","group":"dairy_nondairy"},
+  "Skim milk": {"catalogKey":"skim_milk","group":"dairy_nondairy"}
+}

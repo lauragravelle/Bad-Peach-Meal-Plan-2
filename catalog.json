@@ -1,0 +1,495 @@
+{
+  "ingredients": {
+    "almonds": {
+      "name": "Almonds",
+      "fdcId": "170567",
+      "per100": { "kcal": 579, "protein": 21.2 },
+      "conversions": {},
+      "tags": []
+    },
+    "apple": {
+      "name": "Apple (raw, with skin)",
+      "fdcId": "174988",
+      "per100": { "kcal": 52, "protein": 0.3 },
+      "conversions": {},
+      "tags": []
+    },
+    "arugula_raw": {
+      "name": "Arugula (raw)",
+      "fdcId": "169387",
+      "per100": { "kcal": 25, "protein": 2.6 },
+      "conversions": {},
+      "tags": []
+    },
+    "asparagus_cooked": {
+      "name": "Asparagus (cooked)",
+      "fdcId": "169232",
+      "per100": { "kcal": 14, "protein": 0.6 },
+      "conversions": {},
+      "tags": []
+    },
+    "avocado_raw": {
+      "name": "Avocado (raw)",
+      "fdcId": "173573",
+      "per100": { "kcal": 160, "protein": 2 },
+      "conversions": {},
+      "tags": []
+    },
+    "balsamic_glaze": {
+      "name": "Balsamic glaze",
+      "fdcId": "custom_balsamic_glaze",
+      "per100": { "kcal": 150, "protein": 0 },
+      "conversions": {},
+      "tags": []
+    },
+    "barilla_protein_plus_pasta_cooked": {
+      "name": "Barilla Protein+ pasta (cooked)",
+      "fdcId": "2016665",
+      "per100": { "kcal": 130.8, "protein": 11 },
+      "conversions": {},
+      "tags": []
+    },
+    "barebells_protein_bar": {
+      "name": "Barebells protein bar",
+      "fdcId": "custom_barebells_bar",
+      "per100": { "kcal": 364, "protein": 36 },
+      "conversions": {},
+      "tags": []
+    },
+    "black_beans_canned": {
+      "name": "Black beans (canned, drained)",
+      "fdcId": "173734",
+      "per100": { "kcal": 132, "protein": 8.9 },
+      "conversions": {},
+      "tags": []
+    },
+    "blueberries": {
+      "name": "Blueberries (raw)",
+      "fdcId": "173951",
+      "per100": { "kcal": 57, "protein": 0.7 },
+      "conversions": {},
+      "tags": []
+    },
+    "broccoli_cooked": {
+      "name": "Broccoli (cooked)",
+      "fdcId": "170382",
+      "per100": { "kcal": 25, "protein": 3.8 },
+      "conversions": {},
+      "tags": []
+    },
+    "brown_rice_cooked": {
+      "name": "Brown rice (cooked)",
+      "fdcId": "169757",
+      "per100": { "kcal": 130, "protein": 2.69 },
+      "conversions": {},
+      "tags": []
+    },
+    "carrots_raw": {
+      "name": "Carrots (raw)",
+      "fdcId": "170393",
+      "per100": { "kcal": 41, "protein": 0.9 },
+      "conversions": {},
+      "tags": []
+    },
+    "cherry_tomatoes": {
+      "name": "Cherry tomatoes (raw)",
+      "fdcId": "170461",
+      "per100": { "kcal": 18, "protein": 0.9 },
+      "conversions": {},
+      "tags": []
+    },
+    "chicken_breast_cooked": {
+      "name": "Chicken breast (cooked, skinless)",
+      "fdcId": "173686",
+      "per100": { "kcal": 142, "protein": 19.84 },
+      "conversions": {},
+      "tags": []
+    },
+    "chicken_broth_low_sodium": {
+      "name": "Chicken broth (low sodium)",
+      "fdcId": "171609",
+      "per100": { "kcal": 6, "protein": 0.6 },
+      "conversions": {},
+      "tags": []
+    },
+    "chickpea_pasta_cooked": {
+      "name": "Chickpea pasta (cooked)",
+      "fdcId": "2708357",
+      "per100": { "kcal": 190, "protein": 14 },
+      "conversions": {},
+      "tags": []
+    },
+    "cod_cooked": {
+      "name": "Cod (baked, cooked)",
+      "fdcId": "171956",
+      "per100": { "kcal": 105, "protein": 22.83 },
+      "conversions": {},
+      "tags": []
+    },
+    "corn_tortillas": {
+      "name": "Corn tortillas",
+      "fdcId": "custom_corn_tortillas",
+      "per100": { "kcal": 218, "protein": 5.5 },
+      "conversions": {},
+      "tags": []
+    },
+    "cucumber_raw": {
+      "name": "Cucumber (raw)",
+      "fdcId": "169225",
+      "per100": { "kcal": 16, "protein": 0.7 },
+      "conversions": {},
+      "tags": []
+    },
+    "daves_killer_bread": {
+      "name": "Dave's Killer Bread 21 Whole Grains",
+      "fdcId": "2674263",
+      "per100": { "kcal": 267, "protein": 11.1 },
+      "conversions": {},
+      "tags": []
+    },
+    "diced_tomatoes_canned": {
+      "name": "Diced tomatoes (canned)",
+      "fdcId": "333281",
+      "per100": { "kcal": 18, "protein": 0.9 },
+      "conversions": {},
+      "tags": []
+    },
+    "edamame_shelled_cooked": {
+      "name": "Edamame (shelled, cooked)",
+      "fdcId": "168411",
+      "per100": { "kcal": 121, "protein": 11.9 },
+      "conversions": {},
+      "tags": []
+    },
+    "ezekiel_bread": {
+      "name": "Ezekiel sprouted bread",
+      "fdcId": "2455270",
+      "per100": { "kcal": 225, "protein": 15 },
+      "conversions": {},
+      "tags": []
+    },
+    "fairlife_skim_milk": {
+      "name": "Fairlife skim milk",
+      "fdcId": "170887",
+      "per100": { "kcal": 80, "protein": 5.7 },
+      "conversions": {},
+      "tags": []
+    },
+    "farro_cooked": {
+      "name": "Farro (cooked)",
+      "fdcId": "1988553",
+      "per100": { "kcal": 125, "protein": 4.5 },
+      "conversions": {},
+      "tags": []
+    },
+    "ghughes_sugar_free_bbq": {
+      "name": "G. Hughes sugar-free BBQ sauce",
+      "fdcId": "custom_ghughes_bbq",
+      "per100": { "kcal": 0, "protein": 0 },
+      "conversions": {},
+      "tags": []
+    },
+    "ghughes_sugar_free_teriyaki": {
+      "name": "G. Hughes sugar-free teriyaki sauce",
+      "fdcId": "custom_ghughes_teriyaki",
+      "per100": { "kcal": 0, "protein": 0 },
+      "conversions": {},
+      "tags": []
+    },
+    "gluten_free_bread": {
+      "name": "Gluten-free bread",
+      "fdcId": "2707797",
+      "per100": { "kcal": 248, "protein": 4.3 },
+      "conversions": {},
+      "tags": []
+    },
+    "green_beans_cooked": {
+      "name": "Green beans (cooked)",
+      "fdcId": "169237",
+      "per100": { "kcal": 25, "protein": 0.5 },
+      "conversions": {},
+      "tags": []
+    },
+    "ground_beef_93_cooked": {
+      "name": "Ground beef 93% lean (cooked)",
+      "fdcId": "174754",
+      "per100": { "kcal": 200, "protein": 28.03 },
+      "conversions": {},
+      "tags": []
+    },
+    "ground_chicken_cooked": {
+      "name": "Ground chicken (cooked)",
+      "fdcId": "171117",
+      "per100": { "kcal": 189, "protein": 23.28 },
+      "conversions": {},
+      "tags": []
+    },
+    "ground_turkey_93_cooked": {
+      "name": "Lean ground turkey (cooked)",
+      "fdcId": "746785",
+      "per100": { "kcal": 220, "protein": 27.1 },
+      "conversions": {},
+      "tags": []
+    },
+    "honey": {
+      "name": "Honey",
+      "fdcId": "169640",
+      "per100": { "kcal": 304, "protein": 0 },
+      "conversions": {},
+      "tags": []
+    },
+    "jasmine_rice_cooked": {
+      "name": "Jasmine rice (cooked)",
+      "fdcId": "169757",
+      "per100": { "kcal": 130, "protein": 2.69 },
+      "conversions": {},
+      "tags": []
+    },
+    "kale_cooked": {
+      "name": "Kale (cooked)",
+      "fdcId": "2709602",
+      "per100": { "kcal": 30, "protein": 2 },
+      "conversions": {},
+      "tags": []
+    },
+    "kalamata_olives": {
+      "name": "Kalamata olives",
+      "fdcId": "172926",
+      "per100": { "kcal": 240, "protein": 1.6 },
+      "conversions": {},
+      "tags": []
+    },
+    "kidney_beans_canned": {
+      "name": "Kidney beans (canned, drained)",
+      "fdcId": "169885",
+      "per100": { "kcal": 127, "protein": 8.7 },
+      "conversions": {},
+      "tags": []
+    },
+    "light_string_cheese": {
+      "name": "Light string cheese",
+      "fdcId": "1858692",
+      "per100": { "kcal": 214, "protein": 25 },
+      "conversions": {},
+      "tags": []
+    },
+    "low_sodium_soy_sauce": {
+      "name": "Low-sodium soy sauce",
+      "fdcId": "172473",
+      "per100": { "kcal": 53, "protein": 8 },
+      "conversions": {},
+      "tags": []
+    },
+    "nonfat_greek_yogurt": {
+      "name": "Nonfat Greek yogurt (plain)",
+      "fdcId": "330137",
+      "per100": { "kcal": 61, "protein": 10.3 },
+      "conversions": {},
+      "tags": []
+    },
+    "olive_oil": {
+      "name": "Olive oil",
+      "fdcId": "171443",
+      "per100": { "kcal": 884, "protein": 0 },
+      "conversions": {},
+      "tags": []
+    },
+    "oikos_protein_yogurt": {
+      "name": "Oikos PRO yogurt",
+      "fdcId": "custom_oikos_pro",
+      "per100": { "kcal": 60, "protein": 10 },
+      "conversions": {},
+      "tags": []
+    },
+    "part_skim_mozzarella": {
+      "name": "Part-skim mozzarella cheese",
+      "fdcId": "2057284",
+      "per100": { "kcal": 286, "protein": 25 },
+      "conversions": {},
+      "tags": []
+    },
+    "pbfit_powder": {
+      "name": "PBfit powder",
+      "fdcId": "167806",
+      "per100": { "kcal": 438, "protein": 50 },
+      "conversions": {},
+      "tags": []
+    },
+    "potato_baked": {
+      "name": "Baked potato (with skin)",
+      "fdcId": "170134",
+      "per100": { "kcal": 90, "protein": 2 },
+      "conversions": {},
+      "tags": []
+    },
+    "quinoa_cooked": {
+      "name": "Quinoa (cooked)",
+      "fdcId": "168917",
+      "per100": { "kcal": 120, "protein": 4.4 },
+      "conversions": {},
+      "tags": []
+    },
+    "red_onion_raw": {
+      "name": "Red onion (raw)",
+      "fdcId": "790577",
+      "per100": { "kcal": 40, "protein": 1.1 },
+      "conversions": {},
+      "tags": []
+    },
+    "romaine_raw": {
+      "name": "Romaine lettuce (raw)",
+      "fdcId": "169247",
+      "per100": { "kcal": 17, "protein": 1.2 },
+      "conversions": {},
+      "tags": []
+    },
+    "salmon_cooked": {
+      "name": "Wild Alaskan salmon (cooked)",
+      "fdcId": "173707",
+      "per100": { "kcal": 184, "protein": 29.91 },
+      "conversions": {},
+      "tags": []
+    },
+    "shrimp_cooked": {
+      "name": "Shrimp (cooked)",
+      "fdcId": "173706",
+      "per100": { "kcal": 144, "protein": 23.33 },
+      "conversions": {},
+      "tags": []
+    },
+    "sourdough_bread": {
+      "name": "Sourdough bread",
+      "fdcId": "172675",
+      "per100": { "kcal": 272, "protein": 10.8 },
+      "conversions": {},
+      "tags": []
+    },
+    "spinach_cooked": {
+      "name": "Spinach (cooked)",
+      "fdcId": "2401036",
+      "per100": { "kcal": 23, "protein": 2.9 },
+      "conversions": {},
+      "tags": []
+    },
+    "sweet_potato_baked": {
+      "name": "Sweet potato (baked)",
+      "fdcId": "170134",
+      "per100": { "kcal": 90, "protein": 2 },
+      "conversions": {},
+      "tags": []
+    },
+    "tahini": {
+      "name": "Tahini",
+      "fdcId": "168604",
+      "per100": { "kcal": 595, "protein": 17 },
+      "conversions": {},
+      "tags": []
+    },
+    "thin_bagel": {
+      "name": "Thin-style bagel (whole grain)",
+      "fdcId": "custom_thin_bagel",
+      "per100": { "kcal": 250, "protein": 9 },
+      "conversions": {},
+      "tags": []
+    },
+    "top_sirloin_cooked": {
+      "name": "Top sirloin (cooked, lean)",
+      "fdcId": "2727574",
+      "per100": { "kcal": 200, "protein": 21.98 },
+      "conversions": {},
+      "tags": []
+    },
+    "tuna_canned_water": {
+      "name": "Tuna (canned in water, drained)",
+      "fdcId": "334194",
+      "per100": { "kcal": 116, "protein": 26 },
+      "conversions": {},
+      "tags": []
+    },
+    "tzatziki": {
+      "name": "Tzatziki",
+      "fdcId": "custom_tzatziki",
+      "per100": { "kcal": 60, "protein": 3 },
+      "conversions": {},
+      "tags": []
+    },
+    "unsweetened_almond_milk": {
+      "name": "Unsweetened almond milk",
+      "fdcId": "2479376",
+      "per100": { "kcal": 15, "protein": 0.6 },
+      "conversions": {},
+      "tags": []
+    },
+    "walnuts": {
+      "name": "Walnuts",
+      "fdcId": "170187",
+      "per100": { "kcal": 654, "protein": 15.2 },
+      "conversions": {},
+      "tags": []
+    },
+    "whole_grain_bun": {
+      "name": "Whole-grain bun",
+      "fdcId": "custom_whole_grain_bun",
+      "per100": { "kcal": 265, "protein": 10 },
+      "conversions": {},
+      "tags": []
+    },
+    "zucchini_cooked": {
+      "name": "Zucchini (cooked)",
+      "fdcId": "169204",
+      "per100": { "kcal": 78, "protein": 4.5 },
+      "conversions": {},
+      "tags": []
+    }
+  },
+
+  "swapGroups": {
+    "lean_proteins": [
+      "chicken_breast_cooked",
+      "ground_turkey_93_cooked",
+      "ground_beef_93_cooked",
+      "top_sirloin_cooked",
+      "salmon_cooked",
+      "shrimp_cooked",
+      "cod_cooked",
+      "ground_chicken_cooked",
+      "tuna_canned_water"
+    ],
+    "whole_grains_starches": [
+      "brown_rice_cooked",
+      "jasmine_rice_cooked",
+      "quinoa_cooked",
+      "farro_cooked",
+      "barilla_protein_plus_pasta_cooked",
+      "chickpea_pasta_cooked",
+      "sweet_potato_baked",
+      "potato_baked",
+      "corn_tortillas",
+      "thin_bagel",
+      "whole_grain_bun"
+    ],
+    "breads": [
+      "daves_killer_bread",
+      "ezekiel_bread",
+      "sourdough_bread",
+      "gluten_free_bread"
+    ],
+    "green_vegetables": [
+      "broccoli_cooked",
+      "zucchini_cooked",
+      "spinach_cooked",
+      "kale_cooked",
+      "asparagus_cooked",
+      "green_beans_cooked",
+      "edamame_shelled_cooked"
+    ],
+    "dairy_nondairy": [
+      "nonfat_greek_yogurt",
+      "fairlife_skim_milk",
+      "unsweetened_almond_milk",
+      "light_string_cheese",
+      "part_skim_mozzarella",
+      "oikos_protein_yogurt"
+    ]
+  }
+}

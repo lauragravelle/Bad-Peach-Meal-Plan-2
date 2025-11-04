@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /results.html
+Disallow: /meal-plan.html
+Disallow: /private/
