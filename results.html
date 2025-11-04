@@ -142,6 +142,31 @@
     input,select{font-size:16px}
     body{padding-bottom:env(safe-area-inset-bottom)}
     .tabs{margin-bottom:12px}
+    /* ===== MOBILE-ONLY VISUAL ALIGNMENT (Plan + Recipes) ===== */
+@media (max-width: 480px) {
+  /* 7-Day Plan: keep titles left, macros right, tidy numbers */
+  .meal { align-items: baseline; gap: .75rem; }
+  .meal .macro {
+    white-space: nowrap;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Recipes: align ingredient name left, amount right (grams + cups together) */
+  .ing-row { align-items: baseline; gap: .5rem; }
+  .ing-left { flex: 1; min-width: 0; }             /* name (and method) */
+  .ing-qty  {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Optional: swaps/stepper rows stay compact on small screens */
+  .servings-toolbar { gap: 8px; }
+  .swap { max-width: 100%; }
+}
+
   </style>
 </head>
 <body>
