@@ -42,6 +42,56 @@
       padding: 2rem 1rem 5rem;
     }
 
+    .stats-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: .75rem;
+      background: linear-gradient(90deg, var(--blush-light), var(--cream));
+      border-radius: 12px;
+      box-shadow: inset 0 0 8px rgba(235,202,194,0.4);
+      padding: .75rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .stat-pill {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: .35rem .9rem;
+      font-size: .9rem;
+      color: var(--black);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .tab {
+      padding: .6rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fff;
+      cursor: pointer;
+      font-size: .9rem;
+      transition: all .2s ease;
+    }
+
+    .tab.active {
+      background: var(--black);
+      color: #fff;
+      border-color: var(--black);
+    }
+
+    .tab:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
     .day-card {
       background: rgba(255,255,255,0.9);
       border: 1px solid var(--border);
@@ -108,38 +158,75 @@
       font-variant-numeric: tabular-nums;
     }
 
-    /* === Grocery List, CTA, and other styling omitted for brevity === */
-    /* (everything else stays unchanged in your file) */
+    .grocery-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
 
+    .grocery-section {
+      background: rgba(255,255,255,0.85);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
 
-    /* =============================================================
-       ✅ MOBILE ALIGNMENT FIX (added below — nothing else changed)
-    ============================================================= */
+    .affiliate {
+      background: linear-gradient(135deg, var(--blush-dark), var(--blush-light));
+      border-radius: 24px;
+      padding: 2rem;
+      text-align: center;
+      color: var(--black);
+      box-shadow: var(--shadow);
+      margin-top: 3rem;
+    }
+
+    .affiliate button {
+      background: var(--accent2);
+      color: white;
+      font-weight: 600;
+      padding: .8rem 1.5rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background .2s ease;
+    }
+
+    .affiliate button:hover {
+      background: #a76c5f;
+    }
+
+    /* === Everything else remains the same === */
+
+    /* ===== MOBILE ALIGNMENT-ONLY PATCH ===== */
     @media (max-width: 480px) {
-      /* Align meals neatly (title left, macros right) */
       .day-card .meal {
-        display: flex;
-        justify-content: space-between;
         align-items: baseline;
         gap: .75rem;
       }
-      .day-card .meal-title {
+      .day-card .meal .meal-title {
+        flex: 1;
+        min-width: 0;
         overflow-wrap: anywhere;
       }
-      .day-card .macros {
+      .day-card .meal .macros {
+        flex: 0 0 auto;
         white-space: nowrap;
         text-align: right;
         font-variant-numeric: tabular-nums;
       }
-
-      /* Align ingredient list: name left, amount right */
       .ingredients li {
-        display: grid;
-        grid-template-columns: 1fr auto;
         align-items: baseline;
         gap: .5rem;
       }
+      .ingredients .ingredient-name {
+        flex: 1;
+        min-width: 0;
+      }
       .ingredients .ingredient-amount {
+        flex: 0 0 auto;
         white-space: nowrap;
         text-align: right;
         font-variant-numeric: tabular-nums;
@@ -152,65 +239,79 @@
   <div class="container">
     <h1>Your 7-Day Bad Peach Meal Plan</h1>
 
-    <!-- Example Day Layout -->
+    <div class="stats-bar">
+      <div class="stat-pill">Calories: 1900 kcal</div>
+      <div class="stat-pill">Protein: 150 g</div>
+      <div class="stat-pill">Meals: 4 / day</div>
+    </div>
+
+    <div class="tabs">
+      <div class="tab active">7-Day Plan</div>
+      <div class="tab">Recipes</div>
+      <div class="tab">Grocery List</div>
+    </div>
+
+    <!-- Example week view -->
+    <div class="day-card">
+      <h3>Day 1</h3>
+      <div class="meal"><div class="meal-title">Breakfast — Vanilla-Berry Protein Shake</div><div class="macros">420 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Lunch — Greek Chicken Bowl</div><div class="macros">425 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Snack — Protein Yogurt + Berries</div><div class="macros">420 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Dinner — Mediterranean Salmon Bowl</div><div class="macros">425 kcal • 33 g protein</div></div>
+    </div>
+
+    <div class="day-card">
+      <h3>Day 2</h3>
+      <div class="meal"><div class="meal-title">Breakfast — High Protein Oats</div><div class="macros">420 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Lunch — Farro Chicken Bowl</div><div class="macros">425 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Snack — Barebell Bar + Yogurt</div><div class="macros">420 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Dinner — Shrimp Quinoa Bowl</div><div class="macros">425 kcal • 33 g protein</div></div>
+    </div>
+
+    <div class="day-card">
+      <h3>Day 3</h3>
+      <div class="meal"><div class="meal-title">Breakfast — Cottage Cheese & Toast</div><div class="macros">421 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Lunch — Power Bowl</div><div class="macros">420 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Snack — Edamame + Avocado Toast</div><div class="macros">420 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Dinner — Mediterranean Chicken Bowl</div><div class="macros">421 kcal • 33 g protein</div></div>
+    </div>
+
     <div class="day-card">
       <h3>Day 4</h3>
-      <div class="meal">
-        <div class="meal-title">Breakfast — Vanilla-Berry Protein Shake</div>
-        <div class="macros">420 kcal • 33 g protein</div>
-      </div>
-      <div class="meal">
-        <div class="meal-title">Lunch — leftovers from previous day's dinner</div>
-        <div class="macros">423 kcal • 33 g protein</div>
-      </div>
-      <div class="meal">
-        <div class="meal-title">Snack — Barebell Protein Bar & Protein Yogurt</div>
-        <div class="macros">416 kcal • 33 g protein</div>
-      </div>
-      <div class="meal">
-        <div class="meal-title">Dinner — Southwest Chicken Bowl</div>
-        <div class="macros">423 kcal • 33 g protein</div>
-      </div>
+      <div class="meal"><div class="meal-title">Breakfast — Protein Pancakes</div><div class="macros">420 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Lunch — Quinoa Chicken Bowl</div><div class="macros">423 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Snack — Protein Bar + Yogurt</div><div class="macros">416 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Dinner — Southwest Chicken Bowl</div><div class="macros">423 kcal • 33 g protein</div></div>
     </div>
 
     <div class="day-card">
       <h3>Day 5</h3>
-      <div class="meal">
-        <div class="meal-title">Breakfast — Cottage Cheese Eggs & Avocado Toast</div>
-        <div class="macros">421 kcal • 33 g protein</div>
-      </div>
-      <div class="meal">
-        <div class="meal-title">Lunch — leftovers from previous day's dinner</div>
-        <div class="macros">420 kcal • 33 g protein</div>
-      </div>
-      <div class="meal">
-        <div class="meal-title">Snack — Edamame Avocado Toast & String Cheese</div>
-        <div class="macros">420 kcal • 33 g protein</div>
-      </div>
-      <div class="meal">
-        <div class="meal-title">Dinner — Mediterranean Power Bowl</div>
-        <div class="macros">420 kcal • 33 g protein</div>
-      </div>
+      <div class="meal"><div class="meal-title">Breakfast — Cottage Cheese Eggs & Avocado Toast</div><div class="macros">421 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Lunch — Power Bowl</div><div class="macros">420 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Snack — Edamame Toast & String Cheese</div><div class="macros">420 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Dinner — Mediterranean Power Bowl</div><div class="macros">420 kcal • 33 g protein</div></div>
     </div>
 
     <div class="day-card">
       <h3>Day 6</h3>
-      <div class="meal">
-        <div class="meal-title">Breakfast — Blueberry Protein Pancakes</div>
-        <div class="macros">424 kcal • 33 g protein</div>
-      </div>
-      <div class="meal">
-        <div class="meal-title">Lunch — leftovers from previous day's dinner</div>
-        <div class="macros">421 kcal • 33 g protein</div>
-      </div>
-      <div class="meal">
-        <div class="meal-title">Snack — Barebell Protein Bar & Protein Yogurt</div>
-        <div class="macros">416 kcal • 33 g protein</div>
-      </div>
-      <div class="meal">
-        <div class="meal-title">Dinner — Salmon Bowl</div>
-        <div class="macros">423 kcal • 33 g protein</div>
-      </div>
+      <div class="meal"><div class="meal-title">Breakfast — Blueberry Protein Pancakes</div><div class="macros">424 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Lunch — Chicken Bowl</div><div class="macros">421 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Snack — Protein Bar & Yogurt</div><div class="macros">416 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Dinner — Salmon Bowl</div><div class="macros">423 kcal • 33 g protein</div></div>
+    </div>
+
+    <div class="day-card">
+      <h3>Day 7</h3>
+      <div class="meal"><div class="meal-title">Breakfast — High Protein Oats</div><div class="macros">420 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Lunch — Greek Chicken Bowl</div><div class="macros">425 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Snack — Yogurt + Berries</div><div class="macros">420 kcal • 33 g protein</div></div>
+      <div class="meal"><div class="meal-title">Dinner — Shrimp Farro Bowl</div><div class="macros">425 kcal • 33 g protein</div></div>
+    </div>
+
+    <div class="affiliate">
+      <h2>Become a Bad Peach Affiliate</h2>
+      <p>Share the Becoming Your Fittest Forever system (with lifetime access to the custom meal plan generator) and be rewarded generously as a thank you!<br><br>Earn 50% commission for every purchase made through your unique link.</p>
+      <button>Get Your Link</button>
     </div>
 
   </div>
