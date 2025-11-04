@@ -165,7 +165,58 @@
   /* Optional: swaps/stepper rows stay compact on small screens */
   .servings-toolbar { gap: 8px; }
   .swap { max-width: 100%; }
+}/* ===== MOBILE POLISH PACK (CSS-only, safe) ===== */
+
+/* Subtle quality-of-life improvements for all devices */
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
+
+/* Phone refinements */
+@media (max-width: 480px) {
+
+  /* Breathing room + readable tap sizes */
+  .wrap { padding: 16px; }
+  .card { padding: 14px; }
+  .header .wrap { padding-top: 24px; padding-bottom: 16px; }
+  .pill { font-size: 12px; padding: 5px 8px; }
+  .btn { font-size: 14px; padding: 9px 12px; }
+
+  /* 7-Day Plan rows: title left, macros right, tidy numbers */
+  .meal { align-items: baseline; gap: .75rem; }
+  .meal .macro {
+    white-space: nowrap;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Recipes: ingredient name left, amount right (grams + cups together) */
+  .ing-row { align-items: baseline; gap: .5rem; }
+  .ing-left, .ing-left span {
+    word-break: break-word;
+    overflow-wrap: anywhere;   /* long names never wreck layout */
+  }
+  .ing-left { flex: 1; min-width: 0; }
+  .ing-qty  {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Comfortable controls */
+  .servings-toolbar { gap: 8px; }
+  .stepper button { padding: 6px 10px; font-size: 18px; }
+  .stepper input  { width: 48px; font-size: 16px; }
+  .swap { max-width: 100%; }
+
+  /* Smooth tab switching without touching JS */
+  .panel { transition: opacity .25s ease; }
+  .panel[style*="display: none"] { opacity: 0; pointer-events: none; }
+  .panel:not([style*="display: none"]) { opacity: 1; }
+}
+
 
   </style>
 </head>
