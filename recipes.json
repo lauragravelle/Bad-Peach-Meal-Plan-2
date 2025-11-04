@@ -262,7 +262,7 @@
     },
     {
       "id": "simple_basics_chicken_baked_potato_green_peas",
-      "name": "Simple Basics: Chicken + Baked Potato + Green Peas",
+      "name": "Chicken + Baked Potato + Green Peas",
       "meal_type": "dinner",
       "instructions": "Serve chicken with baked potato (topped with Greek yogurt) and peas.",
       "ingredients": [
@@ -276,7 +276,7 @@
     },
     {
       "id": "simple_basics_salmon_sweet_potato_broccoli",
-      "name": "Simple Basics: Salmon + Sweet Potato + Broccoli",
+      "name": "Salmon + Sweet Potato + Broccoli",
       "meal_type": "dinner",
       "instructions": "Serve salmon with sweet potato and broccoli.",
       "ingredients": [
@@ -289,7 +289,7 @@
     },
     {
       "id": "simple_basics_steak_mashed_potatoes_asparagus",
-      "name": "Simple Basics: Steak + Mashed Potatoes + Asparagus",
+      "name": "Steak + Mashed Potatoes + Asparagus",
       "meal_type": "dinner",
       "instructions": "Serve steak with mashed potatoes and asparagus.",
       "ingredients": [
